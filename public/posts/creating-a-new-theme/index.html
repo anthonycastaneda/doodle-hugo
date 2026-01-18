@@ -5,7 +5,7 @@
   <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>
-  Creating a New Theme | My New Hugo Site
+  Creating a New Theme | Anthony Castañeda
 </title>
  
 <link rel="canonical" href="http://localhost:1313/posts/creating-a-new-theme/" />
@@ -29,7 +29,11 @@
     "headline": "Creating a New Theme",
     "url": "http:\/\/localhost:1313\/posts\/creating-a-new-theme\/",
     "datePublished": "2021-10-22T17:12:11\u002b07:00",
-    "dateModified": "2021-10-22T17:12:11\u002b07:00"
+    "dateModified": "2026-01-17T18:10:13-06:00",
+    "author": {
+      "@type": "Person",
+      "name": "Anthony Castañeda"
+    }
   }
 </script>
  <link rel="apple-touch-icon" sizes="57x57" href="/favicon_io/apple-icon-57x57.png">
@@ -67,7 +71,7 @@
   
   <li>
     /
-    <a href="/">My New Hugo Site</a>
+    <a href="/">Anthony Castañeda</a>
     /
   </li>
 
@@ -93,86 +97,11 @@
 </header>
   <main id="main-content">
   <h1>Creating a New Theme</h1>
-  
-  <div class="terms-list">
-    <ul>
-        <li><a href="/tags/hugo/">#Hugo</a></li>
-    </ul>
-  </div>
-
 
   
   
-  
-  
-    <nav class="toc">
-      <strong>Table of contents</strong>
-      <div class="toc-content">
-        <nav id="TableOfContents">
-  <ul>
-    <li><a href="#introduction">Introduction</a></li>
-    <li><a href="#some-definitions">Some Definitions</a>
-      <ul>
-        <li><a href="#skins">Skins</a></li>
-        <li><a href="#the-home-page">The Home Page</a></li>
-        <li><a href="#site-configuration-file">Site Configuration File</a></li>
-        <li><a href="#content">Content</a></li>
-        <li><a href="#template-files">Template Files</a></li>
-      </ul>
-    </li>
-    <li><a href="#create-a-new-site">Create a New Site</a>
-      <ul>
-        <li><a href="#generate-the-html-for-the-new-site">Generate the HTML For the New Site</a></li>
-        <li><a href="#test-the-new-site">Test the New Site</a></li>
-      </ul>
-    </li>
-    <li><a href="#create-a-new-theme">Create a New Theme</a>
-      <ul>
-        <li><a href="#create-a-skeleton">Create a Skeleton</a></li>
-        <li><a href="#update-the-configuration-file-to-use-the-theme">Update the Configuration File to Use the Theme</a></li>
-        <li><a href="#generate-the-site">Generate the Site</a></li>
-      </ul>
-    </li>
-    <li><a href="#the-theme-development-cycle">The Theme Development Cycle</a>
-      <ul>
-        <li><a href="#purge-the-public-directory">Purge the public/ Directory</a></li>
-        <li><a href="#hugos-watch-option">Hugo&rsquo;s Watch Option</a></li>
-        <li><a href="#live-reload">Live Reload</a></li>
-        <li><a href="#development-commands">Development Commands</a></li>
-      </ul>
-    </li>
-    <li><a href="#update-the-home-page-template">Update the Home Page Template</a>
-      <ul>
-        <li><a href="#make-a-static-home-page">Make a Static Home Page</a></li>
-        <li><a href="#build-a-dynamic-home-page">Build a &ldquo;Dynamic&rdquo; Home Page</a></li>
-        <li><a href="#list-and-single-templates">List and Single Templates</a></li>
-        <li><a href="#add-content-to-the-homepage">Add Content to the Homepage</a></li>
-        <li><a href="#add-content-to-the-posts">Add Content to the Posts</a></li>
-        <li><a href="#linking-to-content">Linking to Content</a></li>
-        <li><a href="#create-a-post-listing">Create a Post Listing</a></li>
-      </ul>
-    </li>
-    <li><a href="#creating-top-level-pages">Creating Top Level Pages</a></li>
-    <li><a href="#sharing-templates">Sharing Templates</a>
-      <ul>
-        <li><a href="#create-the-header-and-footer-partials">Create the Header and Footer Partials</a></li>
-        <li><a href="#update-the-home-page-template-to-use-the-partials">Update the Home Page Template to Use the Partials</a></li>
-        <li><a href="#update-the-default-single-template-to-use-the-partials">Update the Default Single Template to Use the Partials</a></li>
-      </ul>
-    </li>
-    <li><a href="#add-date-published-to-posts">Add “Date Published” to Posts</a>
-      <ul>
-        <li><a href="#add-date-published-to-the-template">Add “Date Published” to the Template</a></li>
-        <li><a href="#dont-repeat-yourself">Don&rsquo;t Repeat Yourself</a></li>
-      </ul>
-    </li>
-  </ul>
-</nav>
-      </div>
-    </nav>
-  
+  <time datetime="2021-10-22T17:12:11&#43;07:00">October 22, 2021</time>
 
-  
   <h2 id="introduction">Introduction</h2>
 <p>This tutorial will show you how to create a simple theme in Hugo. I assume that you are familiar with HTML, the bash command line, and that you are comfortable using Markdown to format content. I&rsquo;ll explain how Hugo uses templates and how you can organize your templates to create a theme. I won&rsquo;t cover using CSS to style your theme.</p>
 <p>We&rsquo;ll start with creating a new site with a very basic template. Then we&rsquo;ll add in a few pages and posts. With small variations on that, you will be able to create many different types of web sites.</p>
@@ -213,75 +142,75 @@
 <h2 id="create-a-new-site">Create a New Site</h2>
 <p>Let&rsquo;s use Hugo to create a new web site. I&rsquo;m a Mac user, so I&rsquo;ll create mine in my home directory, in the Sites folder. If you&rsquo;re using Linux, you might have to create the folder first.</p>
 <p>The &ldquo;new site&rdquo; command will create a skeleton of a site. It will give you the basic directory structure and a useable configuration file.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>$ hugo new site ~/Sites/zafta
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#433e56;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>$ hugo new site ~/Sites/zafta
 </span></span><span style="display:flex;"><span>$ cd ~/Sites/zafta
 </span></span><span style="display:flex;"><span>$ ls -l
-</span></span><span style="display:flex;"><span>total <span style="color:#ae81ff">8</span>
-</span></span><span style="display:flex;"><span>drwxr-xr-x  <span style="color:#ae81ff">7</span> quoha  staff  <span style="color:#ae81ff">238</span> Sep <span style="color:#ae81ff">29</span> 16:49 .
-</span></span><span style="display:flex;"><span>drwxr-xr-x  <span style="color:#ae81ff">3</span> quoha  staff  <span style="color:#ae81ff">102</span> Sep <span style="color:#ae81ff">29</span> 16:49 ..
-</span></span><span style="display:flex;"><span>drwxr-xr-x  <span style="color:#ae81ff">2</span> quoha  staff   <span style="color:#ae81ff">68</span> Sep <span style="color:#ae81ff">29</span> 16:49 archetypes
-</span></span><span style="display:flex;"><span>-rw-r--r--  <span style="color:#ae81ff">1</span> quoha  staff   <span style="color:#ae81ff">82</span> Sep <span style="color:#ae81ff">29</span> 16:49 config.toml
-</span></span><span style="display:flex;"><span>drwxr-xr-x  <span style="color:#ae81ff">2</span> quoha  staff   <span style="color:#ae81ff">68</span> Sep <span style="color:#ae81ff">29</span> 16:49 content
-</span></span><span style="display:flex;"><span>drwxr-xr-x  <span style="color:#ae81ff">2</span> quoha  staff   <span style="color:#ae81ff">68</span> Sep <span style="color:#ae81ff">29</span> 16:49 layouts
-</span></span><span style="display:flex;"><span>drwxr-xr-x  <span style="color:#ae81ff">2</span> quoha  staff   <span style="color:#ae81ff">68</span> Sep <span style="color:#ae81ff">29</span> 16:49 static
+</span></span><span style="display:flex;"><span>total <span style="color:#c5a3ff">8</span>
+</span></span><span style="display:flex;"><span>drwxr-xr-x  <span style="color:#c5a3ff">7</span> quoha  staff  <span style="color:#c5a3ff">238</span> Sep <span style="color:#c5a3ff">29</span> 16:49 .
+</span></span><span style="display:flex;"><span>drwxr-xr-x  <span style="color:#c5a3ff">3</span> quoha  staff  <span style="color:#c5a3ff">102</span> Sep <span style="color:#c5a3ff">29</span> 16:49 ..
+</span></span><span style="display:flex;"><span>drwxr-xr-x  <span style="color:#c5a3ff">2</span> quoha  staff   <span style="color:#c5a3ff">68</span> Sep <span style="color:#c5a3ff">29</span> 16:49 archetypes
+</span></span><span style="display:flex;"><span>-rw-r--r--  <span style="color:#c5a3ff">1</span> quoha  staff   <span style="color:#c5a3ff">82</span> Sep <span style="color:#c5a3ff">29</span> 16:49 config.toml
+</span></span><span style="display:flex;"><span>drwxr-xr-x  <span style="color:#c5a3ff">2</span> quoha  staff   <span style="color:#c5a3ff">68</span> Sep <span style="color:#c5a3ff">29</span> 16:49 content
+</span></span><span style="display:flex;"><span>drwxr-xr-x  <span style="color:#c5a3ff">2</span> quoha  staff   <span style="color:#c5a3ff">68</span> Sep <span style="color:#c5a3ff">29</span> 16:49 layouts
+</span></span><span style="display:flex;"><span>drwxr-xr-x  <span style="color:#c5a3ff">2</span> quoha  staff   <span style="color:#c5a3ff">68</span> Sep <span style="color:#c5a3ff">29</span> 16:49 static
 </span></span><span style="display:flex;"><span>$
 </span></span></code></pre></div><p>Take a look in the content/ directory to confirm that it is empty.</p>
 <p>The other directories (archetypes/, layouts/, and static/) are used when customizing a theme. That&rsquo;s a topic for a different tutorial, so please ignore them for now.</p>
 <h3 id="generate-the-html-for-the-new-site">Generate the HTML For the New Site</h3>
 <p>Running the <code>hugo</code> command with no options will read all the available content and generate the HTML files. It will also copy all static files (that&rsquo;s everything that&rsquo;s not content). Since we have an empty site, it won&rsquo;t do much, but it will do it very quickly.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>$ hugo --verbose
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#433e56;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>$ hugo --verbose
 </span></span><span style="display:flex;"><span>INFO: 2014/09/29 Using config file: config.toml
 </span></span><span style="display:flex;"><span>INFO: 2014/09/29 syncing from /Users/quoha/Sites/zafta/static/ to /Users/quoha/Sites/zafta/public/
-</span></span><span style="display:flex;"><span>WARN: 2014/09/29 Unable to locate layout: <span style="color:#f92672">[</span>index.html _default/list.html _default/single.html<span style="color:#f92672">]</span>
-</span></span><span style="display:flex;"><span>WARN: 2014/09/29 Unable to locate layout: <span style="color:#f92672">[</span>404.html<span style="color:#f92672">]</span>
-</span></span><span style="display:flex;"><span><span style="color:#ae81ff">0</span> draft content
-</span></span><span style="display:flex;"><span><span style="color:#ae81ff">0</span> future content
-</span></span><span style="display:flex;"><span><span style="color:#ae81ff">0</span> pages created
-</span></span><span style="display:flex;"><span><span style="color:#ae81ff">0</span> tags created
-</span></span><span style="display:flex;"><span><span style="color:#ae81ff">0</span> categories created
-</span></span><span style="display:flex;"><span>in <span style="color:#ae81ff">2</span> ms
+</span></span><span style="display:flex;"><span>WARN: 2014/09/29 Unable to locate layout: <span style="color:#ffb8d1">[</span>index.html _default/list.html _default/single.html<span style="color:#ffb8d1">]</span>
+</span></span><span style="display:flex;"><span>WARN: 2014/09/29 Unable to locate layout: <span style="color:#ffb8d1">[</span>404.html<span style="color:#ffb8d1">]</span>
+</span></span><span style="display:flex;"><span><span style="color:#c5a3ff">0</span> draft content
+</span></span><span style="display:flex;"><span><span style="color:#c5a3ff">0</span> future content
+</span></span><span style="display:flex;"><span><span style="color:#c5a3ff">0</span> pages created
+</span></span><span style="display:flex;"><span><span style="color:#c5a3ff">0</span> tags created
+</span></span><span style="display:flex;"><span><span style="color:#c5a3ff">0</span> categories created
+</span></span><span style="display:flex;"><span>in <span style="color:#c5a3ff">2</span> ms
 </span></span><span style="display:flex;"><span>$
 </span></span></code></pre></div><p>The &ldquo;<code>--verbose</code>&rdquo; flag gives extra information that will be helpful when we build the template. Every line of the output that starts with &ldquo;INFO:&rdquo; or &ldquo;WARN:&rdquo; is present because we used that flag. The lines that start with &ldquo;WARN:&rdquo; are warning messages. We&rsquo;ll go over them later.</p>
 <p>We can verify that the command worked by looking at the directory again.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ ls -l
-</span></span><span style="display:flex;"><span>total <span style="color:#ae81ff">8</span>
-</span></span><span style="display:flex;"><span>drwxr-xr-x  <span style="color:#ae81ff">2</span> quoha  staff   <span style="color:#ae81ff">68</span> Sep <span style="color:#ae81ff">29</span> 16:49 archetypes
-</span></span><span style="display:flex;"><span>-rw-r--r--  <span style="color:#ae81ff">1</span> quoha  staff   <span style="color:#ae81ff">82</span> Sep <span style="color:#ae81ff">29</span> 16:49 config.toml
-</span></span><span style="display:flex;"><span>drwxr-xr-x  <span style="color:#ae81ff">2</span> quoha  staff   <span style="color:#ae81ff">68</span> Sep <span style="color:#ae81ff">29</span> 16:49 content
-</span></span><span style="display:flex;"><span>drwxr-xr-x  <span style="color:#ae81ff">2</span> quoha  staff   <span style="color:#ae81ff">68</span> Sep <span style="color:#ae81ff">29</span> 16:49 layouts
-</span></span><span style="display:flex;"><span>drwxr-xr-x  <span style="color:#ae81ff">4</span> quoha  staff  <span style="color:#ae81ff">136</span> Sep <span style="color:#ae81ff">29</span> 17:02 public
-</span></span><span style="display:flex;"><span>drwxr-xr-x  <span style="color:#ae81ff">2</span> quoha  staff   <span style="color:#ae81ff">68</span> Sep <span style="color:#ae81ff">29</span> 16:49 static
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#433e56;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ ls -l
+</span></span><span style="display:flex;"><span>total <span style="color:#c5a3ff">8</span>
+</span></span><span style="display:flex;"><span>drwxr-xr-x  <span style="color:#c5a3ff">2</span> quoha  staff   <span style="color:#c5a3ff">68</span> Sep <span style="color:#c5a3ff">29</span> 16:49 archetypes
+</span></span><span style="display:flex;"><span>-rw-r--r--  <span style="color:#c5a3ff">1</span> quoha  staff   <span style="color:#c5a3ff">82</span> Sep <span style="color:#c5a3ff">29</span> 16:49 config.toml
+</span></span><span style="display:flex;"><span>drwxr-xr-x  <span style="color:#c5a3ff">2</span> quoha  staff   <span style="color:#c5a3ff">68</span> Sep <span style="color:#c5a3ff">29</span> 16:49 content
+</span></span><span style="display:flex;"><span>drwxr-xr-x  <span style="color:#c5a3ff">2</span> quoha  staff   <span style="color:#c5a3ff">68</span> Sep <span style="color:#c5a3ff">29</span> 16:49 layouts
+</span></span><span style="display:flex;"><span>drwxr-xr-x  <span style="color:#c5a3ff">4</span> quoha  staff  <span style="color:#c5a3ff">136</span> Sep <span style="color:#c5a3ff">29</span> 17:02 public
+</span></span><span style="display:flex;"><span>drwxr-xr-x  <span style="color:#c5a3ff">2</span> quoha  staff   <span style="color:#c5a3ff">68</span> Sep <span style="color:#c5a3ff">29</span> 16:49 static
 </span></span><span style="display:flex;"><span>$
 </span></span></code></pre></div><p>See that new public/ directory? Hugo placed all generated content there. When you&rsquo;re ready to publish your web site, that&rsquo;s the place to start. For now, though, let&rsquo;s just confirm that we have what we&rsquo;d expect from a site with no content.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ ls -l public
-</span></span><span style="display:flex;"><span>total <span style="color:#ae81ff">16</span>
-</span></span><span style="display:flex;"><span>-rw-r--r--  <span style="color:#ae81ff">1</span> quoha  staff  <span style="color:#ae81ff">416</span> Sep <span style="color:#ae81ff">29</span> 17:02 index.xml
-</span></span><span style="display:flex;"><span>-rw-r--r--  <span style="color:#ae81ff">1</span> quoha  staff  <span style="color:#ae81ff">262</span> Sep <span style="color:#ae81ff">29</span> 17:02 sitemap.xml
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#433e56;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ ls -l public
+</span></span><span style="display:flex;"><span>total <span style="color:#c5a3ff">16</span>
+</span></span><span style="display:flex;"><span>-rw-r--r--  <span style="color:#c5a3ff">1</span> quoha  staff  <span style="color:#c5a3ff">416</span> Sep <span style="color:#c5a3ff">29</span> 17:02 index.xml
+</span></span><span style="display:flex;"><span>-rw-r--r--  <span style="color:#c5a3ff">1</span> quoha  staff  <span style="color:#c5a3ff">262</span> Sep <span style="color:#c5a3ff">29</span> 17:02 sitemap.xml
 </span></span><span style="display:flex;"><span>$
 </span></span></code></pre></div><p>Hugo created two XML files, which is standard, but there are no HTML files.</p>
 <h3 id="test-the-new-site">Test the New Site</h3>
 <p>Verify that you can run the built-in web server. It will dramatically shorten your development cycle if you do. Start it by running the &ldquo;server&rdquo; command. If it is successful, you will see output similar to the following:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ hugo server --verbose
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#433e56;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ hugo server --verbose
 </span></span><span style="display:flex;"><span>INFO: 2014/09/29 Using config file: /Users/quoha/Sites/zafta/config.toml
 </span></span><span style="display:flex;"><span>INFO: 2014/09/29 syncing from /Users/quoha/Sites/zafta/static/ to /Users/quoha/Sites/zafta/public/
-</span></span><span style="display:flex;"><span>WARN: 2014/09/29 Unable to locate layout: <span style="color:#f92672">[</span>index.html _default/list.html _default/single.html<span style="color:#f92672">]</span>
-</span></span><span style="display:flex;"><span>WARN: 2014/09/29 Unable to locate layout: <span style="color:#f92672">[</span>404.html<span style="color:#f92672">]</span>
-</span></span><span style="display:flex;"><span><span style="color:#ae81ff">0</span> draft content
-</span></span><span style="display:flex;"><span><span style="color:#ae81ff">0</span> future content
-</span></span><span style="display:flex;"><span><span style="color:#ae81ff">0</span> pages created
-</span></span><span style="display:flex;"><span><span style="color:#ae81ff">0</span> tags created
-</span></span><span style="display:flex;"><span><span style="color:#ae81ff">0</span> categories created
-</span></span><span style="display:flex;"><span>in <span style="color:#ae81ff">2</span> ms
+</span></span><span style="display:flex;"><span>WARN: 2014/09/29 Unable to locate layout: <span style="color:#ffb8d1">[</span>index.html _default/list.html _default/single.html<span style="color:#ffb8d1">]</span>
+</span></span><span style="display:flex;"><span>WARN: 2014/09/29 Unable to locate layout: <span style="color:#ffb8d1">[</span>404.html<span style="color:#ffb8d1">]</span>
+</span></span><span style="display:flex;"><span><span style="color:#c5a3ff">0</span> draft content
+</span></span><span style="display:flex;"><span><span style="color:#c5a3ff">0</span> future content
+</span></span><span style="display:flex;"><span><span style="color:#c5a3ff">0</span> pages created
+</span></span><span style="display:flex;"><span><span style="color:#c5a3ff">0</span> tags created
+</span></span><span style="display:flex;"><span><span style="color:#c5a3ff">0</span> categories created
+</span></span><span style="display:flex;"><span>in <span style="color:#c5a3ff">2</span> ms
 </span></span><span style="display:flex;"><span>Serving pages from /Users/quoha/Sites/zafta/public
 </span></span><span style="display:flex;"><span>Web Server is available at http://localhost:1313
 </span></span><span style="display:flex;"><span>Press Ctrl+C to stop
 </span></span></code></pre></div><p>Connect to the listed URL (it&rsquo;s on the line that starts with &ldquo;Web Server&rdquo;). If everything is working correctly, you should get a page that shows the following:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>index.xml
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#433e56;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>index.xml
 </span></span><span style="display:flex;"><span>sitemap.xml
 </span></span></code></pre></div><p>That&rsquo;s a listing of your public/ directory. Hugo didn&rsquo;t create a home page because our site has no content. When there&rsquo;s no index.html file in a directory, the server lists the files in the directory, which is what you should see in your browser.</p>
 <p>Let’s go back and look at those warnings again.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>WARN: 2014/09/29 Unable to locate layout: <span style="color:#f92672">[</span>index.html _default/list.html _default/single.html<span style="color:#f92672">]</span>
-</span></span><span style="display:flex;"><span>WARN: 2014/09/29 Unable to locate layout: <span style="color:#f92672">[</span>404.html<span style="color:#f92672">]</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#433e56;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>WARN: 2014/09/29 Unable to locate layout: <span style="color:#ffb8d1">[</span>index.html _default/list.html _default/single.html<span style="color:#ffb8d1">]</span>
+</span></span><span style="display:flex;"><span>WARN: 2014/09/29 Unable to locate layout: <span style="color:#ffb8d1">[</span>404.html<span style="color:#ffb8d1">]</span>
 </span></span></code></pre></div><p>That second warning is easier to explain. We haven’t created a template to be used to generate “page not found errors.” The 404 message is a topic for a separate tutorial.</p>
 <p>Now for the first warning. It is for the home page. You can tell because the first layout that it looked for was “index.html.” That’s only used by the home page.</p>
 <p>I like that the verbose flag causes Hugo to list the files that it&rsquo;s searching for. For the home page, they are index.html, _default/list.html, and_default/single.html. There are some rules that we&rsquo;ll cover later that explain the names and paths. For now, just remember that Hugo couldn&rsquo;t find a template for the home page and it told you so.</p>
@@ -292,84 +221,84 @@
 <p>All themes have opinions on content and layout. For example, Zafta uses &ldquo;post&rdquo; over &ldquo;blog&rdquo;. Strong opinions make for simpler templates but differing opinions make it tougher to use themes. When you build a theme, consider using the terms that other themes do.</p>
 <h3 id="create-a-skeleton">Create a Skeleton</h3>
 <p>Use the hugo &ldquo;new&rdquo; command to create the skeleton of a theme. This creates the directory structure and places empty files for you to fill out.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ hugo new theme zafta
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#433e56;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ hugo new theme zafta
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>$ ls -l
-</span></span><span style="display:flex;"><span>total <span style="color:#ae81ff">8</span>
-</span></span><span style="display:flex;"><span>drwxr-xr-x  <span style="color:#ae81ff">2</span> quoha  staff   <span style="color:#ae81ff">68</span> Sep <span style="color:#ae81ff">29</span> 16:49 archetypes
-</span></span><span style="display:flex;"><span>-rw-r--r--  <span style="color:#ae81ff">1</span> quoha  staff   <span style="color:#ae81ff">82</span> Sep <span style="color:#ae81ff">29</span> 16:49 config.toml
-</span></span><span style="display:flex;"><span>drwxr-xr-x  <span style="color:#ae81ff">2</span> quoha  staff   <span style="color:#ae81ff">68</span> Sep <span style="color:#ae81ff">29</span> 16:49 content
-</span></span><span style="display:flex;"><span>drwxr-xr-x  <span style="color:#ae81ff">2</span> quoha  staff   <span style="color:#ae81ff">68</span> Sep <span style="color:#ae81ff">29</span> 16:49 layouts
-</span></span><span style="display:flex;"><span>drwxr-xr-x  <span style="color:#ae81ff">4</span> quoha  staff  <span style="color:#ae81ff">136</span> Sep <span style="color:#ae81ff">29</span> 17:02 public
-</span></span><span style="display:flex;"><span>drwxr-xr-x  <span style="color:#ae81ff">2</span> quoha  staff   <span style="color:#ae81ff">68</span> Sep <span style="color:#ae81ff">29</span> 16:49 static
-</span></span><span style="display:flex;"><span>drwxr-xr-x  <span style="color:#ae81ff">3</span> quoha  staff  <span style="color:#ae81ff">102</span> Sep <span style="color:#ae81ff">29</span> 17:31 themes
+</span></span><span style="display:flex;"><span>total <span style="color:#c5a3ff">8</span>
+</span></span><span style="display:flex;"><span>drwxr-xr-x  <span style="color:#c5a3ff">2</span> quoha  staff   <span style="color:#c5a3ff">68</span> Sep <span style="color:#c5a3ff">29</span> 16:49 archetypes
+</span></span><span style="display:flex;"><span>-rw-r--r--  <span style="color:#c5a3ff">1</span> quoha  staff   <span style="color:#c5a3ff">82</span> Sep <span style="color:#c5a3ff">29</span> 16:49 config.toml
+</span></span><span style="display:flex;"><span>drwxr-xr-x  <span style="color:#c5a3ff">2</span> quoha  staff   <span style="color:#c5a3ff">68</span> Sep <span style="color:#c5a3ff">29</span> 16:49 content
+</span></span><span style="display:flex;"><span>drwxr-xr-x  <span style="color:#c5a3ff">2</span> quoha  staff   <span style="color:#c5a3ff">68</span> Sep <span style="color:#c5a3ff">29</span> 16:49 layouts
+</span></span><span style="display:flex;"><span>drwxr-xr-x  <span style="color:#c5a3ff">4</span> quoha  staff  <span style="color:#c5a3ff">136</span> Sep <span style="color:#c5a3ff">29</span> 17:02 public
+</span></span><span style="display:flex;"><span>drwxr-xr-x  <span style="color:#c5a3ff">2</span> quoha  staff   <span style="color:#c5a3ff">68</span> Sep <span style="color:#c5a3ff">29</span> 16:49 static
+</span></span><span style="display:flex;"><span>drwxr-xr-x  <span style="color:#c5a3ff">3</span> quoha  staff  <span style="color:#c5a3ff">102</span> Sep <span style="color:#c5a3ff">29</span> 17:31 themes
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>$ find themes -type f | xargs ls -l
-</span></span><span style="display:flex;"><span>-rw-r--r--  <span style="color:#ae81ff">1</span> quoha  staff  <span style="color:#ae81ff">1081</span> Sep <span style="color:#ae81ff">29</span> 17:31 themes/zafta/LICENSE.md
-</span></span><span style="display:flex;"><span>-rw-r--r--  <span style="color:#ae81ff">1</span> quoha  staff     <span style="color:#ae81ff">0</span> Sep <span style="color:#ae81ff">29</span> 17:31 themes/zafta/archetypes/default.md
-</span></span><span style="display:flex;"><span>-rw-r--r--  <span style="color:#ae81ff">1</span> quoha  staff     <span style="color:#ae81ff">0</span> Sep <span style="color:#ae81ff">29</span> 17:31 themes/zafta/layouts/_default/list.html
-</span></span><span style="display:flex;"><span>-rw-r--r--  <span style="color:#ae81ff">1</span> quoha  staff     <span style="color:#ae81ff">0</span> Sep <span style="color:#ae81ff">29</span> 17:31 themes/zafta/layouts/_default/single.html
-</span></span><span style="display:flex;"><span>-rw-r--r--  <span style="color:#ae81ff">1</span> quoha  staff     <span style="color:#ae81ff">0</span> Sep <span style="color:#ae81ff">29</span> 17:31 themes/zafta/layouts/index.html
-</span></span><span style="display:flex;"><span>-rw-r--r--  <span style="color:#ae81ff">1</span> quoha  staff     <span style="color:#ae81ff">0</span> Sep <span style="color:#ae81ff">29</span> 17:31 themes/zafta/layouts/partials/footer.html
-</span></span><span style="display:flex;"><span>-rw-r--r--  <span style="color:#ae81ff">1</span> quoha  staff     <span style="color:#ae81ff">0</span> Sep <span style="color:#ae81ff">29</span> 17:31 themes/zafta/layouts/partials/header.html
-</span></span><span style="display:flex;"><span>-rw-r--r--  <span style="color:#ae81ff">1</span> quoha  staff    <span style="color:#ae81ff">93</span> Sep <span style="color:#ae81ff">29</span> 17:31 themes/zafta/theme.toml
+</span></span><span style="display:flex;"><span>-rw-r--r--  <span style="color:#c5a3ff">1</span> quoha  staff  <span style="color:#c5a3ff">1081</span> Sep <span style="color:#c5a3ff">29</span> 17:31 themes/zafta/LICENSE.md
+</span></span><span style="display:flex;"><span>-rw-r--r--  <span style="color:#c5a3ff">1</span> quoha  staff     <span style="color:#c5a3ff">0</span> Sep <span style="color:#c5a3ff">29</span> 17:31 themes/zafta/archetypes/default.md
+</span></span><span style="display:flex;"><span>-rw-r--r--  <span style="color:#c5a3ff">1</span> quoha  staff     <span style="color:#c5a3ff">0</span> Sep <span style="color:#c5a3ff">29</span> 17:31 themes/zafta/layouts/_default/list.html
+</span></span><span style="display:flex;"><span>-rw-r--r--  <span style="color:#c5a3ff">1</span> quoha  staff     <span style="color:#c5a3ff">0</span> Sep <span style="color:#c5a3ff">29</span> 17:31 themes/zafta/layouts/_default/single.html
+</span></span><span style="display:flex;"><span>-rw-r--r--  <span style="color:#c5a3ff">1</span> quoha  staff     <span style="color:#c5a3ff">0</span> Sep <span style="color:#c5a3ff">29</span> 17:31 themes/zafta/layouts/index.html
+</span></span><span style="display:flex;"><span>-rw-r--r--  <span style="color:#c5a3ff">1</span> quoha  staff     <span style="color:#c5a3ff">0</span> Sep <span style="color:#c5a3ff">29</span> 17:31 themes/zafta/layouts/partials/footer.html
+</span></span><span style="display:flex;"><span>-rw-r--r--  <span style="color:#c5a3ff">1</span> quoha  staff     <span style="color:#c5a3ff">0</span> Sep <span style="color:#c5a3ff">29</span> 17:31 themes/zafta/layouts/partials/header.html
+</span></span><span style="display:flex;"><span>-rw-r--r--  <span style="color:#c5a3ff">1</span> quoha  staff    <span style="color:#c5a3ff">93</span> Sep <span style="color:#c5a3ff">29</span> 17:31 themes/zafta/theme.toml
 </span></span><span style="display:flex;"><span>$
 </span></span></code></pre></div><p>The skeleton includes templates (the files ending in .html), license file, a description of your theme (the theme.toml file), and an empty archetype.</p>
 <p>Please take a minute to fill out the theme.toml and LICENSE.md files. They&rsquo;re optional, but if you&rsquo;re going to be distributing your theme, it tells the world who to praise (or blame). It&rsquo;s also nice to declare the license so that people will know how they can use the theme.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ vi themes/zafta/theme.toml
-</span></span><span style="display:flex;"><span>author: <span style="color:#e6db74">&#34;michael d henderson&#34;</span>
-</span></span><span style="display:flex;"><span>description: <span style="color:#e6db74">&#34;a minimal working template&#34;</span>
-</span></span><span style="display:flex;"><span>license: <span style="color:#e6db74">&#34;MIT&#34;</span>
-</span></span><span style="display:flex;"><span>name: <span style="color:#e6db74">&#34;zafta&#34;</span>
-</span></span><span style="display:flex;"><span>source_repo: <span style="color:#e6db74">&#34;&#34;</span>
-</span></span><span style="display:flex;"><span>tags: <span style="color:#f92672">[</span><span style="color:#e6db74">&#34;tags&#34;</span>, <span style="color:#e6db74">&#34;categories&#34;</span><span style="color:#f92672">]</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#433e56;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ vi themes/zafta/theme.toml
+</span></span><span style="display:flex;"><span>author: <span style="color:#1bc5e0">&#34;michael d henderson&#34;</span>
+</span></span><span style="display:flex;"><span>description: <span style="color:#1bc5e0">&#34;a minimal working template&#34;</span>
+</span></span><span style="display:flex;"><span>license: <span style="color:#1bc5e0">&#34;MIT&#34;</span>
+</span></span><span style="display:flex;"><span>name: <span style="color:#1bc5e0">&#34;zafta&#34;</span>
+</span></span><span style="display:flex;"><span>source_repo: <span style="color:#1bc5e0">&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>tags: <span style="color:#ffb8d1">[</span><span style="color:#1bc5e0">&#34;tags&#34;</span>, <span style="color:#1bc5e0">&#34;categories&#34;</span><span style="color:#ffb8d1">]</span>
 </span></span><span style="display:flex;"><span>:wq
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">## also edit themes/zafta/LICENSE.md and change</span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">## the bit that says &#34;YOUR_NAME_HERE&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#b0bec5">## also edit themes/zafta/LICENSE.md and change</span>
+</span></span><span style="display:flex;"><span><span style="color:#b0bec5">## the bit that says &#34;YOUR_NAME_HERE&#34;</span>
 </span></span></code></pre></div><p>Note that the the skeleton&rsquo;s template files are empty. Don&rsquo;t worry, we&rsquo;ll be changing that shortly.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ find themes/zafta -name <span style="color:#e6db74">&#39;*.html&#39;</span> | xargs ls -l
-</span></span><span style="display:flex;"><span>-rw-r--r--  <span style="color:#ae81ff">1</span> quoha  staff  <span style="color:#ae81ff">0</span> Sep <span style="color:#ae81ff">29</span> 17:31 themes/zafta/layouts/_default/list.html
-</span></span><span style="display:flex;"><span>-rw-r--r--  <span style="color:#ae81ff">1</span> quoha  staff  <span style="color:#ae81ff">0</span> Sep <span style="color:#ae81ff">29</span> 17:31 themes/zafta/layouts/_default/single.html
-</span></span><span style="display:flex;"><span>-rw-r--r--  <span style="color:#ae81ff">1</span> quoha  staff  <span style="color:#ae81ff">0</span> Sep <span style="color:#ae81ff">29</span> 17:31 themes/zafta/layouts/index.html
-</span></span><span style="display:flex;"><span>-rw-r--r--  <span style="color:#ae81ff">1</span> quoha  staff  <span style="color:#ae81ff">0</span> Sep <span style="color:#ae81ff">29</span> 17:31 themes/zafta/layouts/partials/footer.html
-</span></span><span style="display:flex;"><span>-rw-r--r--  <span style="color:#ae81ff">1</span> quoha  staff  <span style="color:#ae81ff">0</span> Sep <span style="color:#ae81ff">29</span> 17:31 themes/zafta/layouts/partials/header.html
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#433e56;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ find themes/zafta -name <span style="color:#1bc5e0">&#39;*.html&#39;</span> | xargs ls -l
+</span></span><span style="display:flex;"><span>-rw-r--r--  <span style="color:#c5a3ff">1</span> quoha  staff  <span style="color:#c5a3ff">0</span> Sep <span style="color:#c5a3ff">29</span> 17:31 themes/zafta/layouts/_default/list.html
+</span></span><span style="display:flex;"><span>-rw-r--r--  <span style="color:#c5a3ff">1</span> quoha  staff  <span style="color:#c5a3ff">0</span> Sep <span style="color:#c5a3ff">29</span> 17:31 themes/zafta/layouts/_default/single.html
+</span></span><span style="display:flex;"><span>-rw-r--r--  <span style="color:#c5a3ff">1</span> quoha  staff  <span style="color:#c5a3ff">0</span> Sep <span style="color:#c5a3ff">29</span> 17:31 themes/zafta/layouts/index.html
+</span></span><span style="display:flex;"><span>-rw-r--r--  <span style="color:#c5a3ff">1</span> quoha  staff  <span style="color:#c5a3ff">0</span> Sep <span style="color:#c5a3ff">29</span> 17:31 themes/zafta/layouts/partials/footer.html
+</span></span><span style="display:flex;"><span>-rw-r--r--  <span style="color:#c5a3ff">1</span> quoha  staff  <span style="color:#c5a3ff">0</span> Sep <span style="color:#c5a3ff">29</span> 17:31 themes/zafta/layouts/partials/header.html
 </span></span><span style="display:flex;"><span>$
 </span></span></code></pre></div><h3 id="update-the-configuration-file-to-use-the-theme">Update the Configuration File to Use the Theme</h3>
 <p>Now that we&rsquo;ve got a theme to work with, it&rsquo;s a good idea to add the theme name to the configuration file. This is optional, because you can always add &ldquo;-t zafta&rdquo; on all your commands. I like to put it the configuration file because I like shorter command lines. If you don&rsquo;t put it in the configuration file or specify it on the command line, you won&rsquo;t use the template that you&rsquo;re expecting to.</p>
 <p>Edit the file to add the theme, add a title for the site, and specify that all of our content will use the TOML format.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ vi config.toml
-</span></span><span style="display:flex;"><span>theme: <span style="color:#e6db74">&#34;zafta&#34;</span>
-</span></span><span style="display:flex;"><span>baseurl: <span style="color:#e6db74">&#34;&#34;</span>
-</span></span><span style="display:flex;"><span>languageCode: <span style="color:#e6db74">&#34;en-us&#34;</span>
-</span></span><span style="display:flex;"><span>title: <span style="color:#e6db74">&#34;zafta - totally refreshing&#34;</span>
-</span></span><span style="display:flex;"><span>MetaDataFormat: <span style="color:#e6db74">&#34;toml&#34;</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#433e56;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ vi config.toml
+</span></span><span style="display:flex;"><span>theme: <span style="color:#1bc5e0">&#34;zafta&#34;</span>
+</span></span><span style="display:flex;"><span>baseurl: <span style="color:#1bc5e0">&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>languageCode: <span style="color:#1bc5e0">&#34;en-us&#34;</span>
+</span></span><span style="display:flex;"><span>title: <span style="color:#1bc5e0">&#34;zafta - totally refreshing&#34;</span>
+</span></span><span style="display:flex;"><span>MetaDataFormat: <span style="color:#1bc5e0">&#34;toml&#34;</span>
 </span></span><span style="display:flex;"><span>:wq
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>$
 </span></span></code></pre></div><h3 id="generate-the-site">Generate the Site</h3>
 <p>Now that we have an empty theme, let&rsquo;s generate the site again.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ hugo --verbose
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#433e56;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ hugo --verbose
 </span></span><span style="display:flex;"><span>INFO: 2014/09/29 Using config file: /Users/quoha/Sites/zafta/config.toml
 </span></span><span style="display:flex;"><span>INFO: 2014/09/29 syncing from /Users/quoha/Sites/zafta/themes/zafta/static/ to /Users/quoha/Sites/zafta/public/
 </span></span><span style="display:flex;"><span>INFO: 2014/09/29 syncing from /Users/quoha/Sites/zafta/static/ to /Users/quoha/Sites/zafta/public/
-</span></span><span style="display:flex;"><span>WARN: 2014/09/29 Unable to locate layout: <span style="color:#f92672">[</span>404.html theme/404.html<span style="color:#f92672">]</span>
-</span></span><span style="display:flex;"><span><span style="color:#ae81ff">0</span> draft content
-</span></span><span style="display:flex;"><span><span style="color:#ae81ff">0</span> future content
-</span></span><span style="display:flex;"><span><span style="color:#ae81ff">0</span> pages created
-</span></span><span style="display:flex;"><span><span style="color:#ae81ff">0</span> tags created
-</span></span><span style="display:flex;"><span><span style="color:#ae81ff">0</span> categories created
-</span></span><span style="display:flex;"><span>in <span style="color:#ae81ff">2</span> ms
+</span></span><span style="display:flex;"><span>WARN: 2014/09/29 Unable to locate layout: <span style="color:#ffb8d1">[</span>404.html theme/404.html<span style="color:#ffb8d1">]</span>
+</span></span><span style="display:flex;"><span><span style="color:#c5a3ff">0</span> draft content
+</span></span><span style="display:flex;"><span><span style="color:#c5a3ff">0</span> future content
+</span></span><span style="display:flex;"><span><span style="color:#c5a3ff">0</span> pages created
+</span></span><span style="display:flex;"><span><span style="color:#c5a3ff">0</span> tags created
+</span></span><span style="display:flex;"><span><span style="color:#c5a3ff">0</span> categories created
+</span></span><span style="display:flex;"><span>in <span style="color:#c5a3ff">2</span> ms
 </span></span><span style="display:flex;"><span>$
 </span></span></code></pre></div><p>Did you notice that the output is different? The warning message for the home page has disappeared and we have an additional information line saying that Hugo is syncing from the theme&rsquo;s directory.</p>
 <p>Let&rsquo;s check the public/ directory to see what Hugo&rsquo;s created.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ ls -l public
-</span></span><span style="display:flex;"><span>total <span style="color:#ae81ff">16</span>
-</span></span><span style="display:flex;"><span>drwxr-xr-x  <span style="color:#ae81ff">2</span> quoha  staff   <span style="color:#ae81ff">68</span> Sep <span style="color:#ae81ff">29</span> 17:56 css
-</span></span><span style="display:flex;"><span>-rw-r--r--  <span style="color:#ae81ff">1</span> quoha  staff    <span style="color:#ae81ff">0</span> Sep <span style="color:#ae81ff">29</span> 17:56 index.html
-</span></span><span style="display:flex;"><span>-rw-r--r--  <span style="color:#ae81ff">1</span> quoha  staff  <span style="color:#ae81ff">407</span> Sep <span style="color:#ae81ff">29</span> 17:56 index.xml
-</span></span><span style="display:flex;"><span>drwxr-xr-x  <span style="color:#ae81ff">2</span> quoha  staff   <span style="color:#ae81ff">68</span> Sep <span style="color:#ae81ff">29</span> 17:56 js
-</span></span><span style="display:flex;"><span>-rw-r--r--  <span style="color:#ae81ff">1</span> quoha  staff  <span style="color:#ae81ff">243</span> Sep <span style="color:#ae81ff">29</span> 17:56 sitemap.xml
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#433e56;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ ls -l public
+</span></span><span style="display:flex;"><span>total <span style="color:#c5a3ff">16</span>
+</span></span><span style="display:flex;"><span>drwxr-xr-x  <span style="color:#c5a3ff">2</span> quoha  staff   <span style="color:#c5a3ff">68</span> Sep <span style="color:#c5a3ff">29</span> 17:56 css
+</span></span><span style="display:flex;"><span>-rw-r--r--  <span style="color:#c5a3ff">1</span> quoha  staff    <span style="color:#c5a3ff">0</span> Sep <span style="color:#c5a3ff">29</span> 17:56 index.html
+</span></span><span style="display:flex;"><span>-rw-r--r--  <span style="color:#c5a3ff">1</span> quoha  staff  <span style="color:#c5a3ff">407</span> Sep <span style="color:#c5a3ff">29</span> 17:56 index.xml
+</span></span><span style="display:flex;"><span>drwxr-xr-x  <span style="color:#c5a3ff">2</span> quoha  staff   <span style="color:#c5a3ff">68</span> Sep <span style="color:#c5a3ff">29</span> 17:56 js
+</span></span><span style="display:flex;"><span>-rw-r--r--  <span style="color:#c5a3ff">1</span> quoha  staff  <span style="color:#c5a3ff">243</span> Sep <span style="color:#c5a3ff">29</span> 17:56 sitemap.xml
 </span></span><span style="display:flex;"><span>$
 </span></span></code></pre></div><p>Notice four things:</p>
 <ol>
@@ -380,25 +309,25 @@
 </ol>
 <h4 id="el-home-page">El Home Page</h4>
 <p>Hugo supports many different types of templates. The home page is special because it gets its own type of template and its own template file. The file, layouts/index.html, is used to generate the HTML for the home page. The Hugo documentation says that this is the only required template, but that depends. Hugo&rsquo;s warning message shows that it looks for three different templates:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>WARN: 2014/09/29 Unable to locate layout: <span style="color:#f92672">[</span>index.html _default/list.html _default/single.html<span style="color:#f92672">]</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#433e56;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>WARN: 2014/09/29 Unable to locate layout: <span style="color:#ffb8d1">[</span>index.html _default/list.html _default/single.html<span style="color:#ffb8d1">]</span>
 </span></span></code></pre></div><p>If it can&rsquo;t find any of these, it completely skips creating the home page. We noticed that when we built the site without having a theme installed.</p>
 <p>When Hugo created our theme, it created an empty home page template. Now, when we build the site, Hugo finds the template and uses it to generate the HTML for the home page. Since the template file is empty, the HTML file is empty, too. If the template had any rules in it, then Hugo would have used them to generate the home page.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ find . -name index.html | xargs ls -l
-</span></span><span style="display:flex;"><span>-rw-r--r--  <span style="color:#ae81ff">1</span> quoha  staff  <span style="color:#ae81ff">0</span> Sep <span style="color:#ae81ff">29</span> 20:21 ./public/index.html
-</span></span><span style="display:flex;"><span>-rw-r--r--  <span style="color:#ae81ff">1</span> quoha  staff  <span style="color:#ae81ff">0</span> Sep <span style="color:#ae81ff">29</span> 17:31 ./themes/zafta/layouts/index.html
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#433e56;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ find . -name index.html | xargs ls -l
+</span></span><span style="display:flex;"><span>-rw-r--r--  <span style="color:#c5a3ff">1</span> quoha  staff  <span style="color:#c5a3ff">0</span> Sep <span style="color:#c5a3ff">29</span> 20:21 ./public/index.html
+</span></span><span style="display:flex;"><span>-rw-r--r--  <span style="color:#c5a3ff">1</span> quoha  staff  <span style="color:#c5a3ff">0</span> Sep <span style="color:#c5a3ff">29</span> 17:31 ./themes/zafta/layouts/index.html
 </span></span><span style="display:flex;"><span>$
 </span></span></code></pre></div><h4 id="the-magic-of-static">The Magic of Static</h4>
 <p>Hugo does two things when generating the site. It uses templates to transform content into HTML and it copies static files into the site. Unlike content, static files are not transformed. They are copied exactly as they are.</p>
 <p>Hugo assumes that your site will use both CSS and JavaScript, so it creates directories in your theme to hold them. Remember opinions? Well, Hugo&rsquo;s opinion is that you&rsquo;ll store your CSS in a directory named css/ and your JavaScript in a directory named js/. If you don&rsquo;t like that, you can change the directory names in your theme directory or even delete them completely. Hugo&rsquo;s nice enough to offer its opinion, then behave nicely if you disagree.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ find themes/zafta -type d | xargs ls -ld
-</span></span><span style="display:flex;"><span>drwxr-xr-x  <span style="color:#ae81ff">7</span> quoha  staff  <span style="color:#ae81ff">238</span> Sep <span style="color:#ae81ff">29</span> 17:38 themes/zafta
-</span></span><span style="display:flex;"><span>drwxr-xr-x  <span style="color:#ae81ff">3</span> quoha  staff  <span style="color:#ae81ff">102</span> Sep <span style="color:#ae81ff">29</span> 17:31 themes/zafta/archetypes
-</span></span><span style="display:flex;"><span>drwxr-xr-x  <span style="color:#ae81ff">5</span> quoha  staff  <span style="color:#ae81ff">170</span> Sep <span style="color:#ae81ff">29</span> 17:31 themes/zafta/layouts
-</span></span><span style="display:flex;"><span>drwxr-xr-x  <span style="color:#ae81ff">4</span> quoha  staff  <span style="color:#ae81ff">136</span> Sep <span style="color:#ae81ff">29</span> 17:31 themes/zafta/layouts/_default
-</span></span><span style="display:flex;"><span>drwxr-xr-x  <span style="color:#ae81ff">4</span> quoha  staff  <span style="color:#ae81ff">136</span> Sep <span style="color:#ae81ff">29</span> 17:31 themes/zafta/layouts/partials
-</span></span><span style="display:flex;"><span>drwxr-xr-x  <span style="color:#ae81ff">4</span> quoha  staff  <span style="color:#ae81ff">136</span> Sep <span style="color:#ae81ff">29</span> 17:31 themes/zafta/static
-</span></span><span style="display:flex;"><span>drwxr-xr-x  <span style="color:#ae81ff">2</span> quoha  staff   <span style="color:#ae81ff">68</span> Sep <span style="color:#ae81ff">29</span> 17:31 themes/zafta/static/css
-</span></span><span style="display:flex;"><span>drwxr-xr-x  <span style="color:#ae81ff">2</span> quoha  staff   <span style="color:#ae81ff">68</span> Sep <span style="color:#ae81ff">29</span> 17:31 themes/zafta/static/js
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#433e56;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ find themes/zafta -type d | xargs ls -ld
+</span></span><span style="display:flex;"><span>drwxr-xr-x  <span style="color:#c5a3ff">7</span> quoha  staff  <span style="color:#c5a3ff">238</span> Sep <span style="color:#c5a3ff">29</span> 17:38 themes/zafta
+</span></span><span style="display:flex;"><span>drwxr-xr-x  <span style="color:#c5a3ff">3</span> quoha  staff  <span style="color:#c5a3ff">102</span> Sep <span style="color:#c5a3ff">29</span> 17:31 themes/zafta/archetypes
+</span></span><span style="display:flex;"><span>drwxr-xr-x  <span style="color:#c5a3ff">5</span> quoha  staff  <span style="color:#c5a3ff">170</span> Sep <span style="color:#c5a3ff">29</span> 17:31 themes/zafta/layouts
+</span></span><span style="display:flex;"><span>drwxr-xr-x  <span style="color:#c5a3ff">4</span> quoha  staff  <span style="color:#c5a3ff">136</span> Sep <span style="color:#c5a3ff">29</span> 17:31 themes/zafta/layouts/_default
+</span></span><span style="display:flex;"><span>drwxr-xr-x  <span style="color:#c5a3ff">4</span> quoha  staff  <span style="color:#c5a3ff">136</span> Sep <span style="color:#c5a3ff">29</span> 17:31 themes/zafta/layouts/partials
+</span></span><span style="display:flex;"><span>drwxr-xr-x  <span style="color:#c5a3ff">4</span> quoha  staff  <span style="color:#c5a3ff">136</span> Sep <span style="color:#c5a3ff">29</span> 17:31 themes/zafta/static
+</span></span><span style="display:flex;"><span>drwxr-xr-x  <span style="color:#c5a3ff">2</span> quoha  staff   <span style="color:#c5a3ff">68</span> Sep <span style="color:#c5a3ff">29</span> 17:31 themes/zafta/static/css
+</span></span><span style="display:flex;"><span>drwxr-xr-x  <span style="color:#c5a3ff">2</span> quoha  staff   <span style="color:#c5a3ff">68</span> Sep <span style="color:#c5a3ff">29</span> 17:31 themes/zafta/static/js
 </span></span><span style="display:flex;"><span>$
 </span></span></code></pre></div><h2 id="the-theme-development-cycle">The Theme Development Cycle</h2>
 <p>When you&rsquo;re working on a theme, you will make changes in the theme&rsquo;s directory, rebuild the site, and check your changes in the browser. Hugo makes this very easy:</p>
@@ -421,40 +350,40 @@
 <p>Hugo&rsquo;s built in web server supports live reload. As pages are saved on the server, the browser is told to refresh the page. Usually, this happens faster than you can say, &ldquo;Wow, that&rsquo;s totally amazing.&rdquo;</p>
 <h3 id="development-commands">Development Commands</h3>
 <p>Use the following commands as the basis for your workflow.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e">## purge old files. hugo will recreate the public directory.</span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">##</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#433e56;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#b0bec5">## purge old files. hugo will recreate the public directory.</span>
+</span></span><span style="display:flex;"><span><span style="color:#b0bec5">##</span>
 </span></span><span style="display:flex;"><span>$ rm -rf public
-</span></span><span style="display:flex;"><span><span style="color:#75715e">##</span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">## run hugo in watch mode</span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">##</span>
+</span></span><span style="display:flex;"><span><span style="color:#b0bec5">##</span>
+</span></span><span style="display:flex;"><span><span style="color:#b0bec5">## run hugo in watch mode</span>
+</span></span><span style="display:flex;"><span><span style="color:#b0bec5">##</span>
 </span></span><span style="display:flex;"><span>$ hugo server --watch --verbose
 </span></span></code></pre></div><p>Here&rsquo;s sample output showing Hugo detecting a change to the template for the home page. Once generated, the web browser automatically reloaded the page. I&rsquo;ve said this before, it&rsquo;s amazing.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ rm -rf public
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#433e56;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ rm -rf public
 </span></span><span style="display:flex;"><span>$ hugo server --watch --verbose
 </span></span><span style="display:flex;"><span>INFO: 2014/09/29 Using config file: /Users/quoha/Sites/zafta/config.toml
 </span></span><span style="display:flex;"><span>INFO: 2014/09/29 syncing from /Users/quoha/Sites/zafta/themes/zafta/static/ to /Users/quoha/Sites/zafta/public/
 </span></span><span style="display:flex;"><span>INFO: 2014/09/29 syncing from /Users/quoha/Sites/zafta/static/ to /Users/quoha/Sites/zafta/public/
-</span></span><span style="display:flex;"><span>WARN: 2014/09/29 Unable to locate layout: <span style="color:#f92672">[</span>404.html theme/404.html<span style="color:#f92672">]</span>
-</span></span><span style="display:flex;"><span><span style="color:#ae81ff">0</span> draft content
-</span></span><span style="display:flex;"><span><span style="color:#ae81ff">0</span> future content
-</span></span><span style="display:flex;"><span><span style="color:#ae81ff">0</span> pages created
-</span></span><span style="display:flex;"><span><span style="color:#ae81ff">0</span> tags created
-</span></span><span style="display:flex;"><span><span style="color:#ae81ff">0</span> categories created
-</span></span><span style="display:flex;"><span>in <span style="color:#ae81ff">2</span> ms
-</span></span><span style="display:flex;"><span>Watching <span style="color:#66d9ef">for</span> changes in /Users/quoha/Sites/zafta/content
+</span></span><span style="display:flex;"><span>WARN: 2014/09/29 Unable to locate layout: <span style="color:#ffb8d1">[</span>404.html theme/404.html<span style="color:#ffb8d1">]</span>
+</span></span><span style="display:flex;"><span><span style="color:#c5a3ff">0</span> draft content
+</span></span><span style="display:flex;"><span><span style="color:#c5a3ff">0</span> future content
+</span></span><span style="display:flex;"><span><span style="color:#c5a3ff">0</span> pages created
+</span></span><span style="display:flex;"><span><span style="color:#c5a3ff">0</span> tags created
+</span></span><span style="display:flex;"><span><span style="color:#c5a3ff">0</span> categories created
+</span></span><span style="display:flex;"><span>in <span style="color:#c5a3ff">2</span> ms
+</span></span><span style="display:flex;"><span>Watching <span style="color:#c2ffdf">for</span> changes in /Users/quoha/Sites/zafta/content
 </span></span><span style="display:flex;"><span>Serving pages from /Users/quoha/Sites/zafta/public
 </span></span><span style="display:flex;"><span>Web Server is available at http://localhost:1313
 </span></span><span style="display:flex;"><span>Press Ctrl+C to stop
-</span></span><span style="display:flex;"><span>INFO: 2014/09/29 File System Event: <span style="color:#f92672">[</span><span style="color:#e6db74">&#34;/Users/quoha/Sites/zafta/themes/zafta/layouts/index.html&#34;</span>: MODIFY|ATTRIB<span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>INFO: 2014/09/29 File System Event: <span style="color:#ffb8d1">[</span><span style="color:#1bc5e0">&#34;/Users/quoha/Sites/zafta/themes/zafta/layouts/index.html&#34;</span>: MODIFY|ATTRIB<span style="color:#ffb8d1">]</span>
 </span></span><span style="display:flex;"><span>Change detected, rebuilding site
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>WARN: 2014/09/29 Unable to locate layout: <span style="color:#f92672">[</span>404.html theme/404.html<span style="color:#f92672">]</span>
-</span></span><span style="display:flex;"><span><span style="color:#ae81ff">0</span> draft content
-</span></span><span style="display:flex;"><span><span style="color:#ae81ff">0</span> future content
-</span></span><span style="display:flex;"><span><span style="color:#ae81ff">0</span> pages created
-</span></span><span style="display:flex;"><span><span style="color:#ae81ff">0</span> tags created
-</span></span><span style="display:flex;"><span><span style="color:#ae81ff">0</span> categories created
-</span></span><span style="display:flex;"><span>in <span style="color:#ae81ff">1</span> ms
+</span></span><span style="display:flex;"><span>WARN: 2014/09/29 Unable to locate layout: <span style="color:#ffb8d1">[</span>404.html theme/404.html<span style="color:#ffb8d1">]</span>
+</span></span><span style="display:flex;"><span><span style="color:#c5a3ff">0</span> draft content
+</span></span><span style="display:flex;"><span><span style="color:#c5a3ff">0</span> future content
+</span></span><span style="display:flex;"><span><span style="color:#c5a3ff">0</span> pages created
+</span></span><span style="display:flex;"><span><span style="color:#c5a3ff">0</span> tags created
+</span></span><span style="display:flex;"><span><span style="color:#c5a3ff">0</span> categories created
+</span></span><span style="display:flex;"><span>in <span style="color:#c5a3ff">1</span> ms
 </span></span></code></pre></div><h2 id="update-the-home-page-template">Update the Home Page Template</h2>
 <p>The home page is one of a few special pages that Hugo creates automatically. As mentioned earlier, it looks for one of three files in the theme&rsquo;s layout/ directory:</p>
 <ol>
@@ -465,7 +394,7 @@
 <p>We could update one of the default templates, but a good design decision is to update the most specific template available. That&rsquo;s not a hard and fast rule (in fact, we&rsquo;ll break it a few times in this tutorial), but it is a good generalization.</p>
 <h3 id="make-a-static-home-page">Make a Static Home Page</h3>
 <p>Right now, that page is empty because we don&rsquo;t have any content and we don&rsquo;t have any logic in the template. Let&rsquo;s change that by adding some text to the template.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ vi themes/zafta/layouts/index.html
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#433e56;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ vi themes/zafta/layouts/index.html
 </span></span><span style="display:flex;"><span>&lt;!DOCTYPE html&gt;
 </span></span><span style="display:flex;"><span>&lt;html&gt;
 </span></span><span style="display:flex;"><span>&lt;body&gt;
@@ -476,20 +405,20 @@
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>$
 </span></span></code></pre></div><p>Build the web site and then verify the results.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ hugo --verbose
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#433e56;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ hugo --verbose
 </span></span><span style="display:flex;"><span>INFO: 2014/09/29 Using config file: /Users/quoha/Sites/zafta/config.toml
 </span></span><span style="display:flex;"><span>INFO: 2014/09/29 syncing from /Users/quoha/Sites/zafta/themes/zafta/static/ to /Users/quoha/Sites/zafta/public/
 </span></span><span style="display:flex;"><span>INFO: 2014/09/29 syncing from /Users/quoha/Sites/zafta/static/ to /Users/quoha/Sites/zafta/public/
-</span></span><span style="display:flex;"><span>WARN: 2014/09/29 Unable to locate layout: <span style="color:#f92672">[</span>404.html theme/404.html<span style="color:#f92672">]</span>
-</span></span><span style="display:flex;"><span><span style="color:#ae81ff">0</span> draft content
-</span></span><span style="display:flex;"><span><span style="color:#ae81ff">0</span> future content
-</span></span><span style="display:flex;"><span><span style="color:#ae81ff">0</span> pages created
-</span></span><span style="display:flex;"><span><span style="color:#ae81ff">0</span> tags created
-</span></span><span style="display:flex;"><span><span style="color:#ae81ff">0</span> categories created
-</span></span><span style="display:flex;"><span>in <span style="color:#ae81ff">2</span> ms
+</span></span><span style="display:flex;"><span>WARN: 2014/09/29 Unable to locate layout: <span style="color:#ffb8d1">[</span>404.html theme/404.html<span style="color:#ffb8d1">]</span>
+</span></span><span style="display:flex;"><span><span style="color:#c5a3ff">0</span> draft content
+</span></span><span style="display:flex;"><span><span style="color:#c5a3ff">0</span> future content
+</span></span><span style="display:flex;"><span><span style="color:#c5a3ff">0</span> pages created
+</span></span><span style="display:flex;"><span><span style="color:#c5a3ff">0</span> tags created
+</span></span><span style="display:flex;"><span><span style="color:#c5a3ff">0</span> categories created
+</span></span><span style="display:flex;"><span>in <span style="color:#c5a3ff">2</span> ms
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>$ find public -type f -name <span style="color:#e6db74">&#39;*.html&#39;</span> | xargs ls -l
-</span></span><span style="display:flex;"><span>-rw-r--r--  <span style="color:#ae81ff">1</span> quoha  staff  <span style="color:#ae81ff">78</span> Sep <span style="color:#ae81ff">29</span> 21:26 public/index.html
+</span></span><span style="display:flex;"><span>$ find public -type f -name <span style="color:#1bc5e0">&#39;*.html&#39;</span> | xargs ls -l
+</span></span><span style="display:flex;"><span>-rw-r--r--  <span style="color:#c5a3ff">1</span> quoha  staff  <span style="color:#c5a3ff">78</span> Sep <span style="color:#c5a3ff">29</span> 21:26 public/index.html
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>$ cat public/index.html
 </span></span><span style="display:flex;"><span>&lt;!DOCTYPE html&gt;
@@ -499,15 +428,15 @@
 </span></span><span style="display:flex;"><span>&lt;/html&gt;
 </span></span></code></pre></div><h4 id="el-live-reload">El Live Reload</h4>
 <p>Note: If you&rsquo;re running the server with the <code>--watch</code> option, you&rsquo;ll see different content in the file:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ cat public/index.html
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#433e56;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ cat public/index.html
 </span></span><span style="display:flex;"><span>&lt;!DOCTYPE html&gt;
 </span></span><span style="display:flex;"><span>&lt;html&gt;
 </span></span><span style="display:flex;"><span>&lt;body&gt;
 </span></span><span style="display:flex;"><span>  &lt;p&gt;hugo says hello!&lt;/p&gt;
-</span></span><span style="display:flex;"><span>&lt;script&gt;document.write<span style="color:#f92672">(</span><span style="color:#e6db74">&#39;&lt;script src=&#34;http://&#39;</span>
-</span></span><span style="display:flex;"><span>        + <span style="color:#f92672">(</span>location.host <span style="color:#f92672">||</span> <span style="color:#e6db74">&#39;localhost&#39;</span><span style="color:#f92672">)</span>.split<span style="color:#f92672">(</span><span style="color:#e6db74">&#39;:&#39;</span><span style="color:#f92672">)[</span>0<span style="color:#f92672">]</span>
-</span></span><span style="display:flex;"><span>    + <span style="color:#e6db74">&#39;:1313/livereload.js?mindelay=10&#34;&gt;&lt;/&#39;</span>
-</span></span><span style="display:flex;"><span>        + <span style="color:#e6db74">&#39;script&gt;&#39;</span><span style="color:#f92672">)</span>&lt;/script&gt;&lt;/body&gt;
+</span></span><span style="display:flex;"><span>&lt;script&gt;document.write<span style="color:#ffb8d1">(</span><span style="color:#1bc5e0">&#39;&lt;script src=&#34;http://&#39;</span>
+</span></span><span style="display:flex;"><span>        + <span style="color:#ffb8d1">(</span>location.host <span style="color:#ffb8d1">||</span> <span style="color:#1bc5e0">&#39;localhost&#39;</span><span style="color:#ffb8d1">)</span>.split<span style="color:#ffb8d1">(</span><span style="color:#1bc5e0">&#39;:&#39;</span><span style="color:#ffb8d1">)[</span>0<span style="color:#ffb8d1">]</span>
+</span></span><span style="display:flex;"><span>    + <span style="color:#1bc5e0">&#39;:1313/livereload.js?mindelay=10&#34;&gt;&lt;/&#39;</span>
+</span></span><span style="display:flex;"><span>        + <span style="color:#1bc5e0">&#39;script&gt;&#39;</span><span style="color:#ffb8d1">)</span>&lt;/script&gt;&lt;/body&gt;
 </span></span><span style="display:flex;"><span>&lt;/html&gt;
 </span></span></code></pre></div><p>When you use <code>--watch</code>, the Live Reload script is added by Hugo. Look for live reload in the documentation to see what it does and how to disable it.</p>
 <h3 id="build-a-dynamic-home-page">Build a &ldquo;Dynamic&rdquo; Home Page</h3>
@@ -515,26 +444,26 @@
 <h4 id="create-new-posts">Create New Posts</h4>
 <p>Now that we have the home page generating static content, let&rsquo;s add some content to the site. We&rsquo;ll display these posts as a list on the home page and on their own page, too.</p>
 <p>Hugo has a command to generate a skeleton post, just like it does for sites and themes.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ hugo --verbose new post/first.md
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#433e56;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ hugo --verbose new post/first.md
 </span></span><span style="display:flex;"><span>INFO: 2014/09/29 Using config file: /Users/quoha/Sites/zafta/config.toml
 </span></span><span style="display:flex;"><span>INFO: 2014/09/29 attempting to create  post/first.md of post
 </span></span><span style="display:flex;"><span>INFO: 2014/09/29 curpath: /Users/quoha/Sites/zafta/themes/zafta/archetypes/default.md
-</span></span><span style="display:flex;"><span>ERROR: 2014/09/29 Unable to Cast &lt;nil&gt; to map<span style="color:#f92672">[</span>string<span style="color:#f92672">]</span>interface<span style="color:#f92672">{}</span>
+</span></span><span style="display:flex;"><span>ERROR: 2014/09/29 Unable to Cast &lt;nil&gt; to map<span style="color:#ffb8d1">[</span>string<span style="color:#ffb8d1">]</span>interface<span style="color:#ffb8d1">{}</span>
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>$
 </span></span></code></pre></div><p>That wasn&rsquo;t very nice, was it?</p>
 <p>The &ldquo;new&rdquo; command uses an archetype to create the post file. Hugo created an empty default archetype file, but that causes an error when there&rsquo;s a theme. For me, the workaround was to create an archetypes file specifically for the post type.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ vi themes/zafta/archetypes/post.md
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#433e56;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ vi themes/zafta/archetypes/post.md
 </span></span><span style="display:flex;"><span>---
-</span></span><span style="display:flex;"><span>Description: <span style="color:#e6db74">&#34;&#34;</span>
-</span></span><span style="display:flex;"><span>Tags: <span style="color:#f92672">[]</span>
-</span></span><span style="display:flex;"><span>Categories: <span style="color:#f92672">[]</span>
+</span></span><span style="display:flex;"><span>Description: <span style="color:#1bc5e0">&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>Tags: <span style="color:#ffb8d1">[]</span>
+</span></span><span style="display:flex;"><span>Categories: <span style="color:#ffb8d1">[]</span>
 </span></span><span style="display:flex;"><span>---
 </span></span><span style="display:flex;"><span>:wq
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>$ find themes/zafta/archetypes -type f | xargs ls -l
-</span></span><span style="display:flex;"><span>-rw-r--r--  <span style="color:#ae81ff">1</span> quoha  staff   <span style="color:#ae81ff">0</span> Sep <span style="color:#ae81ff">29</span> 21:53 themes/zafta/archetypes/default.md
-</span></span><span style="display:flex;"><span>-rw-r--r--  <span style="color:#ae81ff">1</span> quoha  staff  <span style="color:#ae81ff">51</span> Sep <span style="color:#ae81ff">29</span> 21:54 themes/zafta/archetypes/post.md
+</span></span><span style="display:flex;"><span>-rw-r--r--  <span style="color:#c5a3ff">1</span> quoha  staff   <span style="color:#c5a3ff">0</span> Sep <span style="color:#c5a3ff">29</span> 21:53 themes/zafta/archetypes/default.md
+</span></span><span style="display:flex;"><span>-rw-r--r--  <span style="color:#c5a3ff">1</span> quoha  staff  <span style="color:#c5a3ff">51</span> Sep <span style="color:#c5a3ff">29</span> 21:54 themes/zafta/archetypes/post.md
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>$ hugo --verbose new post/first.md
 </span></span><span style="display:flex;"><span>INFO: 2014/09/29 Using config file: /Users/quoha/Sites/zafta/config.toml
@@ -551,54 +480,54 @@
 </span></span><span style="display:flex;"><span>/Users/quoha/Sites/zafta/content/post/second.md created
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>$ ls -l content/post
-</span></span><span style="display:flex;"><span>total <span style="color:#ae81ff">16</span>
-</span></span><span style="display:flex;"><span>-rw-r--r--  <span style="color:#ae81ff">1</span> quoha  staff  <span style="color:#ae81ff">104</span> Sep <span style="color:#ae81ff">29</span> 21:54 first.md
-</span></span><span style="display:flex;"><span>-rw-r--r--  <span style="color:#ae81ff">1</span> quoha  staff  <span style="color:#ae81ff">105</span> Sep <span style="color:#ae81ff">29</span> 21:57 second.md
+</span></span><span style="display:flex;"><span>total <span style="color:#c5a3ff">16</span>
+</span></span><span style="display:flex;"><span>-rw-r--r--  <span style="color:#c5a3ff">1</span> quoha  staff  <span style="color:#c5a3ff">104</span> Sep <span style="color:#c5a3ff">29</span> 21:54 first.md
+</span></span><span style="display:flex;"><span>-rw-r--r--  <span style="color:#c5a3ff">1</span> quoha  staff  <span style="color:#c5a3ff">105</span> Sep <span style="color:#c5a3ff">29</span> 21:57 second.md
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>$ cat content/post/first.md
 </span></span><span style="display:flex;"><span>---
-</span></span><span style="display:flex;"><span>Categories: <span style="color:#f92672">[]</span>
-</span></span><span style="display:flex;"><span>Description: <span style="color:#e6db74">&#34;&#34;</span>
-</span></span><span style="display:flex;"><span>Tags: <span style="color:#f92672">[]</span>
-</span></span><span style="display:flex;"><span>date: <span style="color:#e6db74">&#34;2014-09-29T21:54:53-05:00&#34;</span>
-</span></span><span style="display:flex;"><span>title: <span style="color:#e6db74">&#34;first&#34;</span>
+</span></span><span style="display:flex;"><span>Categories: <span style="color:#ffb8d1">[]</span>
+</span></span><span style="display:flex;"><span>Description: <span style="color:#1bc5e0">&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>Tags: <span style="color:#ffb8d1">[]</span>
+</span></span><span style="display:flex;"><span>date: <span style="color:#1bc5e0">&#34;2014-09-29T21:54:53-05:00&#34;</span>
+</span></span><span style="display:flex;"><span>title: <span style="color:#1bc5e0">&#34;first&#34;</span>
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>---
 </span></span><span style="display:flex;"><span>my first post
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>$ cat content/post/second.md
 </span></span><span style="display:flex;"><span>---
-</span></span><span style="display:flex;"><span>Categories: <span style="color:#f92672">[]</span>
-</span></span><span style="display:flex;"><span>Description: <span style="color:#e6db74">&#34;&#34;</span>
-</span></span><span style="display:flex;"><span>Tags: <span style="color:#f92672">[]</span>
-</span></span><span style="display:flex;"><span>date: <span style="color:#e6db74">&#34;2014-09-29T21:57:09-05:00&#34;</span>
-</span></span><span style="display:flex;"><span>title: <span style="color:#e6db74">&#34;second&#34;</span>
+</span></span><span style="display:flex;"><span>Categories: <span style="color:#ffb8d1">[]</span>
+</span></span><span style="display:flex;"><span>Description: <span style="color:#1bc5e0">&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>Tags: <span style="color:#ffb8d1">[]</span>
+</span></span><span style="display:flex;"><span>date: <span style="color:#1bc5e0">&#34;2014-09-29T21:57:09-05:00&#34;</span>
+</span></span><span style="display:flex;"><span>title: <span style="color:#1bc5e0">&#34;second&#34;</span>
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>---
 </span></span><span style="display:flex;"><span>my second post
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>$
 </span></span></code></pre></div><p>Build the web site and then verify the results.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ rm -rf public
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#433e56;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ rm -rf public
 </span></span><span style="display:flex;"><span>$ hugo --verbose
 </span></span><span style="display:flex;"><span>INFO: 2014/09/29 Using config file: /Users/quoha/Sites/zafta/config.toml
 </span></span><span style="display:flex;"><span>INFO: 2014/09/29 syncing from /Users/quoha/Sites/zafta/themes/zafta/static/ to /Users/quoha/Sites/zafta/public/
 </span></span><span style="display:flex;"><span>INFO: 2014/09/29 syncing from /Users/quoha/Sites/zafta/static/ to /Users/quoha/Sites/zafta/public/
-</span></span><span style="display:flex;"><span>INFO: 2014/09/29 found taxonomies: map<span style="color:#f92672">[</span>string<span style="color:#f92672">]</span>string<span style="color:#f92672">{</span><span style="color:#e6db74">&#34;category&#34;</span>:<span style="color:#e6db74">&#34;categories&#34;</span>, <span style="color:#e6db74">&#34;tag&#34;</span>:<span style="color:#e6db74">&#34;tags&#34;</span><span style="color:#f92672">}</span>
-</span></span><span style="display:flex;"><span>WARN: 2014/09/29 Unable to locate layout: <span style="color:#f92672">[</span>404.html theme/404.html<span style="color:#f92672">]</span>
-</span></span><span style="display:flex;"><span><span style="color:#ae81ff">0</span> draft content
-</span></span><span style="display:flex;"><span><span style="color:#ae81ff">0</span> future content
-</span></span><span style="display:flex;"><span><span style="color:#ae81ff">2</span> pages created
-</span></span><span style="display:flex;"><span><span style="color:#ae81ff">0</span> tags created
-</span></span><span style="display:flex;"><span><span style="color:#ae81ff">0</span> categories created
-</span></span><span style="display:flex;"><span>in <span style="color:#ae81ff">4</span> ms
+</span></span><span style="display:flex;"><span>INFO: 2014/09/29 found taxonomies: map<span style="color:#ffb8d1">[</span>string<span style="color:#ffb8d1">]</span>string<span style="color:#ffb8d1">{</span><span style="color:#1bc5e0">&#34;category&#34;</span>:<span style="color:#1bc5e0">&#34;categories&#34;</span>, <span style="color:#1bc5e0">&#34;tag&#34;</span>:<span style="color:#1bc5e0">&#34;tags&#34;</span><span style="color:#ffb8d1">}</span>
+</span></span><span style="display:flex;"><span>WARN: 2014/09/29 Unable to locate layout: <span style="color:#ffb8d1">[</span>404.html theme/404.html<span style="color:#ffb8d1">]</span>
+</span></span><span style="display:flex;"><span><span style="color:#c5a3ff">0</span> draft content
+</span></span><span style="display:flex;"><span><span style="color:#c5a3ff">0</span> future content
+</span></span><span style="display:flex;"><span><span style="color:#c5a3ff">2</span> pages created
+</span></span><span style="display:flex;"><span><span style="color:#c5a3ff">0</span> tags created
+</span></span><span style="display:flex;"><span><span style="color:#c5a3ff">0</span> categories created
+</span></span><span style="display:flex;"><span>in <span style="color:#c5a3ff">4</span> ms
 </span></span><span style="display:flex;"><span>$
 </span></span></code></pre></div><p>The output says that it created 2 pages. Those are our new posts:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ find public -type f -name <span style="color:#e6db74">&#39;*.html&#39;</span> | xargs ls -l
-</span></span><span style="display:flex;"><span>-rw-r--r--  <span style="color:#ae81ff">1</span> quoha  staff  <span style="color:#ae81ff">78</span> Sep <span style="color:#ae81ff">29</span> 22:13 public/index.html
-</span></span><span style="display:flex;"><span>-rw-r--r--  <span style="color:#ae81ff">1</span> quoha  staff   <span style="color:#ae81ff">0</span> Sep <span style="color:#ae81ff">29</span> 22:13 public/post/first/index.html
-</span></span><span style="display:flex;"><span>-rw-r--r--  <span style="color:#ae81ff">1</span> quoha  staff   <span style="color:#ae81ff">0</span> Sep <span style="color:#ae81ff">29</span> 22:13 public/post/index.html
-</span></span><span style="display:flex;"><span>-rw-r--r--  <span style="color:#ae81ff">1</span> quoha  staff   <span style="color:#ae81ff">0</span> Sep <span style="color:#ae81ff">29</span> 22:13 public/post/second/index.html
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#433e56;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ find public -type f -name <span style="color:#1bc5e0">&#39;*.html&#39;</span> | xargs ls -l
+</span></span><span style="display:flex;"><span>-rw-r--r--  <span style="color:#c5a3ff">1</span> quoha  staff  <span style="color:#c5a3ff">78</span> Sep <span style="color:#c5a3ff">29</span> 22:13 public/index.html
+</span></span><span style="display:flex;"><span>-rw-r--r--  <span style="color:#c5a3ff">1</span> quoha  staff   <span style="color:#c5a3ff">0</span> Sep <span style="color:#c5a3ff">29</span> 22:13 public/post/first/index.html
+</span></span><span style="display:flex;"><span>-rw-r--r--  <span style="color:#c5a3ff">1</span> quoha  staff   <span style="color:#c5a3ff">0</span> Sep <span style="color:#c5a3ff">29</span> 22:13 public/post/index.html
+</span></span><span style="display:flex;"><span>-rw-r--r--  <span style="color:#c5a3ff">1</span> quoha  staff   <span style="color:#c5a3ff">0</span> Sep <span style="color:#c5a3ff">29</span> 22:13 public/post/second/index.html
 </span></span><span style="display:flex;"><span>$
 </span></span></code></pre></div><p>The new files are empty because because the templates used to generate the content are empty. The homepage doesn&rsquo;t show the new content, either. We have to update the templates to add the posts.</p>
 <h3 id="list-and-single-templates">List and Single Templates</h3>
@@ -607,13 +536,13 @@
 <p>There are three other types of templates: partials, content views, and terms. We will not go into much detail on these.</p>
 <h3 id="add-content-to-the-homepage">Add Content to the Homepage</h3>
 <p>The home page will contain a list of posts. Let&rsquo;s update its template to add the posts that we just created. The logic in the template will run every time we build the site.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ vi themes/zafta/layouts/index.html
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#433e56;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ vi themes/zafta/layouts/index.html
 </span></span><span style="display:flex;"><span>&lt;!DOCTYPE html&gt;
 </span></span><span style="display:flex;"><span>&lt;html&gt;
 </span></span><span style="display:flex;"><span>&lt;body&gt;
-</span></span><span style="display:flex;"><span>  <span style="color:#f92672">{{</span> range first <span style="color:#ae81ff">10</span> .Data.Pages <span style="color:#f92672">}}</span>
-</span></span><span style="display:flex;"><span>    &lt;h1&gt;<span style="color:#f92672">{{</span> .Title <span style="color:#f92672">}}</span>&lt;/h1&gt;
-</span></span><span style="display:flex;"><span>  <span style="color:#f92672">{{</span> end <span style="color:#f92672">}}</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#ffb8d1">{{</span> range first <span style="color:#c5a3ff">10</span> .Data.Pages <span style="color:#ffb8d1">}}</span>
+</span></span><span style="display:flex;"><span>    &lt;h1&gt;<span style="color:#ffb8d1">{{</span> .Title <span style="color:#ffb8d1">}}</span>&lt;/h1&gt;
+</span></span><span style="display:flex;"><span>  <span style="color:#ffb8d1">{{</span> end <span style="color:#ffb8d1">}}</span>
 </span></span><span style="display:flex;"><span>&lt;/body&gt;
 </span></span><span style="display:flex;"><span>&lt;/html&gt;
 </span></span><span style="display:flex;"><span>:wq
@@ -630,24 +559,24 @@
 <p>The &ldquo;end&rdquo; command signals the end of the range iterator. The engine loops back to the top of the iteration when it finds &ldquo;end.&rdquo; Everything between the &ldquo;range&rdquo; and &ldquo;end&rdquo; is evaluated every time the engine goes through the iteration. In this file, that would cause the title from the first ten pages to be output as heading level one.</p>
 <p>It&rsquo;s helpful to remember that some variables, like .Data, are created before any output files. Hugo loads every content file into the variable and then gives the template a chance to process before creating the HTML files.</p>
 <p>Build the web site and then verify the results.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ rm -rf public
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#433e56;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ rm -rf public
 </span></span><span style="display:flex;"><span>$ hugo --verbose
 </span></span><span style="display:flex;"><span>INFO: 2014/09/29 Using config file: /Users/quoha/Sites/zafta/config.toml
 </span></span><span style="display:flex;"><span>INFO: 2014/09/29 syncing from /Users/quoha/Sites/zafta/themes/zafta/static/ to /Users/quoha/Sites/zafta/public/
 </span></span><span style="display:flex;"><span>INFO: 2014/09/29 syncing from /Users/quoha/Sites/zafta/static/ to /Users/quoha/Sites/zafta/public/
-</span></span><span style="display:flex;"><span>INFO: 2014/09/29 found taxonomies: map<span style="color:#f92672">[</span>string<span style="color:#f92672">]</span>string<span style="color:#f92672">{</span><span style="color:#e6db74">&#34;tag&#34;</span>:<span style="color:#e6db74">&#34;tags&#34;</span>, <span style="color:#e6db74">&#34;category&#34;</span>:<span style="color:#e6db74">&#34;categories&#34;</span><span style="color:#f92672">}</span>
-</span></span><span style="display:flex;"><span>WARN: 2014/09/29 Unable to locate layout: <span style="color:#f92672">[</span>404.html theme/404.html<span style="color:#f92672">]</span>
-</span></span><span style="display:flex;"><span><span style="color:#ae81ff">0</span> draft content
-</span></span><span style="display:flex;"><span><span style="color:#ae81ff">0</span> future content
-</span></span><span style="display:flex;"><span><span style="color:#ae81ff">2</span> pages created
-</span></span><span style="display:flex;"><span><span style="color:#ae81ff">0</span> tags created
-</span></span><span style="display:flex;"><span><span style="color:#ae81ff">0</span> categories created
-</span></span><span style="display:flex;"><span>in <span style="color:#ae81ff">4</span> ms
-</span></span><span style="display:flex;"><span>$ find public -type f -name <span style="color:#e6db74">&#39;*.html&#39;</span> | xargs ls -l
-</span></span><span style="display:flex;"><span>-rw-r--r--  <span style="color:#ae81ff">1</span> quoha  staff  <span style="color:#ae81ff">94</span> Sep <span style="color:#ae81ff">29</span> 22:23 public/index.html
-</span></span><span style="display:flex;"><span>-rw-r--r--  <span style="color:#ae81ff">1</span> quoha  staff   <span style="color:#ae81ff">0</span> Sep <span style="color:#ae81ff">29</span> 22:23 public/post/first/index.html
-</span></span><span style="display:flex;"><span>-rw-r--r--  <span style="color:#ae81ff">1</span> quoha  staff   <span style="color:#ae81ff">0</span> Sep <span style="color:#ae81ff">29</span> 22:23 public/post/index.html
-</span></span><span style="display:flex;"><span>-rw-r--r--  <span style="color:#ae81ff">1</span> quoha  staff   <span style="color:#ae81ff">0</span> Sep <span style="color:#ae81ff">29</span> 22:23 public/post/second/index.html
+</span></span><span style="display:flex;"><span>INFO: 2014/09/29 found taxonomies: map<span style="color:#ffb8d1">[</span>string<span style="color:#ffb8d1">]</span>string<span style="color:#ffb8d1">{</span><span style="color:#1bc5e0">&#34;tag&#34;</span>:<span style="color:#1bc5e0">&#34;tags&#34;</span>, <span style="color:#1bc5e0">&#34;category&#34;</span>:<span style="color:#1bc5e0">&#34;categories&#34;</span><span style="color:#ffb8d1">}</span>
+</span></span><span style="display:flex;"><span>WARN: 2014/09/29 Unable to locate layout: <span style="color:#ffb8d1">[</span>404.html theme/404.html<span style="color:#ffb8d1">]</span>
+</span></span><span style="display:flex;"><span><span style="color:#c5a3ff">0</span> draft content
+</span></span><span style="display:flex;"><span><span style="color:#c5a3ff">0</span> future content
+</span></span><span style="display:flex;"><span><span style="color:#c5a3ff">2</span> pages created
+</span></span><span style="display:flex;"><span><span style="color:#c5a3ff">0</span> tags created
+</span></span><span style="display:flex;"><span><span style="color:#c5a3ff">0</span> categories created
+</span></span><span style="display:flex;"><span>in <span style="color:#c5a3ff">4</span> ms
+</span></span><span style="display:flex;"><span>$ find public -type f -name <span style="color:#1bc5e0">&#39;*.html&#39;</span> | xargs ls -l
+</span></span><span style="display:flex;"><span>-rw-r--r--  <span style="color:#c5a3ff">1</span> quoha  staff  <span style="color:#c5a3ff">94</span> Sep <span style="color:#c5a3ff">29</span> 22:23 public/index.html
+</span></span><span style="display:flex;"><span>-rw-r--r--  <span style="color:#c5a3ff">1</span> quoha  staff   <span style="color:#c5a3ff">0</span> Sep <span style="color:#c5a3ff">29</span> 22:23 public/post/first/index.html
+</span></span><span style="display:flex;"><span>-rw-r--r--  <span style="color:#c5a3ff">1</span> quoha  staff   <span style="color:#c5a3ff">0</span> Sep <span style="color:#c5a3ff">29</span> 22:23 public/post/index.html
+</span></span><span style="display:flex;"><span>-rw-r--r--  <span style="color:#c5a3ff">1</span> quoha  staff   <span style="color:#c5a3ff">0</span> Sep <span style="color:#c5a3ff">29</span> 22:23 public/post/second/index.html
 </span></span><span style="display:flex;"><span>$ cat public/index.html
 </span></span><span style="display:flex;"><span>&lt;!DOCTYPE html&gt;
 </span></span><span style="display:flex;"><span>&lt;html&gt;
@@ -666,46 +595,46 @@
 <p>We&rsquo;re working with posts, which are in the content/post/ directory. That means that their section is &ldquo;post&rdquo; (and if we don&rsquo;t do something weird, their type is also &ldquo;post&rdquo;).</p>
 <p>Hugo uses the section and type to find the template file for every piece of content. Hugo will first look for a template file that matches the section or type name. If it can&rsquo;t find one, then it will look in the _default/ directory. There are some twists that we&rsquo;ll cover when we get to categories and tags, but for now we can assume that Hugo will try post/single.html, then_default/single.html.</p>
 <p>Now that we know the search rule, let&rsquo;s see what we actually have available:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ find themes/zafta -name single.html | xargs ls -l
-</span></span><span style="display:flex;"><span>-rw-r--r--  <span style="color:#ae81ff">1</span> quoha  staff  <span style="color:#ae81ff">132</span> Sep <span style="color:#ae81ff">29</span> 17:31 themes/zafta/layouts/_default/single.html
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#433e56;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ find themes/zafta -name single.html | xargs ls -l
+</span></span><span style="display:flex;"><span>-rw-r--r--  <span style="color:#c5a3ff">1</span> quoha  staff  <span style="color:#c5a3ff">132</span> Sep <span style="color:#c5a3ff">29</span> 17:31 themes/zafta/layouts/_default/single.html
 </span></span></code></pre></div><p>We could create a new template, post/single.html, or change the default. Since we don&rsquo;t know of any other content types, let&rsquo;s start with updating the default.</p>
 <p>Remember, any content that we haven&rsquo;t created a template for will end up using this template. That can be good or bad. Bad because I know that we&rsquo;re going to be adding different types of content and we&rsquo;re going to end up undoing some of the changes we&rsquo;ve made. It&rsquo;s good because we&rsquo;ll be able to see immediate results. It&rsquo;s also good to start here because we can start to build the basic layout for the site. As we add more content types, we&rsquo;ll refactor this file and move logic around. Hugo makes that fairly painless, so we&rsquo;ll accept the cost and proceed.</p>
 <p>Please see the Hugo documentation on template rendering for all the details on determining which template to use. And, as the docs mention, if you&rsquo;re building a single page application (SPA) web site, you can delete all of the other templates and work with just the default single page. That&rsquo;s a refreshing amount of joy right there.</p>
 <h4 id="update-the-template-file">Update the Template File</h4>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ vi themes/zafta/layouts/_default/single.html
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#433e56;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ vi themes/zafta/layouts/_default/single.html
 </span></span><span style="display:flex;"><span>&lt;!DOCTYPE html&gt;
 </span></span><span style="display:flex;"><span>&lt;html&gt;
 </span></span><span style="display:flex;"><span>&lt;head&gt;
-</span></span><span style="display:flex;"><span>  &lt;title&gt;<span style="color:#f92672">{{</span> .Title <span style="color:#f92672">}}</span>&lt;/title&gt;
+</span></span><span style="display:flex;"><span>  &lt;title&gt;<span style="color:#ffb8d1">{{</span> .Title <span style="color:#ffb8d1">}}</span>&lt;/title&gt;
 </span></span><span style="display:flex;"><span>&lt;/head&gt;
 </span></span><span style="display:flex;"><span>&lt;body&gt;
-</span></span><span style="display:flex;"><span>  &lt;h1&gt;<span style="color:#f92672">{{</span> .Title <span style="color:#f92672">}}</span>&lt;/h1&gt;
-</span></span><span style="display:flex;"><span>  <span style="color:#f92672">{{</span> .Content <span style="color:#f92672">}}</span>
+</span></span><span style="display:flex;"><span>  &lt;h1&gt;<span style="color:#ffb8d1">{{</span> .Title <span style="color:#ffb8d1">}}</span>&lt;/h1&gt;
+</span></span><span style="display:flex;"><span>  <span style="color:#ffb8d1">{{</span> .Content <span style="color:#ffb8d1">}}</span>
 </span></span><span style="display:flex;"><span>&lt;/body&gt;
 </span></span><span style="display:flex;"><span>&lt;/html&gt;
 </span></span><span style="display:flex;"><span>:wq
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>$
 </span></span></code></pre></div><p>Build the web site and verify the results.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ rm -rf public
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#433e56;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ rm -rf public
 </span></span><span style="display:flex;"><span>$ hugo --verbose
 </span></span><span style="display:flex;"><span>INFO: 2014/09/29 Using config file: /Users/quoha/Sites/zafta/config.toml
 </span></span><span style="display:flex;"><span>INFO: 2014/09/29 syncing from /Users/quoha/Sites/zafta/themes/zafta/static/ to /Users/quoha/Sites/zafta/public/
 </span></span><span style="display:flex;"><span>INFO: 2014/09/29 syncing from /Users/quoha/Sites/zafta/static/ to /Users/quoha/Sites/zafta/public/
-</span></span><span style="display:flex;"><span>INFO: 2014/09/29 found taxonomies: map<span style="color:#f92672">[</span>string<span style="color:#f92672">]</span>string<span style="color:#f92672">{</span><span style="color:#e6db74">&#34;tag&#34;</span>:<span style="color:#e6db74">&#34;tags&#34;</span>, <span style="color:#e6db74">&#34;category&#34;</span>:<span style="color:#e6db74">&#34;categories&#34;</span><span style="color:#f92672">}</span>
-</span></span><span style="display:flex;"><span>WARN: 2014/09/29 Unable to locate layout: <span style="color:#f92672">[</span>404.html theme/404.html<span style="color:#f92672">]</span>
-</span></span><span style="display:flex;"><span><span style="color:#ae81ff">0</span> draft content
-</span></span><span style="display:flex;"><span><span style="color:#ae81ff">0</span> future content
-</span></span><span style="display:flex;"><span><span style="color:#ae81ff">2</span> pages created
-</span></span><span style="display:flex;"><span><span style="color:#ae81ff">0</span> tags created
-</span></span><span style="display:flex;"><span><span style="color:#ae81ff">0</span> categories created
-</span></span><span style="display:flex;"><span>in <span style="color:#ae81ff">4</span> ms
+</span></span><span style="display:flex;"><span>INFO: 2014/09/29 found taxonomies: map<span style="color:#ffb8d1">[</span>string<span style="color:#ffb8d1">]</span>string<span style="color:#ffb8d1">{</span><span style="color:#1bc5e0">&#34;tag&#34;</span>:<span style="color:#1bc5e0">&#34;tags&#34;</span>, <span style="color:#1bc5e0">&#34;category&#34;</span>:<span style="color:#1bc5e0">&#34;categories&#34;</span><span style="color:#ffb8d1">}</span>
+</span></span><span style="display:flex;"><span>WARN: 2014/09/29 Unable to locate layout: <span style="color:#ffb8d1">[</span>404.html theme/404.html<span style="color:#ffb8d1">]</span>
+</span></span><span style="display:flex;"><span><span style="color:#c5a3ff">0</span> draft content
+</span></span><span style="display:flex;"><span><span style="color:#c5a3ff">0</span> future content
+</span></span><span style="display:flex;"><span><span style="color:#c5a3ff">2</span> pages created
+</span></span><span style="display:flex;"><span><span style="color:#c5a3ff">0</span> tags created
+</span></span><span style="display:flex;"><span><span style="color:#c5a3ff">0</span> categories created
+</span></span><span style="display:flex;"><span>in <span style="color:#c5a3ff">4</span> ms
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>$ find public -type f -name <span style="color:#e6db74">&#39;*.html&#39;</span> | xargs ls -l
-</span></span><span style="display:flex;"><span>-rw-r--r--  <span style="color:#ae81ff">1</span> quoha  staff   <span style="color:#ae81ff">94</span> Sep <span style="color:#ae81ff">29</span> 22:40 public/index.html
-</span></span><span style="display:flex;"><span>-rw-r--r--  <span style="color:#ae81ff">1</span> quoha  staff  <span style="color:#ae81ff">125</span> Sep <span style="color:#ae81ff">29</span> 22:40 public/post/first/index.html
-</span></span><span style="display:flex;"><span>-rw-r--r--  <span style="color:#ae81ff">1</span> quoha  staff    <span style="color:#ae81ff">0</span> Sep <span style="color:#ae81ff">29</span> 22:40 public/post/index.html
-</span></span><span style="display:flex;"><span>-rw-r--r--  <span style="color:#ae81ff">1</span> quoha  staff  <span style="color:#ae81ff">128</span> Sep <span style="color:#ae81ff">29</span> 22:40 public/post/second/index.html
+</span></span><span style="display:flex;"><span>$ find public -type f -name <span style="color:#1bc5e0">&#39;*.html&#39;</span> | xargs ls -l
+</span></span><span style="display:flex;"><span>-rw-r--r--  <span style="color:#c5a3ff">1</span> quoha  staff   <span style="color:#c5a3ff">94</span> Sep <span style="color:#c5a3ff">29</span> 22:40 public/index.html
+</span></span><span style="display:flex;"><span>-rw-r--r--  <span style="color:#c5a3ff">1</span> quoha  staff  <span style="color:#c5a3ff">125</span> Sep <span style="color:#c5a3ff">29</span> 22:40 public/post/first/index.html
+</span></span><span style="display:flex;"><span>-rw-r--r--  <span style="color:#c5a3ff">1</span> quoha  staff    <span style="color:#c5a3ff">0</span> Sep <span style="color:#c5a3ff">29</span> 22:40 public/post/index.html
+</span></span><span style="display:flex;"><span>-rw-r--r--  <span style="color:#c5a3ff">1</span> quoha  staff  <span style="color:#c5a3ff">128</span> Sep <span style="color:#c5a3ff">29</span> 22:40 public/post/second/index.html
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>$ cat public/post/first/index.html
 </span></span><span style="display:flex;"><span>&lt;!DOCTYPE html&gt;
@@ -736,44 +665,44 @@
 </span></span></code></pre></div><p>Notice that the posts now have content. You can go to localhost:1313/post/first to verify.</p>
 <h3 id="linking-to-content">Linking to Content</h3>
 <p>The posts are on the home page. Let&rsquo;s add a link from there to the post. Since this is the home page, we&rsquo;ll update its template.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ vi themes/zafta/layouts/index.html
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#433e56;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ vi themes/zafta/layouts/index.html
 </span></span><span style="display:flex;"><span>&lt;!DOCTYPE html&gt;
 </span></span><span style="display:flex;"><span>&lt;html&gt;
 </span></span><span style="display:flex;"><span>&lt;body&gt;
-</span></span><span style="display:flex;"><span>  <span style="color:#f92672">{{</span> range first <span style="color:#ae81ff">10</span> .Data.Pages <span style="color:#f92672">}}</span>
-</span></span><span style="display:flex;"><span>    &lt;h1&gt;&lt;a href<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{{ .Permalink }}&#34;</span>&gt;<span style="color:#f92672">{{</span> .Title <span style="color:#f92672">}}</span>&lt;/a&gt;&lt;/h1&gt;
-</span></span><span style="display:flex;"><span>  <span style="color:#f92672">{{</span> end <span style="color:#f92672">}}</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#ffb8d1">{{</span> range first <span style="color:#c5a3ff">10</span> .Data.Pages <span style="color:#ffb8d1">}}</span>
+</span></span><span style="display:flex;"><span>    &lt;h1&gt;&lt;a href<span style="color:#ffb8d1">=</span><span style="color:#1bc5e0">&#34;{{ .Permalink }}&#34;</span>&gt;<span style="color:#ffb8d1">{{</span> .Title <span style="color:#ffb8d1">}}</span>&lt;/a&gt;&lt;/h1&gt;
+</span></span><span style="display:flex;"><span>  <span style="color:#ffb8d1">{{</span> end <span style="color:#ffb8d1">}}</span>
 </span></span><span style="display:flex;"><span>&lt;/body&gt;
 </span></span><span style="display:flex;"><span>&lt;/html&gt;
 </span></span></code></pre></div><p>Build the web site and verify the results.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ rm -rf public
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#433e56;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ rm -rf public
 </span></span><span style="display:flex;"><span>$ hugo --verbose
 </span></span><span style="display:flex;"><span>INFO: 2014/09/29 Using config file: /Users/quoha/Sites/zafta/config.toml
 </span></span><span style="display:flex;"><span>INFO: 2014/09/29 syncing from /Users/quoha/Sites/zafta/themes/zafta/static/ to /Users/quoha/Sites/zafta/public/
 </span></span><span style="display:flex;"><span>INFO: 2014/09/29 syncing from /Users/quoha/Sites/zafta/static/ to /Users/quoha/Sites/zafta/public/
-</span></span><span style="display:flex;"><span>INFO: 2014/09/29 found taxonomies: map<span style="color:#f92672">[</span>string<span style="color:#f92672">]</span>string<span style="color:#f92672">{</span><span style="color:#e6db74">&#34;tag&#34;</span>:<span style="color:#e6db74">&#34;tags&#34;</span>, <span style="color:#e6db74">&#34;category&#34;</span>:<span style="color:#e6db74">&#34;categories&#34;</span><span style="color:#f92672">}</span>
-</span></span><span style="display:flex;"><span>WARN: 2014/09/29 Unable to locate layout: <span style="color:#f92672">[</span>404.html theme/404.html<span style="color:#f92672">]</span>
-</span></span><span style="display:flex;"><span><span style="color:#ae81ff">0</span> draft content
-</span></span><span style="display:flex;"><span><span style="color:#ae81ff">0</span> future content
-</span></span><span style="display:flex;"><span><span style="color:#ae81ff">2</span> pages created
-</span></span><span style="display:flex;"><span><span style="color:#ae81ff">0</span> tags created
-</span></span><span style="display:flex;"><span><span style="color:#ae81ff">0</span> categories created
-</span></span><span style="display:flex;"><span>in <span style="color:#ae81ff">4</span> ms
+</span></span><span style="display:flex;"><span>INFO: 2014/09/29 found taxonomies: map<span style="color:#ffb8d1">[</span>string<span style="color:#ffb8d1">]</span>string<span style="color:#ffb8d1">{</span><span style="color:#1bc5e0">&#34;tag&#34;</span>:<span style="color:#1bc5e0">&#34;tags&#34;</span>, <span style="color:#1bc5e0">&#34;category&#34;</span>:<span style="color:#1bc5e0">&#34;categories&#34;</span><span style="color:#ffb8d1">}</span>
+</span></span><span style="display:flex;"><span>WARN: 2014/09/29 Unable to locate layout: <span style="color:#ffb8d1">[</span>404.html theme/404.html<span style="color:#ffb8d1">]</span>
+</span></span><span style="display:flex;"><span><span style="color:#c5a3ff">0</span> draft content
+</span></span><span style="display:flex;"><span><span style="color:#c5a3ff">0</span> future content
+</span></span><span style="display:flex;"><span><span style="color:#c5a3ff">2</span> pages created
+</span></span><span style="display:flex;"><span><span style="color:#c5a3ff">0</span> tags created
+</span></span><span style="display:flex;"><span><span style="color:#c5a3ff">0</span> categories created
+</span></span><span style="display:flex;"><span>in <span style="color:#c5a3ff">4</span> ms
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>$ find public -type f -name <span style="color:#e6db74">&#39;*.html&#39;</span> | xargs ls -l
-</span></span><span style="display:flex;"><span>-rw-r--r--  <span style="color:#ae81ff">1</span> quoha  staff  <span style="color:#ae81ff">149</span> Sep <span style="color:#ae81ff">29</span> 22:44 public/index.html
-</span></span><span style="display:flex;"><span>-rw-r--r--  <span style="color:#ae81ff">1</span> quoha  staff  <span style="color:#ae81ff">125</span> Sep <span style="color:#ae81ff">29</span> 22:44 public/post/first/index.html
-</span></span><span style="display:flex;"><span>-rw-r--r--  <span style="color:#ae81ff">1</span> quoha  staff    <span style="color:#ae81ff">0</span> Sep <span style="color:#ae81ff">29</span> 22:44 public/post/index.html
-</span></span><span style="display:flex;"><span>-rw-r--r--  <span style="color:#ae81ff">1</span> quoha  staff  <span style="color:#ae81ff">128</span> Sep <span style="color:#ae81ff">29</span> 22:44 public/post/second/index.html
+</span></span><span style="display:flex;"><span>$ find public -type f -name <span style="color:#1bc5e0">&#39;*.html&#39;</span> | xargs ls -l
+</span></span><span style="display:flex;"><span>-rw-r--r--  <span style="color:#c5a3ff">1</span> quoha  staff  <span style="color:#c5a3ff">149</span> Sep <span style="color:#c5a3ff">29</span> 22:44 public/index.html
+</span></span><span style="display:flex;"><span>-rw-r--r--  <span style="color:#c5a3ff">1</span> quoha  staff  <span style="color:#c5a3ff">125</span> Sep <span style="color:#c5a3ff">29</span> 22:44 public/post/first/index.html
+</span></span><span style="display:flex;"><span>-rw-r--r--  <span style="color:#c5a3ff">1</span> quoha  staff    <span style="color:#c5a3ff">0</span> Sep <span style="color:#c5a3ff">29</span> 22:44 public/post/index.html
+</span></span><span style="display:flex;"><span>-rw-r--r--  <span style="color:#c5a3ff">1</span> quoha  staff  <span style="color:#c5a3ff">128</span> Sep <span style="color:#c5a3ff">29</span> 22:44 public/post/second/index.html
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>$ cat public/index.html
 </span></span><span style="display:flex;"><span>&lt;!DOCTYPE html&gt;
 </span></span><span style="display:flex;"><span>&lt;html&gt;
 </span></span><span style="display:flex;"><span>&lt;body&gt;
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    &lt;h1&gt;&lt;a href<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;/post/second/&#34;</span>&gt;second&lt;/a&gt;&lt;/h1&gt;
+</span></span><span style="display:flex;"><span>    &lt;h1&gt;&lt;a href<span style="color:#ffb8d1">=</span><span style="color:#1bc5e0">&#34;/post/second/&#34;</span>&gt;second&lt;/a&gt;&lt;/h1&gt;
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    &lt;h1&gt;&lt;a href<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;/post/first/&#34;</span>&gt;first&lt;/a&gt;&lt;/h1&gt;
+</span></span><span style="display:flex;"><span>    &lt;h1&gt;&lt;a href<span style="color:#ffb8d1">=</span><span style="color:#1bc5e0">&#34;/post/first/&#34;</span>&gt;first&lt;/a&gt;&lt;/h1&gt;
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>&lt;/body&gt;
 </span></span><span style="display:flex;"><span>&lt;/html&gt;
@@ -782,198 +711,186 @@
 </span></span></code></pre></div><h3 id="create-a-post-listing">Create a Post Listing</h3>
 <p>We have the posts displaying on the home page and on their own page. We also have a file public/post/index.html that is empty. Let&rsquo;s make it show a list of all posts (not just the first ten).</p>
 <p>We need to decide which template to update. This will be a listing, so it should be a list template. Let&rsquo;s take a quick look and see which list templates are available.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ find themes/zafta -name list.html | xargs ls -l
-</span></span><span style="display:flex;"><span>-rw-r--r--  <span style="color:#ae81ff">1</span> quoha  staff  <span style="color:#ae81ff">0</span> Sep <span style="color:#ae81ff">29</span> 17:31 themes/zafta/layouts/_default/list.html
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#433e56;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ find themes/zafta -name list.html | xargs ls -l
+</span></span><span style="display:flex;"><span>-rw-r--r--  <span style="color:#c5a3ff">1</span> quoha  staff  <span style="color:#c5a3ff">0</span> Sep <span style="color:#c5a3ff">29</span> 17:31 themes/zafta/layouts/_default/list.html
 </span></span></code></pre></div><p>As with the single post, we have to decide to update _default/list.html or create post/list.html. We still don&rsquo;t have multiple content types, so let&rsquo;s stay consistent and update the default list template.</p>
 <h2 id="creating-top-level-pages">Creating Top Level Pages</h2>
 <p>Let&rsquo;s add an &ldquo;about&rdquo; page and display it at the top level (as opposed to a sub-level like we did with posts).</p>
 <p>The default in Hugo is to use the directory structure of the content/ directory to guide the location of the generated html in the public/ directory. Let&rsquo;s verify that by creating an &ldquo;about&rdquo; page at the top level:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ vi content/about.md
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#433e56;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ vi content/about.md
 </span></span><span style="display:flex;"><span>---
-</span></span><span style="display:flex;"><span>title: <span style="color:#e6db74">&#34;about&#34;</span>
-</span></span><span style="display:flex;"><span>description: <span style="color:#e6db74">&#34;about this site&#34;</span>
-</span></span><span style="display:flex;"><span>date: <span style="color:#e6db74">&#34;2014-09-27&#34;</span>
-</span></span><span style="display:flex;"><span>slug: <span style="color:#e6db74">&#34;about time&#34;</span>
+</span></span><span style="display:flex;"><span>title: <span style="color:#1bc5e0">&#34;about&#34;</span>
+</span></span><span style="display:flex;"><span>description: <span style="color:#1bc5e0">&#34;about this site&#34;</span>
+</span></span><span style="display:flex;"><span>date: <span style="color:#1bc5e0">&#34;2014-09-27&#34;</span>
+</span></span><span style="display:flex;"><span>slug: <span style="color:#1bc5e0">&#34;about time&#34;</span>
 </span></span><span style="display:flex;"><span>---
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">## about us</span>
+</span></span><span style="display:flex;"><span><span style="color:#b0bec5">## about us</span>
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>i<span style="color:#960050;background-color:#1e0010">&#39;</span>m speechless
 </span></span><span style="display:flex;"><span>:wq
 </span></span></code></pre></div><p>Generate the web site and verify the results.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ find public -name <span style="color:#e6db74">&#39;*.html&#39;</span> | xargs ls -l
-</span></span><span style="display:flex;"><span>-rw-rw-r--  <span style="color:#ae81ff">1</span> mdhender  staff   <span style="color:#ae81ff">334</span> Sep <span style="color:#ae81ff">27</span> 15:08 public/about-time/index.html
-</span></span><span style="display:flex;"><span>-rw-rw-r--  <span style="color:#ae81ff">1</span> mdhender  staff   <span style="color:#ae81ff">527</span> Sep <span style="color:#ae81ff">27</span> 15:08 public/index.html
-</span></span><span style="display:flex;"><span>-rw-rw-r--  <span style="color:#ae81ff">1</span> mdhender  staff   <span style="color:#ae81ff">358</span> Sep <span style="color:#ae81ff">27</span> 15:08 public/post/first-post/index.html
-</span></span><span style="display:flex;"><span>-rw-rw-r--  <span style="color:#ae81ff">1</span> mdhender  staff     <span style="color:#ae81ff">0</span> Sep <span style="color:#ae81ff">27</span> 15:08 public/post/index.html
-</span></span><span style="display:flex;"><span>-rw-rw-r--  <span style="color:#ae81ff">1</span> mdhender  staff   <span style="color:#ae81ff">342</span> Sep <span style="color:#ae81ff">27</span> 15:08 public/post/second-post/index.html
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#433e56;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ find public -name <span style="color:#1bc5e0">&#39;*.html&#39;</span> | xargs ls -l
+</span></span><span style="display:flex;"><span>-rw-rw-r--  <span style="color:#c5a3ff">1</span> mdhender  staff   <span style="color:#c5a3ff">334</span> Sep <span style="color:#c5a3ff">27</span> 15:08 public/about-time/index.html
+</span></span><span style="display:flex;"><span>-rw-rw-r--  <span style="color:#c5a3ff">1</span> mdhender  staff   <span style="color:#c5a3ff">527</span> Sep <span style="color:#c5a3ff">27</span> 15:08 public/index.html
+</span></span><span style="display:flex;"><span>-rw-rw-r--  <span style="color:#c5a3ff">1</span> mdhender  staff   <span style="color:#c5a3ff">358</span> Sep <span style="color:#c5a3ff">27</span> 15:08 public/post/first-post/index.html
+</span></span><span style="display:flex;"><span>-rw-rw-r--  <span style="color:#c5a3ff">1</span> mdhender  staff     <span style="color:#c5a3ff">0</span> Sep <span style="color:#c5a3ff">27</span> 15:08 public/post/index.html
+</span></span><span style="display:flex;"><span>-rw-rw-r--  <span style="color:#c5a3ff">1</span> mdhender  staff   <span style="color:#c5a3ff">342</span> Sep <span style="color:#c5a3ff">27</span> 15:08 public/post/second-post/index.html
 </span></span></code></pre></div><p>Notice that the page wasn&rsquo;t created at the top level. It was created in a sub-directory named &lsquo;about-time/&rsquo;. That name came from our slug. Hugo will use the slug to name the generated content. It&rsquo;s a reasonable default, by the way, but we can learn a few things by fighting it for this file.</p>
 <p>One other thing. Take a look at the home page.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ cat public/index.html
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#433e56;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ cat public/index.html
 </span></span><span style="display:flex;"><span>&lt;!DOCTYPE html&gt;
 </span></span><span style="display:flex;"><span>&lt;html&gt;
 </span></span><span style="display:flex;"><span>&lt;body&gt;
-</span></span><span style="display:flex;"><span>    &lt;h1&gt;&lt;a href<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;http://localhost:1313/post/theme/&#34;</span>&gt;creating a new theme&lt;/a&gt;&lt;/h1&gt;
-</span></span><span style="display:flex;"><span>    &lt;h1&gt;&lt;a href<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;http://localhost:1313/about-time/&#34;</span>&gt;about&lt;/a&gt;&lt;/h1&gt;
-</span></span><span style="display:flex;"><span>    &lt;h1&gt;&lt;a href<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;http://localhost:1313/post/second-post/&#34;</span>&gt;second&lt;/a&gt;&lt;/h1&gt;
-</span></span><span style="display:flex;"><span>    &lt;h1&gt;&lt;a href<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;http://localhost:1313/post/first-post/&#34;</span>&gt;first&lt;/a&gt;&lt;/h1&gt;
-</span></span><span style="display:flex;"><span>&lt;script&gt;document.write<span style="color:#f92672">(</span><span style="color:#e6db74">&#39;&lt;script src=&#34;http://&#39;</span>
-</span></span><span style="display:flex;"><span>        + <span style="color:#f92672">(</span>location.host <span style="color:#f92672">||</span> <span style="color:#e6db74">&#39;localhost&#39;</span><span style="color:#f92672">)</span>.split<span style="color:#f92672">(</span><span style="color:#e6db74">&#39;:&#39;</span><span style="color:#f92672">)[</span>0<span style="color:#f92672">]</span>
-</span></span><span style="display:flex;"><span>  + <span style="color:#e6db74">&#39;:1313/livereload.js?mindelay=10&#34;&gt;&lt;/&#39;</span>
-</span></span><span style="display:flex;"><span>        + <span style="color:#e6db74">&#39;script&gt;&#39;</span><span style="color:#f92672">)</span>&lt;/script&gt;&lt;/body&gt;
+</span></span><span style="display:flex;"><span>    &lt;h1&gt;&lt;a href<span style="color:#ffb8d1">=</span><span style="color:#1bc5e0">&#34;http://localhost:1313/post/theme/&#34;</span>&gt;creating a new theme&lt;/a&gt;&lt;/h1&gt;
+</span></span><span style="display:flex;"><span>    &lt;h1&gt;&lt;a href<span style="color:#ffb8d1">=</span><span style="color:#1bc5e0">&#34;http://localhost:1313/about-time/&#34;</span>&gt;about&lt;/a&gt;&lt;/h1&gt;
+</span></span><span style="display:flex;"><span>    &lt;h1&gt;&lt;a href<span style="color:#ffb8d1">=</span><span style="color:#1bc5e0">&#34;http://localhost:1313/post/second-post/&#34;</span>&gt;second&lt;/a&gt;&lt;/h1&gt;
+</span></span><span style="display:flex;"><span>    &lt;h1&gt;&lt;a href<span style="color:#ffb8d1">=</span><span style="color:#1bc5e0">&#34;http://localhost:1313/post/first-post/&#34;</span>&gt;first&lt;/a&gt;&lt;/h1&gt;
+</span></span><span style="display:flex;"><span>&lt;script&gt;document.write<span style="color:#ffb8d1">(</span><span style="color:#1bc5e0">&#39;&lt;script src=&#34;http://&#39;</span>
+</span></span><span style="display:flex;"><span>        + <span style="color:#ffb8d1">(</span>location.host <span style="color:#ffb8d1">||</span> <span style="color:#1bc5e0">&#39;localhost&#39;</span><span style="color:#ffb8d1">)</span>.split<span style="color:#ffb8d1">(</span><span style="color:#1bc5e0">&#39;:&#39;</span><span style="color:#ffb8d1">)[</span>0<span style="color:#ffb8d1">]</span>
+</span></span><span style="display:flex;"><span>  + <span style="color:#1bc5e0">&#39;:1313/livereload.js?mindelay=10&#34;&gt;&lt;/&#39;</span>
+</span></span><span style="display:flex;"><span>        + <span style="color:#1bc5e0">&#39;script&gt;&#39;</span><span style="color:#ffb8d1">)</span>&lt;/script&gt;&lt;/body&gt;
 </span></span><span style="display:flex;"><span>&lt;/html&gt;
 </span></span></code></pre></div><p>Notice that the &ldquo;about&rdquo; link is listed with the posts? That&rsquo;s not desirable, so let&rsquo;s change that first.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ vi themes/zafta/layouts/index.html
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#433e56;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ vi themes/zafta/layouts/index.html
 </span></span><span style="display:flex;"><span>&lt;!DOCTYPE html&gt;
 </span></span><span style="display:flex;"><span>&lt;html&gt;
 </span></span><span style="display:flex;"><span>&lt;body&gt;
 </span></span><span style="display:flex;"><span>  &lt;h1&gt;posts&lt;/h1&gt;
-</span></span><span style="display:flex;"><span>  <span style="color:#f92672">{{</span> range first <span style="color:#ae81ff">10</span> .Data.Pages <span style="color:#f92672">}}</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">{{</span> <span style="color:#66d9ef">if</span> eq .Type <span style="color:#e6db74">&#34;post&#34;</span><span style="color:#f92672">}}</span>
-</span></span><span style="display:flex;"><span>      &lt;h2&gt;&lt;a href<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{{ .Permalink }}&#34;</span>&gt;<span style="color:#f92672">{{</span> .Title <span style="color:#f92672">}}</span>&lt;/a&gt;&lt;/h2&gt;
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">{{</span> end <span style="color:#f92672">}}</span>
-</span></span><span style="display:flex;"><span>  <span style="color:#f92672">{{</span> end <span style="color:#f92672">}}</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#ffb8d1">{{</span> range first <span style="color:#c5a3ff">10</span> .Data.Pages <span style="color:#ffb8d1">}}</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ffb8d1">{{</span> <span style="color:#c2ffdf">if</span> eq .Type <span style="color:#1bc5e0">&#34;post&#34;</span><span style="color:#ffb8d1">}}</span>
+</span></span><span style="display:flex;"><span>      &lt;h2&gt;&lt;a href<span style="color:#ffb8d1">=</span><span style="color:#1bc5e0">&#34;{{ .Permalink }}&#34;</span>&gt;<span style="color:#ffb8d1">{{</span> .Title <span style="color:#ffb8d1">}}</span>&lt;/a&gt;&lt;/h2&gt;
+</span></span><span style="display:flex;"><span>    <span style="color:#ffb8d1">{{</span> end <span style="color:#ffb8d1">}}</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#ffb8d1">{{</span> end <span style="color:#ffb8d1">}}</span>
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>  &lt;h1&gt;pages&lt;/h1&gt;
-</span></span><span style="display:flex;"><span>  <span style="color:#f92672">{{</span> range .Data.Pages <span style="color:#f92672">}}</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">{{</span> <span style="color:#66d9ef">if</span> eq .Type <span style="color:#e6db74">&#34;page&#34;</span> <span style="color:#f92672">}}</span>
-</span></span><span style="display:flex;"><span>      &lt;h2&gt;&lt;a href<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{{ .Permalink }}&#34;</span>&gt;<span style="color:#f92672">{{</span> .Title <span style="color:#f92672">}}</span>&lt;/a&gt;&lt;/h2&gt;
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">{{</span> end <span style="color:#f92672">}}</span>
-</span></span><span style="display:flex;"><span>  <span style="color:#f92672">{{</span> end <span style="color:#f92672">}}</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#ffb8d1">{{</span> range .Data.Pages <span style="color:#ffb8d1">}}</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ffb8d1">{{</span> <span style="color:#c2ffdf">if</span> eq .Type <span style="color:#1bc5e0">&#34;page&#34;</span> <span style="color:#ffb8d1">}}</span>
+</span></span><span style="display:flex;"><span>      &lt;h2&gt;&lt;a href<span style="color:#ffb8d1">=</span><span style="color:#1bc5e0">&#34;{{ .Permalink }}&#34;</span>&gt;<span style="color:#ffb8d1">{{</span> .Title <span style="color:#ffb8d1">}}</span>&lt;/a&gt;&lt;/h2&gt;
+</span></span><span style="display:flex;"><span>    <span style="color:#ffb8d1">{{</span> end <span style="color:#ffb8d1">}}</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#ffb8d1">{{</span> end <span style="color:#ffb8d1">}}</span>
 </span></span><span style="display:flex;"><span>&lt;/body&gt;
 </span></span><span style="display:flex;"><span>&lt;/html&gt;
 </span></span><span style="display:flex;"><span>:wq
 </span></span></code></pre></div><p>Generate the web site and verify the results. The home page has two sections, posts and pages, and each section has the right set of headings and links in it.</p>
 <p>But, that about page still renders to about-time/index.html.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ find public -name <span style="color:#e6db74">&#39;*.html&#39;</span> | xargs ls -l
-</span></span><span style="display:flex;"><span>-rw-rw-r--  <span style="color:#ae81ff">1</span> mdhender  staff    <span style="color:#ae81ff">334</span> Sep <span style="color:#ae81ff">27</span> 15:33 public/about-time/index.html
-</span></span><span style="display:flex;"><span>-rw-rw-r--  <span style="color:#ae81ff">1</span> mdhender  staff    <span style="color:#ae81ff">645</span> Sep <span style="color:#ae81ff">27</span> 15:33 public/index.html
-</span></span><span style="display:flex;"><span>-rw-rw-r--  <span style="color:#ae81ff">1</span> mdhender  staff    <span style="color:#ae81ff">358</span> Sep <span style="color:#ae81ff">27</span> 15:33 public/post/first-post/index.html
-</span></span><span style="display:flex;"><span>-rw-rw-r--  <span style="color:#ae81ff">1</span> mdhender  staff      <span style="color:#ae81ff">0</span> Sep <span style="color:#ae81ff">27</span> 15:33 public/post/index.html
-</span></span><span style="display:flex;"><span>-rw-rw-r--  <span style="color:#ae81ff">1</span> mdhender  staff    <span style="color:#ae81ff">342</span> Sep <span style="color:#ae81ff">27</span> 15:33 public/post/second-post/index.html
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#433e56;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ find public -name <span style="color:#1bc5e0">&#39;*.html&#39;</span> | xargs ls -l
+</span></span><span style="display:flex;"><span>-rw-rw-r--  <span style="color:#c5a3ff">1</span> mdhender  staff    <span style="color:#c5a3ff">334</span> Sep <span style="color:#c5a3ff">27</span> 15:33 public/about-time/index.html
+</span></span><span style="display:flex;"><span>-rw-rw-r--  <span style="color:#c5a3ff">1</span> mdhender  staff    <span style="color:#c5a3ff">645</span> Sep <span style="color:#c5a3ff">27</span> 15:33 public/index.html
+</span></span><span style="display:flex;"><span>-rw-rw-r--  <span style="color:#c5a3ff">1</span> mdhender  staff    <span style="color:#c5a3ff">358</span> Sep <span style="color:#c5a3ff">27</span> 15:33 public/post/first-post/index.html
+</span></span><span style="display:flex;"><span>-rw-rw-r--  <span style="color:#c5a3ff">1</span> mdhender  staff      <span style="color:#c5a3ff">0</span> Sep <span style="color:#c5a3ff">27</span> 15:33 public/post/index.html
+</span></span><span style="display:flex;"><span>-rw-rw-r--  <span style="color:#c5a3ff">1</span> mdhender  staff    <span style="color:#c5a3ff">342</span> Sep <span style="color:#c5a3ff">27</span> 15:33 public/post/second-post/index.html
 </span></span></code></pre></div><p>Knowing that hugo is using the slug to generate the file name, the simplest solution is to change the slug. Let&rsquo;s do it the hard way and change the permalink in the configuration file.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ vi config.toml
-</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>permalinks<span style="color:#f92672">]</span>
-</span></span><span style="display:flex;"><span> page: <span style="color:#e6db74">&#34;/:title/&#34;</span>
-</span></span><span style="display:flex;"><span> about: <span style="color:#e6db74">&#34;/:filename/&#34;</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#433e56;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ vi config.toml
+</span></span><span style="display:flex;"><span><span style="color:#ffb8d1">[</span>permalinks<span style="color:#ffb8d1">]</span>
+</span></span><span style="display:flex;"><span> page: <span style="color:#1bc5e0">&#34;/:title/&#34;</span>
+</span></span><span style="display:flex;"><span> about: <span style="color:#1bc5e0">&#34;/:filename/&#34;</span>
 </span></span></code></pre></div><p>Generate the web site and verify that this didn&rsquo;t work. Hugo lets &ldquo;slug&rdquo; or &ldquo;URL&rdquo; override the permalinks setting in the configuration file. Go ahead and comment out the slug in content/about.md, then generate the web site to get it to be created in the right place.</p>
 <h2 id="sharing-templates">Sharing Templates</h2>
 <p>If you&rsquo;ve been following along, you probably noticed that posts have titles in the browser and the home page doesn&rsquo;t. That&rsquo;s because we didn&rsquo;t put the title in the home page&rsquo;s template (layouts/index.html). That&rsquo;s an easy thing to do, but let&rsquo;s look at a different option.</p>
 <p>We can put the common bits into a shared template that&rsquo;s stored in the themes/zafta/layouts/partials/ directory.</p>
 <h3 id="create-the-header-and-footer-partials">Create the Header and Footer Partials</h3>
 <p>In Hugo, a partial is a sugar-coated template. Normally a template reference has a path specified. Partials are different. Hugo searches for them along a TODO defined search path. This makes it easier for end-users to override the theme&rsquo;s presentation.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>$ vi themes/zafta/layouts/partials/header.html
-</span></span><span style="display:flex;"><span><span style="color:#75715e">&lt;!DOCTYPE html&gt;</span>
-</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">html</span>&gt;
-</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">head</span>&gt;
-</span></span><span style="display:flex;"><span> &lt;<span style="color:#f92672">title</span>&gt;{{ .Title }}&lt;/<span style="color:#f92672">title</span>&gt;
-</span></span><span style="display:flex;"><span>&lt;/<span style="color:#f92672">head</span>&gt;
-</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">body</span>&gt;
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#433e56;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>$ vi themes/zafta/layouts/partials/header.html
+</span></span><span style="display:flex;"><span><span style="color:#b0bec5">&lt;!DOCTYPE html&gt;</span>
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#ffb8d1">html</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#ffb8d1">head</span>&gt;
+</span></span><span style="display:flex;"><span> &lt;<span style="color:#ffb8d1">title</span>&gt;{{ .Title }}&lt;/<span style="color:#ffb8d1">title</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#ffb8d1">head</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#ffb8d1">body</span>&gt;
 </span></span><span style="display:flex;"><span>:wq
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>$ vi themes/zafta/layouts/partials/footer.html
-</span></span><span style="display:flex;"><span>&lt;/<span style="color:#f92672">body</span>&gt;
-</span></span><span style="display:flex;"><span>&lt;/<span style="color:#f92672">html</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#ffb8d1">body</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#ffb8d1">html</span>&gt;
 </span></span><span style="display:flex;"><span>:wq
 </span></span></code></pre></div><h3 id="update-the-home-page-template-to-use-the-partials">Update the Home Page Template to Use the Partials</h3>
 <p>The most noticeable difference between a template call and a partials call is the lack of path:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#f92672">{{</span> template <span style="color:#e6db74">&#34;theme/partials/header.html&#34;</span> . <span style="color:#f92672">}}</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#433e56;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#ffb8d1">{{</span> template <span style="color:#1bc5e0">&#34;theme/partials/header.html&#34;</span> . <span style="color:#ffb8d1">}}</span>
 </span></span></code></pre></div><p>versus</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#f92672">{{</span> partial <span style="color:#e6db74">&#34;header.html&#34;</span> . <span style="color:#f92672">}}</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#433e56;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#ffb8d1">{{</span> partial <span style="color:#1bc5e0">&#34;header.html&#34;</span> . <span style="color:#ffb8d1">}}</span>
 </span></span></code></pre></div><p>Both pass in the context.</p>
 <p>Let&rsquo;s change the home page template to use these new partials.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ vi themes/zafta/layouts/index.html
-</span></span><span style="display:flex;"><span><span style="color:#f92672">{{</span> partial <span style="color:#e6db74">&#34;header.html&#34;</span> . <span style="color:#f92672">}}</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#433e56;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ vi themes/zafta/layouts/index.html
+</span></span><span style="display:flex;"><span><span style="color:#ffb8d1">{{</span> partial <span style="color:#1bc5e0">&#34;header.html&#34;</span> . <span style="color:#ffb8d1">}}</span>
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>  &lt;h1&gt;posts&lt;/h1&gt;
-</span></span><span style="display:flex;"><span>  <span style="color:#f92672">{{</span> range first <span style="color:#ae81ff">10</span> .Data.Pages <span style="color:#f92672">}}</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">{{</span> <span style="color:#66d9ef">if</span> eq .Type <span style="color:#e6db74">&#34;post&#34;</span><span style="color:#f92672">}}</span>
-</span></span><span style="display:flex;"><span>      &lt;h2&gt;&lt;a href<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{{ .Permalink }}&#34;</span>&gt;<span style="color:#f92672">{{</span> .Title <span style="color:#f92672">}}</span>&lt;/a&gt;&lt;/h2&gt;
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">{{</span> end <span style="color:#f92672">}}</span>
-</span></span><span style="display:flex;"><span>  <span style="color:#f92672">{{</span> end <span style="color:#f92672">}}</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#ffb8d1">{{</span> range first <span style="color:#c5a3ff">10</span> .Data.Pages <span style="color:#ffb8d1">}}</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ffb8d1">{{</span> <span style="color:#c2ffdf">if</span> eq .Type <span style="color:#1bc5e0">&#34;post&#34;</span><span style="color:#ffb8d1">}}</span>
+</span></span><span style="display:flex;"><span>      &lt;h2&gt;&lt;a href<span style="color:#ffb8d1">=</span><span style="color:#1bc5e0">&#34;{{ .Permalink }}&#34;</span>&gt;<span style="color:#ffb8d1">{{</span> .Title <span style="color:#ffb8d1">}}</span>&lt;/a&gt;&lt;/h2&gt;
+</span></span><span style="display:flex;"><span>    <span style="color:#ffb8d1">{{</span> end <span style="color:#ffb8d1">}}</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#ffb8d1">{{</span> end <span style="color:#ffb8d1">}}</span>
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>  &lt;h1&gt;pages&lt;/h1&gt;
-</span></span><span style="display:flex;"><span>  <span style="color:#f92672">{{</span> range .Data.Pages <span style="color:#f92672">}}</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">{{</span> <span style="color:#66d9ef">if</span> or <span style="color:#f92672">(</span>eq .Type <span style="color:#e6db74">&#34;page&#34;</span><span style="color:#f92672">)</span> <span style="color:#f92672">(</span>eq .Type <span style="color:#e6db74">&#34;about&#34;</span><span style="color:#f92672">)</span> <span style="color:#f92672">}}</span>
-</span></span><span style="display:flex;"><span>      &lt;h2&gt;&lt;a href<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{{ .Permalink }}&#34;</span>&gt;<span style="color:#f92672">{{</span> .Type <span style="color:#f92672">}}</span> - <span style="color:#f92672">{{</span> .Title <span style="color:#f92672">}}</span> - <span style="color:#f92672">{{</span> .RelPermalink <span style="color:#f92672">}}</span>&lt;/a&gt;&lt;/h2&gt;
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">{{</span> end <span style="color:#f92672">}}</span>
-</span></span><span style="display:flex;"><span>  <span style="color:#f92672">{{</span> end <span style="color:#f92672">}}</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#ffb8d1">{{</span> range .Data.Pages <span style="color:#ffb8d1">}}</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ffb8d1">{{</span> <span style="color:#c2ffdf">if</span> or <span style="color:#ffb8d1">(</span>eq .Type <span style="color:#1bc5e0">&#34;page&#34;</span><span style="color:#ffb8d1">)</span> <span style="color:#ffb8d1">(</span>eq .Type <span style="color:#1bc5e0">&#34;about&#34;</span><span style="color:#ffb8d1">)</span> <span style="color:#ffb8d1">}}</span>
+</span></span><span style="display:flex;"><span>      &lt;h2&gt;&lt;a href<span style="color:#ffb8d1">=</span><span style="color:#1bc5e0">&#34;{{ .Permalink }}&#34;</span>&gt;<span style="color:#ffb8d1">{{</span> .Type <span style="color:#ffb8d1">}}</span> - <span style="color:#ffb8d1">{{</span> .Title <span style="color:#ffb8d1">}}</span> - <span style="color:#ffb8d1">{{</span> .RelPermalink <span style="color:#ffb8d1">}}</span>&lt;/a&gt;&lt;/h2&gt;
+</span></span><span style="display:flex;"><span>    <span style="color:#ffb8d1">{{</span> end <span style="color:#ffb8d1">}}</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#ffb8d1">{{</span> end <span style="color:#ffb8d1">}}</span>
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">{{</span> partial <span style="color:#e6db74">&#34;footer.html&#34;</span> . <span style="color:#f92672">}}</span>
+</span></span><span style="display:flex;"><span><span style="color:#ffb8d1">{{</span> partial <span style="color:#1bc5e0">&#34;footer.html&#34;</span> . <span style="color:#ffb8d1">}}</span>
 </span></span><span style="display:flex;"><span>:wq
 </span></span></code></pre></div><p>Generate the web site and verify the results. The title on the home page is now &ldquo;your title here&rdquo;, which comes from the &ldquo;title&rdquo; variable in the config.toml file.</p>
 <h3 id="update-the-default-single-template-to-use-the-partials">Update the Default Single Template to Use the Partials</h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ vi themes/zafta/layouts/_default/single.html
-</span></span><span style="display:flex;"><span><span style="color:#f92672">{{</span> partial <span style="color:#e6db74">&#34;header.html&#34;</span> . <span style="color:#f92672">}}</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#433e56;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ vi themes/zafta/layouts/_default/single.html
+</span></span><span style="display:flex;"><span><span style="color:#ffb8d1">{{</span> partial <span style="color:#1bc5e0">&#34;header.html&#34;</span> . <span style="color:#ffb8d1">}}</span>
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>  &lt;h1&gt;<span style="color:#f92672">{{</span> .Title <span style="color:#f92672">}}</span>&lt;/h1&gt;
-</span></span><span style="display:flex;"><span>  <span style="color:#f92672">{{</span> .Content <span style="color:#f92672">}}</span>
+</span></span><span style="display:flex;"><span>  &lt;h1&gt;<span style="color:#ffb8d1">{{</span> .Title <span style="color:#ffb8d1">}}</span>&lt;/h1&gt;
+</span></span><span style="display:flex;"><span>  <span style="color:#ffb8d1">{{</span> .Content <span style="color:#ffb8d1">}}</span>
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">{{</span> partial <span style="color:#e6db74">&#34;footer.html&#34;</span> . <span style="color:#f92672">}}</span>
+</span></span><span style="display:flex;"><span><span style="color:#ffb8d1">{{</span> partial <span style="color:#1bc5e0">&#34;footer.html&#34;</span> . <span style="color:#ffb8d1">}}</span>
 </span></span><span style="display:flex;"><span>:wq
 </span></span></code></pre></div><p>Generate the web site and verify the results. The title on the posts and the about page should both reflect the value in the markdown file.</p>
 <h2 id="add-date-published-to-posts">Add “Date Published” to Posts</h2>
 <p>It&rsquo;s common to have posts display the date that they were written or published, so let&rsquo;s add that. The front matter of our posts has a variable named &ldquo;date.&rdquo; It&rsquo;s usually the date the content was created, but let&rsquo;s pretend that&rsquo;s the value we want to display.</p>
 <h3 id="add-date-published-to-the-template">Add “Date Published” to the Template</h3>
 <p>We&rsquo;ll start by updating the template used to render the posts. The template code will look like:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#f92672">{{</span> .Date.Format <span style="color:#e6db74">&#34;Mon, Jan 2, 2006&#34;</span> <span style="color:#f92672">}}</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#433e56;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#ffb8d1">{{</span> .Date.Format <span style="color:#1bc5e0">&#34;Mon, Jan 2, 2006&#34;</span> <span style="color:#ffb8d1">}}</span>
 </span></span></code></pre></div><p>Posts use the default single template, so we&rsquo;ll change that file.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ vi themes/zafta/layouts/_default/single.html
-</span></span><span style="display:flex;"><span><span style="color:#f92672">{{</span> partial <span style="color:#e6db74">&#34;header.html&#34;</span> . <span style="color:#f92672">}}</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#433e56;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ vi themes/zafta/layouts/_default/single.html
+</span></span><span style="display:flex;"><span><span style="color:#ffb8d1">{{</span> partial <span style="color:#1bc5e0">&#34;header.html&#34;</span> . <span style="color:#ffb8d1">}}</span>
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>  &lt;h1&gt;<span style="color:#f92672">{{</span> .Title <span style="color:#f92672">}}</span>&lt;/h1&gt;
-</span></span><span style="display:flex;"><span>  &lt;h2&gt;<span style="color:#f92672">{{</span> .Date.Format <span style="color:#e6db74">&#34;Mon, Jan 2, 2006&#34;</span> <span style="color:#f92672">}}</span>&lt;/h2&gt;
-</span></span><span style="display:flex;"><span>  <span style="color:#f92672">{{</span> .Content <span style="color:#f92672">}}</span>
+</span></span><span style="display:flex;"><span>  &lt;h1&gt;<span style="color:#ffb8d1">{{</span> .Title <span style="color:#ffb8d1">}}</span>&lt;/h1&gt;
+</span></span><span style="display:flex;"><span>  &lt;h2&gt;<span style="color:#ffb8d1">{{</span> .Date.Format <span style="color:#1bc5e0">&#34;Mon, Jan 2, 2006&#34;</span> <span style="color:#ffb8d1">}}</span>&lt;/h2&gt;
+</span></span><span style="display:flex;"><span>  <span style="color:#ffb8d1">{{</span> .Content <span style="color:#ffb8d1">}}</span>
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">{{</span> partial <span style="color:#e6db74">&#34;footer.html&#34;</span> . <span style="color:#f92672">}}</span>
+</span></span><span style="display:flex;"><span><span style="color:#ffb8d1">{{</span> partial <span style="color:#1bc5e0">&#34;footer.html&#34;</span> . <span style="color:#ffb8d1">}}</span>
 </span></span><span style="display:flex;"><span>:wq
 </span></span></code></pre></div><p>Generate the web site and verify the results. The posts now have the date displayed in them. There&rsquo;s a problem, though. The &ldquo;about&rdquo; page also has the date displayed.</p>
 <p>As usual, there are a couple of ways to make the date display only on posts. We could do an &ldquo;if&rdquo; statement like we did on the home page. Another way would be to create a separate template for posts.</p>
 <p>The &ldquo;if&rdquo; solution works for sites that have just a couple of content types. It aligns with the principle of &ldquo;code for today,&rdquo; too.</p>
 <p>Let&rsquo;s assume, though, that we&rsquo;ve made our site so complex that we feel we have to create a new template type. In Hugo-speak, we&rsquo;re going to create a section template.</p>
 <p>Let&rsquo;s restore the default single template before we forget.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ mkdir themes/zafta/layouts/post
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#433e56;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ mkdir themes/zafta/layouts/post
 </span></span><span style="display:flex;"><span>$ vi themes/zafta/layouts/_default/single.html
-</span></span><span style="display:flex;"><span><span style="color:#f92672">{{</span> partial <span style="color:#e6db74">&#34;header.html&#34;</span> . <span style="color:#f92672">}}</span>
+</span></span><span style="display:flex;"><span><span style="color:#ffb8d1">{{</span> partial <span style="color:#1bc5e0">&#34;header.html&#34;</span> . <span style="color:#ffb8d1">}}</span>
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>  &lt;h1&gt;<span style="color:#f92672">{{</span> .Title <span style="color:#f92672">}}</span>&lt;/h1&gt;
-</span></span><span style="display:flex;"><span>  <span style="color:#f92672">{{</span> .Content <span style="color:#f92672">}}</span>
+</span></span><span style="display:flex;"><span>  &lt;h1&gt;<span style="color:#ffb8d1">{{</span> .Title <span style="color:#ffb8d1">}}</span>&lt;/h1&gt;
+</span></span><span style="display:flex;"><span>  <span style="color:#ffb8d1">{{</span> .Content <span style="color:#ffb8d1">}}</span>
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">{{</span> partial <span style="color:#e6db74">&#34;footer.html&#34;</span> . <span style="color:#f92672">}}</span>
+</span></span><span style="display:flex;"><span><span style="color:#ffb8d1">{{</span> partial <span style="color:#1bc5e0">&#34;footer.html&#34;</span> . <span style="color:#ffb8d1">}}</span>
 </span></span><span style="display:flex;"><span>:wq
 </span></span></code></pre></div><p>Now we&rsquo;ll update the post&rsquo;s version of the single template. If you remember Hugo&rsquo;s rules, the template engine will use this version over the default.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ vi themes/zafta/layouts/post/single.html
-</span></span><span style="display:flex;"><span><span style="color:#f92672">{{</span> partial <span style="color:#e6db74">&#34;header.html&#34;</span> . <span style="color:#f92672">}}</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#433e56;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ vi themes/zafta/layouts/post/single.html
+</span></span><span style="display:flex;"><span><span style="color:#ffb8d1">{{</span> partial <span style="color:#1bc5e0">&#34;header.html&#34;</span> . <span style="color:#ffb8d1">}}</span>
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>  &lt;h1&gt;<span style="color:#f92672">{{</span> .Title <span style="color:#f92672">}}</span>&lt;/h1&gt;
-</span></span><span style="display:flex;"><span>  &lt;h2&gt;<span style="color:#f92672">{{</span> .Date.Format <span style="color:#e6db74">&#34;Mon, Jan 2, 2006&#34;</span> <span style="color:#f92672">}}</span>&lt;/h2&gt;
-</span></span><span style="display:flex;"><span>  <span style="color:#f92672">{{</span> .Content <span style="color:#f92672">}}</span>
+</span></span><span style="display:flex;"><span>  &lt;h1&gt;<span style="color:#ffb8d1">{{</span> .Title <span style="color:#ffb8d1">}}</span>&lt;/h1&gt;
+</span></span><span style="display:flex;"><span>  &lt;h2&gt;<span style="color:#ffb8d1">{{</span> .Date.Format <span style="color:#1bc5e0">&#34;Mon, Jan 2, 2006&#34;</span> <span style="color:#ffb8d1">}}</span>&lt;/h2&gt;
+</span></span><span style="display:flex;"><span>  <span style="color:#ffb8d1">{{</span> .Content <span style="color:#ffb8d1">}}</span>
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">{{</span> partial <span style="color:#e6db74">&#34;footer.html&#34;</span> . <span style="color:#f92672">}}</span>
+</span></span><span style="display:flex;"><span><span style="color:#ffb8d1">{{</span> partial <span style="color:#1bc5e0">&#34;footer.html&#34;</span> . <span style="color:#ffb8d1">}}</span>
 </span></span><span style="display:flex;"><span>:wq
 </span></span></code></pre></div><p>Note that we removed the date logic from the default template and put it in the post template. Generate the web site and verify the results. Posts have dates and the about page doesn&rsquo;t.</p>
 <h3 id="dont-repeat-yourself">Don&rsquo;t Repeat Yourself</h3>
 <p>DRY is a good design goal and Hugo does a great job supporting it. Part of the art of a good template is knowing when to add a new template and when to update an existing one. While you&rsquo;re figuring that out, accept that you&rsquo;ll be doing some refactoring. Hugo makes that easy and fast, so it&rsquo;s okay to delay splitting up a template.</p>
 
-  <div class="time"><time datetime="2021-10-22">2021-10-22&nbsp;</time>
-</div>
+  
+  <div class="terms-list">
+    <ul>
+        <li><a href="/tags/hugo/">#Hugo</a></li>
+    </ul>
+  </div>
 
-  
-  
-    <div class="comments">
-
-</div>
-  
-
-  
-    <div class="terminal-nav">
-      <div class="back-nav">
-        
-          <a href="/posts/" class="back-link">../</a>
-        
-      </div>
-    </div>
-  
 </main>
   <footer><p>
   &copy; Copyright 2026 &middot;

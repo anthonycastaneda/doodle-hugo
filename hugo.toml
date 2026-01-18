@@ -1,3 +1,55 @@
-baseURL = 'https://example.org/'
+baseURL = 'https://www.anthonycastaneda.com/'
+enableGitInfo = true
 languageCode = 'en-us'
-title = 'My New Hugo Site'
+title = 'Anthony Castañeda'
+
+[params.author]
+email = "anthony@anthonycastaneda.com"
+name = "Anthony Castañeda"
+
+[markup]
+defaultMarkdownHandler = "goldmark"
+# By default, Goldmark trims unsafe outputs which might prevent some shortcodes from rendering.
+# It is recommended to set markup.goldmark.renderer.unsafe=true if you encounter problems.
+[markup.goldmark]
+[markup.goldmark.renderer]
+unsafe = true # Enable user to embed HTML snippets in Markdown content.
+[markup.highlight]
+codeFences = true
+guessSyntax = true
+lineNos = false
+noClasses = true
+style = 'witchhazel'
+tabWidth = 4
+wrapperClass = 'highlight'
+[markup.tableOfContents]
+endLevel = 4
+ordered = true
+startLevel = 2
+
+[menu]
+[[menu.main]]
+name = "Posts"
+url = "/posts/"
+weight = 1
+[[menu.main]]
+name = "About"
+url = "/about/"
+weight = 2
+
+[build]
+writeStats = true
+
+[frontmatter]
+date = ['date', 'publishDate', 'lastmod']
+lastmod = [':git', 'lastmod', 'date', 'publishDate']
+publishDate = ['publishDate', 'date']
+
+[caches]
+[caches.images]
+dir = ':cacheDir/images'
+
+[module]
+[module.hugoVersion]
+extended = false
+min = '0.93.0'

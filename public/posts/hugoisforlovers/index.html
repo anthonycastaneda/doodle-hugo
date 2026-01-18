@@ -5,7 +5,7 @@
   <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>
-  Getting Started with Hugo | My New Hugo Site
+  Getting Started with Hugo | Anthony Castañeda
 </title>
  
 <link rel="canonical" href="http://localhost:1313/posts/hugoisforlovers/" />
@@ -29,7 +29,11 @@
     "headline": "Getting Started with Hugo",
     "url": "http:\/\/localhost:1313\/posts\/hugoisforlovers\/",
     "datePublished": "2022-10-26T17:12:11\u002b07:00",
-    "dateModified": "2022-10-26T17:12:11\u002b07:00"
+    "dateModified": "2026-01-17T18:10:13-06:00",
+    "author": {
+      "@type": "Person",
+      "name": "Anthony Castañeda"
+    }
   }
 </script>
  <link rel="apple-touch-icon" sizes="57x57" href="/favicon_io/apple-icon-57x57.png">
@@ -67,7 +71,7 @@
   
   <li>
     /
-    <a href="/">My New Hugo Site</a>
+    <a href="/">Anthony Castañeda</a>
     /
   </li>
 
@@ -93,33 +97,11 @@
 </header>
   <main id="main-content">
   <h1>Getting Started with Hugo</h1>
-  
-  <div class="terms-list">
-    <ul>
-        <li><a href="/tags/hugo/">#Hugo</a></li>
-    </ul>
-  </div>
-
 
   
   
-  
-  
-    <nav class="toc">
-      <strong>Table of contents</strong>
-      <div class="toc-content">
-        <nav id="TableOfContents">
-  <ul>
-    <li><a href="#step-1-install-hugo">Step 1. Install Hugo</a></li>
-    <li><a href="#step-2-build-the-docs">Step 2. Build the Docs</a></li>
-    <li><a href="#step-3-change-the-docs-site">Step 3. Change the docs site</a></li>
-  </ul>
-</nav>
-      </div>
-    </nav>
-  
+  <time datetime="2022-10-26T17:12:11&#43;07:00">October 26, 2022</time>
 
-  
   <h2 id="step-1-install-hugo">Step 1. Install Hugo</h2>
 <p>Go to <a href="https://github.com/spf13/hugo/releases">Hugo releases</a> and download the
 appropriate version for your OS and architecture.</p>
@@ -129,29 +111,29 @@ appropriate version for your OS and architecture.</p>
 <p>Hugo has its own example site which happens to also be the documentation site
 you are reading right now.</p>
 <p>Follow the following steps:</p>
-<pre tabindex="0"><code>1. Clone the [Hugo repository](http://github.com/spf13/hugo)
-2. Go into the repo
-3. Run hugo in server mode and build the docs
-4. Open your browser to http://localhost:1313
-</code></pre><p>Corresponding pseudo commands:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>git clone https://github.com/spf13/hugo
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#433e56;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>1. Clone the [Hugo repository](http://github.com/spf13/hugo)
+</span></span><span style="display:flex;"><span>2. Go into the repo
+</span></span><span style="display:flex;"><span>3. Run hugo in server mode and build the docs
+</span></span><span style="display:flex;"><span>4. Open your browser to http://localhost:1313
+</span></span></code></pre></div><p>Corresponding pseudo commands:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#433e56;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>git clone https://github.com/spf13/hugo
 </span></span><span style="display:flex;"><span>cd hugo
-</span></span><span style="display:flex;"><span>/path/to/where/you/installed/hugo server --source<span style="color:#f92672">=</span>./docs
-</span></span><span style="display:flex;"><span>&gt; <span style="color:#ae81ff">29</span> pages created
-</span></span><span style="display:flex;"><span>&gt; <span style="color:#ae81ff">0</span> tags index created
-</span></span><span style="display:flex;"><span>&gt; in <span style="color:#ae81ff">27</span> ms
+</span></span><span style="display:flex;"><span>/path/to/where/you/installed/hugo server --source<span style="color:#ffb8d1">=</span>./docs
+</span></span><span style="display:flex;"><span>&gt; <span style="color:#c5a3ff">29</span> pages created
+</span></span><span style="display:flex;"><span>&gt; <span style="color:#c5a3ff">0</span> tags index created
+</span></span><span style="display:flex;"><span>&gt; in <span style="color:#c5a3ff">27</span> ms
 </span></span><span style="display:flex;"><span>&gt; Web Server is available at http://localhost:1313
 </span></span><span style="display:flex;"><span>&gt; Press ctrl+c to stop
 </span></span></code></pre></div><p>Once you&rsquo;ve gotten here, follow along the rest of this page on your local build.</p>
 <h2 id="step-3-change-the-docs-site">Step 3. Change the docs site</h2>
 <p>Stop the Hugo process by hitting Ctrl+C.</p>
 <p>Now we are going to run hugo again, but this time with hugo in watch mode.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>/path/to/hugo/from/step/1/hugo server --source<span style="color:#f92672">=</span>./docs --watch
-</span></span><span style="display:flex;"><span>&gt; <span style="color:#ae81ff">29</span> pages created
-</span></span><span style="display:flex;"><span>&gt; <span style="color:#ae81ff">0</span> tags index created
-</span></span><span style="display:flex;"><span>&gt; in <span style="color:#ae81ff">27</span> ms
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#433e56;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>/path/to/hugo/from/step/1/hugo server --source<span style="color:#ffb8d1">=</span>./docs --watch
+</span></span><span style="display:flex;"><span>&gt; <span style="color:#c5a3ff">29</span> pages created
+</span></span><span style="display:flex;"><span>&gt; <span style="color:#c5a3ff">0</span> tags index created
+</span></span><span style="display:flex;"><span>&gt; in <span style="color:#c5a3ff">27</span> ms
 </span></span><span style="display:flex;"><span>&gt; Web Server is available at http://localhost:1313
-</span></span><span style="display:flex;"><span>&gt; Watching <span style="color:#66d9ef">for</span> changes in /Users/spf13/Code/hugo/docs/content
+</span></span><span style="display:flex;"><span>&gt; Watching <span style="color:#c2ffdf">for</span> changes in /Users/spf13/Code/hugo/docs/content
 </span></span><span style="display:flex;"><span>&gt; Press ctrl+c to stop
 </span></span></code></pre></div><p>Open your <a href="http://vim.spf13.com">favorite editor</a> and change one of the source
 content pages. How about changing this very file to <em>fix the typo</em>. How about changing this very file to <em>fix the typo</em>.</p>
@@ -159,34 +141,22 @@ content pages. How about changing this very file to <em>fix the typo</em>. How a
 are located at the same relative location as the url, in our case
 <code>docs/content/overview/quickstart.md</code>.</p>
 <p>Change and save this file.. Notice what happened in your terminal.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>&gt; Change detected, rebuilding site
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#433e56;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>&gt; Change detected, rebuilding site
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>&gt; <span style="color:#ae81ff">29</span> pages created
-</span></span><span style="display:flex;"><span>&gt; <span style="color:#ae81ff">0</span> tags index created
-</span></span><span style="display:flex;"><span>&gt; in <span style="color:#ae81ff">26</span> ms
+</span></span><span style="display:flex;"><span>&gt; <span style="color:#c5a3ff">29</span> pages created
+</span></span><span style="display:flex;"><span>&gt; <span style="color:#c5a3ff">0</span> tags index created
+</span></span><span style="display:flex;"><span>&gt; in <span style="color:#c5a3ff">26</span> ms
 </span></span></code></pre></div><p>Refresh the browser and observe that the typo is now fixed.</p>
 <p>Notice how quick that was. Try to refresh the site before it&rsquo;s finished building. I double dare you.
 Having nearly instant feedback enables you to have your creativity flow without waiting for long builds.</p>
 
-  <div class="time"><time datetime="2022-10-26">2022-10-26&nbsp;</time>
-</div>
+  
+  <div class="terms-list">
+    <ul>
+        <li><a href="/tags/hugo/">#Hugo</a></li>
+    </ul>
+  </div>
 
-  
-  
-    <div class="comments">
-
-</div>
-  
-
-  
-    <div class="terminal-nav">
-      <div class="back-nav">
-        
-          <a href="/posts/" class="back-link">../</a>
-        
-      </div>
-    </div>
-  
 </main>
   <footer><p>
   &copy; Copyright 2026 &middot;

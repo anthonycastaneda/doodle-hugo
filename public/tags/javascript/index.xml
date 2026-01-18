@@ -1,17 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Javascript on My New Hugo Site</title>
+    <title>Javascript on Anthony Castañeda</title>
     <link>http://localhost:1313/tags/javascript/</link>
-    <description>Recent content in Javascript on My New Hugo Site</description>
+    <description>Recent content in Javascript on Anthony Castañeda</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 18 Nov 2025 00:00:00 +0000</lastBuildDate>
+    <managingEditor>anthony@anthonycastaneda.com (Anthony Castañeda)</managingEditor>
+    <webMaster>anthony@anthonycastaneda.com (Anthony Castañeda)</webMaster>
+    <lastBuildDate>Sat, 17 Jan 2026 18:10:13 -0600</lastBuildDate>
     <atom:link href="http://localhost:1313/tags/javascript/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Married</title>
       <link>http://localhost:1313/posts/married/</link>
-      <pubDate>Tue, 18 Nov 2025 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 18 Nov 2025 00:00:00 +0000</pubDate><author>anthony@anthonycastaneda.com (Anthony Castañeda)</author>
       <guid>http://localhost:1313/posts/married/</guid>
       <description>&lt;h2 id=&#34;time-passing&#34;&gt;Time passing&lt;/h2&gt;&#xA;&lt;p&gt;How long have I been &lt;a href=&#34;https://anthonycastaneda.github.io/married/&#34;&gt;married&lt;/a&gt;?&lt;/p&gt;</description>
     </item>
