@@ -1,0 +1,18 @@
+services:
+  - type: web
+    name: doodle
+    repo: https://github.com/anthonycastaneda/doodle-hugo
+    runtime: static
+    buildCommand: chmod a+x build.sh && ./build.sh
+    staticPublishPath: public
+    envVars:
+      - key: DART_SASS_VERSION
+        value: 1.97.2
+      - key: GO_VERSION
+        value: 1.25.5
+      - key: HUGO_VERSION
+        value: 0.154.4
+      - key: NODE_VERSION
+        value: 24.12.0
+      - key: TZ
+        value: Europe/Oslo
