@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Cooking on My New Hugo Site</title>
+    <link>http://localhost:1313/tags/cooking/</link>
+    <description>Recent content in Cooking on My New Hugo Site</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 23 Mar 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/cooking/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Making Chicken Curry</title>
+      <link>http://localhost:1313/posts/curry/</link>
+      <pubDate>Sun, 23 Mar 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/curry/</guid>
+      <description>&lt;p&gt;Making an &lt;strong&gt;authentic chicken curry&lt;/strong&gt; involves a blend of spices, slow cooking, and a bit of patience. Depending on the region, chicken curry recipes vary, but I&amp;rsquo;ll guide you through a basic, flavorful recipe that can be adapted to suit many Indian and South Asian styles. This recipe focuses on traditional ingredients and techniques for an aromatic, rich, and delicious chicken curry.&lt;/p&gt;&#xA;&lt;h2 id=&#34;authentic-chicken-curry-recipe&#34;&gt;&lt;strong&gt;Authentic Chicken Curry Recipe&lt;/strong&gt;&lt;/h2&gt;&#xA;&lt;h3 id=&#34;ingredients&#34;&gt;&lt;strong&gt;Ingredients:&lt;/strong&gt;&lt;/h3&gt;&#xA;&lt;p&gt;&lt;strong&gt;For the Chicken Marinade:&lt;/strong&gt;&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Diagrams on My New Hugo Site</title>
+    <link>http://localhost:1313/tags/diagrams/</link>
+    <description>Recent content in Diagrams on My New Hugo Site</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 25 Oct 2022 17:12:11 +0700</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/diagrams/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Hugo Diagrams</title>
+      <link>http://localhost:1313/posts/diagrams/</link>
+      <pubDate>Tue, 25 Oct 2022 17:12:11 +0700</pubDate>
+      <guid>http://localhost:1313/posts/diagrams/</guid>
+      <description>&lt;p&gt;Hugo version &amp;gt;= 0.93.0&lt;/p&gt;&#xA;&lt;h2 id=&#34;goat-diagrams-ascii&#34;&gt;GoAT Diagrams (Ascii)&lt;/h2&gt;&#xA;&lt;p&gt;Hugo! supports &lt;a href=&#34;https://github.com/bep/goat&#34;&gt;GoAT&lt;/a&gt; natively. This means that this code block:&lt;/p&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;```goat&#xA;      .               .                .               .--- 1          .-- 1     / 1&#xA;     / \              |                |           .---+            .-+         +&#xA;    /   \         .---+---.         .--+--.        |   &amp;#39;--- 2      |   &amp;#39;-- 2   / \ 2&#xA;   +     +        |       |        |       |    ---+            ---+          +&#xA;  / \   / \     .-+-.   .-+-.     .+.     .+.      |   .--- 3      |   .-- 3   \ / 3&#xA; /   \ /   \    |   |   |   |    |   |   |   |     &amp;#39;---+            &amp;#39;-+         +&#xA; 1   2 3   4    1   2   3   4    1   2   3   4         &amp;#39;--- 4          &amp;#39;-- 4     \ 4&#xA;&#xA;```&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Will be rendered as:&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
