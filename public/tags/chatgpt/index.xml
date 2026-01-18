@@ -1,21 +1,6 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Chatgpt on Anthony Castañeda</title>
-    <link>http://localhost:1313/tags/chatgpt/</link>
-    <description>Recent content in Chatgpt on Anthony Castañeda</description>
-    <generator>Hugo</generator>
-    <language>en-us</language>
-    <managingEditor>anthony@anthonycastaneda.com (Anthony Castañeda)</managingEditor>
-    <webMaster>anthony@anthonycastaneda.com (Anthony Castañeda)</webMaster>
-    <lastBuildDate>Sat, 17 Jan 2026 18:10:13 -0600</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/chatgpt/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Entra ID</title>
-      <link>http://localhost:1313/posts/entra/</link>
-      <pubDate>Sun, 23 Mar 2025 00:00:00 +0000</pubDate><author>anthony@anthonycastaneda.com (Anthony Castañeda)</author>
-      <guid>http://localhost:1313/posts/entra/</guid>
-      <description>&lt;h2 id=&#34;entra-powershell&#34;&gt;Entra PowerShell&lt;/h2&gt;&#xA;&lt;p&gt;To work with Enterprise Applications in Azure using PowerShell, particularly for Entra ID (previously Azure AD), you&amp;rsquo;ll typically use the &lt;strong&gt;AzureAD&lt;/strong&gt; or &lt;strong&gt;Microsoft.Graph&lt;/strong&gt; module for interacting with these resources. Below is an example of a PowerShell script that demonstrates how to interact with an &lt;strong&gt;Enterprise Application&lt;/strong&gt; in Entra ID using the &lt;strong&gt;Microsoft.Graph&lt;/strong&gt; module.&lt;/p&gt;&#xA;&lt;h3 id=&#34;prerequisites&#34;&gt;Prerequisites&lt;/h3&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;&lt;strong&gt;Microsoft.Graph PowerShell Module&lt;/strong&gt;: If you don&amp;rsquo;t have it installed, use the following to install it:&lt;/p&gt;</description>
-    </item>
-  </channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Chatgpt on Anthony Castañeda</title><link>https://www.anthonycastaneda.com/tags/chatgpt/</link><description>Recent content in Chatgpt on Anthony Castañeda</description><generator>Hugo</generator><language>en-us</language><managingEditor>anthony@anthonycastaneda.com (Anthony Castañeda)</managingEditor><webMaster>anthony@anthonycastaneda.com (Anthony Castañeda)</webMaster><lastBuildDate>Sat, 17 Jan 2026 21:33:56 -0600</lastBuildDate><atom:link href="https://www.anthonycastaneda.com/tags/chatgpt/index.xml" rel="self" type="application/rss+xml"/><item><title>Entra ID</title><link>https://www.anthonycastaneda.com/posts/entra/</link><pubDate>Sun, 23 Mar 2025 00:00:00 +0000</pubDate><author>anthony@anthonycastaneda.com (Anthony Castañeda)</author><guid>https://www.anthonycastaneda.com/posts/entra/</guid><description>&lt;h2 id="entra-powershell"&gt;Entra PowerShell&lt;/h2&gt;
+&lt;p&gt;To work with Enterprise Applications in Azure using PowerShell, particularly for Entra ID (previously Azure AD), you&amp;rsquo;ll typically use the &lt;strong&gt;AzureAD&lt;/strong&gt; or &lt;strong&gt;Microsoft.Graph&lt;/strong&gt; module for interacting with these resources. Below is an example of a PowerShell script that demonstrates how to interact with an &lt;strong&gt;Enterprise Application&lt;/strong&gt; in Entra ID using the &lt;strong&gt;Microsoft.Graph&lt;/strong&gt; module.&lt;/p&gt;
+&lt;h3 id="prerequisites"&gt;Prerequisites&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Microsoft.Graph PowerShell Module&lt;/strong&gt;: If you don&amp;rsquo;t have it installed, use the following to install it:&lt;/p&gt;</description></item></channel></rss>

@@ -505,5 +505,58 @@ blockquote > :last-child {
   }
 }
 
+/* Print styles */
+@media print {
+  body {
+    background: white;
+    color: black;
+    padding: 0;
+    display: block;
+  }
+
+  header,
+  footer,
+  .terminal-nav,
+  .skip-link,
+  .toc,
+  .back-nav {
+    display: none !important;
+  }
+
+  main {
+    max-width: 100%;
+  }
+
+  a {
+    border-bottom: none;
+    color: black;
+  }
+
+  a[href]::after {
+    content: " (" attr(href) ")";
+    font-size: 0.8em;
+    color: gray;
+  }
+
+  a[href^="#"]::after,
+  a[href^="javascript:"]::after {
+    content: "";
+  }
+
+  pre,
+  blockquote,
+  img {
+    page-break-inside: avoid;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5 {
+    page-break-after: avoid;
+  }
+}
+
 /* Custom defined styles */
 @import "assets/css/custom";

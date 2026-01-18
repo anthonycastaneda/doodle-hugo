@@ -1,206 +1,37 @@
-<!DOCTYPE html>
-<html lang="en-us" dir="ltr">
-
-<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
-  <meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>
-  Entra ID | Anthony Castañeda
-</title>
-<meta
-  name="description"
-  content="ChatGPT creates documentation"
-/> 
-<link rel="canonical" href="http://localhost:1313/posts/entra/" />
-
-
-<meta property="og:title" content="Entra ID" />
-<meta
-  property="og:description"
-  content="ChatGPT creates documentation"
-/>
-<meta
-  property="og:type"
-  content="article"
-/>
-<meta property="og:url" content="http://localhost:1313/posts/entra/" />
- 
-<meta name="twitter:card" content="summary" />
-<meta name="twitter:title" content="Entra ID" />
-<meta
-  name="twitter:description"
-  content="ChatGPT creates documentation"
-/>      
-<script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Article",
-    "headline": "Entra ID",
-    "url": "http:\/\/localhost:1313\/posts\/entra\/",
-    "datePublished": "2025-03-23T00:00:00Z",
-    "dateModified": "2026-01-17T18:10:13-06:00",
-    "author": {
-      "@type": "Person",
-      "name": "Anthony Castañeda"
-    },
-    "description": "ChatGPT creates documentation"
-  }
-</script>
- <link rel="apple-touch-icon" sizes="57x57" href="/favicon_io/apple-icon-57x57.png">
-<link rel="apple-touch-icon" sizes="60x60" href="/favicon_io/apple-icon-60x60.png">
-<link rel="apple-touch-icon" sizes="72x72" href="/favicon_io/apple-icon-72x72.png">
-<link rel="apple-touch-icon" sizes="76x76" href="/favicon_io/apple-icon-76x76.png">
-<link rel="apple-touch-icon" sizes="114x114" href="/favicon_io/apple-icon-114x114.png">
-<link rel="apple-touch-icon" sizes="120x120" href="/favicon_io/apple-icon-120x120.png">
-<link rel="apple-touch-icon" sizes="144x144" href="/favicon_io/apple-icon-144x144.png">
-<link rel="apple-touch-icon" sizes="152x152" href="/favicon_io/apple-icon-152x152.png">
-<link rel="apple-touch-icon" sizes="180x180" href="/favicon_io/apple-icon-180x180.png">
-<link rel="icon" type="image/png" sizes="192x192"  href="/favicon_io/android-icon-192x192.png">
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon_io/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="96x96" href="/favicon_io/favicon-96x96.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/favicon_io/favicon-16x16.png">
-<link rel="manifest" href="/favicon_io/manifest.json">
-<meta name="msapplication-TileColor" content="#ffffff">
-<meta name="msapplication-TileImage" content="/favicon_io/ms-icon-144x144.png">
-<meta name="theme-color" content="#ffffff">
- 
-    <link rel="stylesheet" href="/css/main.css">
-    <link rel="stylesheet" href="/css/custom.css">
-
-
-</head>
-
-<body>
-  <header><nav class="path-nav">
-  <ol>
-    
-  
-    
-  
-    
-  
-  <li>
-    /
-    <a href="/">Anthony Castañeda</a>
-    /
-  </li>
-
-  
-  <li>
-    
-    <a href="/posts/">Posts</a>
-    /
-  </li>
-
-  
-  <li class="current">
-    
-    <a href="/posts/entra/">Entra ID</a>
-    
-  </li>
-
-  </ol>
-</nav>
-
-
-
-</header>
-  <main id="main-content">
-<h1>Entra ID</h1>
-
-
-
-<time datetime="2025-03-23T00:00:00&#43;00:00">March 23, 2025</time>
-
-<h2 id="entra-powershell">Entra PowerShell</h2>
-<p>To work with Enterprise Applications in Azure using PowerShell, particularly for Entra ID (previously Azure AD), you&rsquo;ll typically use the <strong>AzureAD</strong> or <strong>Microsoft.Graph</strong> module for interacting with these resources. Below is an example of a PowerShell script that demonstrates how to interact with an <strong>Enterprise Application</strong> in Entra ID using the <strong>Microsoft.Graph</strong> module.</p>
-<h3 id="prerequisites">Prerequisites</h3>
-<ul>
-<li>
-<p><strong>Microsoft.Graph PowerShell Module</strong>: If you don&rsquo;t have it installed, use the following to install it:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#433e56;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>Install-Module Microsoft.Graph -Scope CurrentUser
-</span></span></code></pre></div></li>
-<li>
-<p><strong>Login</strong>: You&rsquo;ll need to authenticate with your Azure tenant. If you&rsquo;re using multi-tenant authentication, you may need admin consent for specific actions.</p>
-</li>
-</ul>
-<hr>
-<h3 id="example-script-for-managing-enterprise-applications">Example Script for Managing Enterprise Applications</h3>
-<p>This script will cover basic tasks, such as:</p>
-<ul>
-<li>Logging in to Azure.</li>
-<li>Fetching a list of Enterprise Applications.</li>
-<li>Assigning roles or permissions to the app.</li>
-</ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#433e56;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-PowerShell" data-lang="PowerShell"><span style="display:flex;"><span><span style="color:#b0bec5"># Connect to Microsoft Graph</span>
-</span></span><span style="display:flex;"><span>Connect-MgGraph -Scopes <span style="color:#1bc5e0">&#34;Application.ReadWrite.All&#34;</span>, <span style="color:#1bc5e0">&#34;Directory.ReadWrite.All&#34;</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#b0bec5"># Get all Enterprise Applications</span>
-</span></span><span style="display:flex;"><span>$enterpriseApps = Get-MgServicePrincipal
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#b0bec5"># Display list of Enterprise Applications (Service Principals)</span>
-</span></span><span style="display:flex;"><span>$enterpriseApps | Select DisplayName, AppId, Id
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#b0bec5"># Example: Get details of a specific Enterprise Application by AppId</span>
-</span></span><span style="display:flex;"><span>$appId = <span style="color:#1bc5e0">&#34;your-app-id-here&#34;</span>  <span style="color:#b0bec5"># Replace with your Enterprise Application&#39;s AppId</span>
-</span></span><span style="display:flex;"><span>$enterpriseApp = Get-MgServicePrincipal -ServicePrincipalId $appId
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#b0bec5"># Display details of the specific Enterprise Application</span>
-</span></span><span style="display:flex;"><span>$enterpriseApp | Format-List DisplayName, AppId, Id, Description, AppRoleAssignedTo
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#b0bec5"># Example: Assign a role to the Enterprise Application</span>
-</span></span><span style="display:flex;"><span><span style="color:#b0bec5"># First, find the role you want to assign</span>
-</span></span><span style="display:flex;"><span>$roles = Get-MgServicePrincipalAppRoleAssignedTo -ServicePrincipalId $enterpriseApp.Id
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#b0bec5"># Display available roles</span>
-</span></span><span style="display:flex;"><span>$roles | Select AppRoleId, PrincipalDisplayName, ResourceDisplayName
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#b0bec5"># Assign role (if necessary)</span>
-</span></span><span style="display:flex;"><span><span style="color:#b0bec5"># Example: You&#39;d assign a role like this (adjust based on your needs):</span>
-</span></span><span style="display:flex;"><span>$roleId = <span style="color:#1bc5e0">&#34;role-id&#34;</span>  <span style="color:#b0bec5"># Replace with actual role ID</span>
-</span></span><span style="display:flex;"><span>$resourceId = <span style="color:#1bc5e0">&#34;resource-id&#34;</span>  <span style="color:#b0bec5"># Replace with resource (service) ID</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>New-MgServicePrincipalAppRoleAssignment -ServicePrincipalId $enterpriseApp.Id -AppRoleId $roleId -ResourceId $resourceId
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>Write-Host <span style="color:#1bc5e0">&#34;Role Assigned Successfully!&#34;</span>
-</span></span></code></pre></div><hr>
-<h3 id="key-concepts">Key Concepts</h3>
-<ul>
-<li><strong>Service Principal</strong>: This represents the application&rsquo;s identity in Azure AD.</li>
-<li><strong>App Roles</strong>: These are permissions or roles assigned to an application, and the <code>AppRoleAssignedTo</code> refers to which roles are assigned.</li>
-<li><strong>Get-MgServicePrincipal</strong>: Retrieves a list of service principals (Enterprise Applications).</li>
-<li><strong>New-MgServicePrincipalAppRoleAssignment</strong>: Assigns an app role to a service principal.</li>
-</ul>
-<hr>
-<h3 id="more-advanced-operations-you-can-perform">More advanced operations you can perform</h3>
-<ul>
-<li><strong>Assigning users to an Enterprise Application</strong>: Use <code>Add-MgUserToGroup</code> or <code>Add-MgServicePrincipalOwner</code> if you&rsquo;re adding a user to the application or managing permissions.</li>
-<li><strong>Deleting an Enterprise Application</strong>: Use <code>Remove-MgServicePrincipal</code>.</li>
-</ul>
-<hr>
-
-
-  <div class="terms-list">
-    <ul>
-        <li><a href="/tags/blog/">#Blog</a></li>
-        <li><a href="/tags/chatgpt/">#Chatgpt</a></li>
-    </ul>
-  </div>
-
-
-<div class="terminal-nav">
-  <div class="back-nav">
-    
-    <a href="/posts/" class="back-link">../</a>
-    
-  </div>
-</div>
-
-</main>
-  <footer><p>
-  &copy; Copyright 2026 &middot;
-  Anthony Castañeda
-</p></footer>
-</body>
-
-</html>
+<!doctype html><html lang=en-us dir=ltr><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>Entra ID | Anthony Castañeda</title><meta name=description content="ChatGPT creates documentation"><link rel=canonical href=https://www.anthonycastaneda.com/posts/entra/><meta property="og:title" content="Entra ID"><meta property="og:description" content="ChatGPT creates documentation"><meta property="og:type" content="article"><meta property="og:url" content="https://www.anthonycastaneda.com/posts/entra/"><meta name=twitter:card content="summary"><meta name=twitter:title content="Entra ID"><meta name=twitter:description content="ChatGPT creates documentation"><script type=application/ld+json>{"@context":"https://schema.org","@type":"Article","headline":"Entra ID","url":"https:\/\/www.anthonycastaneda.com\/posts\/entra\/","datePublished":"2025-03-23T00:00:00Z","dateModified":"2026-01-17T21:33:56-06:00","author":{"@type":"Person","name":"Anthony Castañeda"},"description":"ChatGPT creates documentation"}</script><link rel=apple-touch-icon sizes=57x57 href=/favicon_io/apple-icon-57x57.png><link rel=apple-touch-icon sizes=60x60 href=/favicon_io/apple-icon-60x60.png><link rel=apple-touch-icon sizes=72x72 href=/favicon_io/apple-icon-72x72.png><link rel=apple-touch-icon sizes=76x76 href=/favicon_io/apple-icon-76x76.png><link rel=apple-touch-icon sizes=114x114 href=/favicon_io/apple-icon-114x114.png><link rel=apple-touch-icon sizes=120x120 href=/favicon_io/apple-icon-120x120.png><link rel=apple-touch-icon sizes=144x144 href=/favicon_io/apple-icon-144x144.png><link rel=apple-touch-icon sizes=152x152 href=/favicon_io/apple-icon-152x152.png><link rel=apple-touch-icon sizes=180x180 href=/favicon_io/apple-icon-180x180.png><link rel=icon type=image/png sizes=192x192 href=/favicon_io/android-icon-192x192.png><link rel=icon type=image/png sizes=32x32 href=/favicon_io/favicon-32x32.png><link rel=icon type=image/png sizes=96x96 href=/favicon_io/favicon-96x96.png><link rel=icon type=image/png sizes=16x16 href=/favicon_io/favicon-16x16.png><link rel=manifest href=/favicon_io/manifest.json><meta name=msapplication-TileColor content="#ffffff"><meta name=msapplication-TileImage content="/favicon_io/ms-icon-144x144.png"><meta name=theme-color content="#ffffff"><link rel=stylesheet href=/css/main.min.7270e4c221fd0aa7a80b28465d45a26a7532e7499428d02f03390d51fd1971a6.css integrity="sha256-cnDkwiH9CqeoCyhGXUWianUy50mUKNAvAzkNUf0ZcaY=" crossorigin=anonymous><link rel=stylesheet href=/css/custom.min.2eaf7f9f21986aaa6d0050733657ca2a5570f97e60adc90c9c4ac509f021cefd.css integrity="sha256-Lq9/nyGYaqptAFBzNlfKKlVw+X5grckMnErFCfAhzv0=" crossorigin=anonymous></head><body><header><nav class=path-nav><ol><li>/
+<a href=/>Anthony Castañeda</a>
+/</li><li><a href=/posts/>Posts</a>
+/</li><li class=current><a href=/posts/entra/>Entra ID</a></li></ol></nav></header><main id=main-content><h1>Entra ID</h1><time datetime=2025-03-23T00:00:00+00:00>March 23, 2025</time><h2 id=entra-powershell>Entra PowerShell</h2><p>To work with Enterprise Applications in Azure using PowerShell, particularly for Entra ID (previously Azure AD), you&rsquo;ll typically use the <strong>AzureAD</strong> or <strong>Microsoft.Graph</strong> module for interacting with these resources. Below is an example of a PowerShell script that demonstrates how to interact with an <strong>Enterprise Application</strong> in Entra ID using the <strong>Microsoft.Graph</strong> module.</p><h3 id=prerequisites>Prerequisites</h3><ul><li><p><strong>Microsoft.Graph PowerShell Module</strong>: If you don&rsquo;t have it installed, use the following to install it:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#433e56;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-powershell data-lang=powershell><span style=display:flex><span>Install-Module Microsoft.Graph -Scope CurrentUser
+</span></span></code></pre></div></li><li><p><strong>Login</strong>: You&rsquo;ll need to authenticate with your Azure tenant. If you&rsquo;re using multi-tenant authentication, you may need admin consent for specific actions.</p></li></ul><hr><h3 id=example-script-for-managing-enterprise-applications>Example Script for Managing Enterprise Applications</h3><p>This script will cover basic tasks, such as:</p><ul><li>Logging in to Azure.</li><li>Fetching a list of Enterprise Applications.</li><li>Assigning roles or permissions to the app.</li></ul><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#433e56;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-PowerShell data-lang=PowerShell><span style=display:flex><span><span style=color:#b0bec5># Connect to Microsoft Graph</span>
+</span></span><span style=display:flex><span>Connect-MgGraph -Scopes <span style=color:#1bc5e0>&#34;Application.ReadWrite.All&#34;</span>, <span style=color:#1bc5e0>&#34;Directory.ReadWrite.All&#34;</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#b0bec5># Get all Enterprise Applications</span>
+</span></span><span style=display:flex><span>$enterpriseApps = Get-MgServicePrincipal
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#b0bec5># Display list of Enterprise Applications (Service Principals)</span>
+</span></span><span style=display:flex><span>$enterpriseApps | Select DisplayName, AppId, Id
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#b0bec5># Example: Get details of a specific Enterprise Application by AppId</span>
+</span></span><span style=display:flex><span>$appId = <span style=color:#1bc5e0>&#34;your-app-id-here&#34;</span>  <span style=color:#b0bec5># Replace with your Enterprise Application&#39;s AppId</span>
+</span></span><span style=display:flex><span>$enterpriseApp = Get-MgServicePrincipal -ServicePrincipalId $appId
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#b0bec5># Display details of the specific Enterprise Application</span>
+</span></span><span style=display:flex><span>$enterpriseApp | Format-List DisplayName, AppId, Id, Description, AppRoleAssignedTo
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#b0bec5># Example: Assign a role to the Enterprise Application</span>
+</span></span><span style=display:flex><span><span style=color:#b0bec5># First, find the role you want to assign</span>
+</span></span><span style=display:flex><span>$roles = Get-MgServicePrincipalAppRoleAssignedTo -ServicePrincipalId $enterpriseApp.Id
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#b0bec5># Display available roles</span>
+</span></span><span style=display:flex><span>$roles | Select AppRoleId, PrincipalDisplayName, ResourceDisplayName
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#b0bec5># Assign role (if necessary)</span>
+</span></span><span style=display:flex><span><span style=color:#b0bec5># Example: You&#39;d assign a role like this (adjust based on your needs):</span>
+</span></span><span style=display:flex><span>$roleId = <span style=color:#1bc5e0>&#34;role-id&#34;</span>  <span style=color:#b0bec5># Replace with actual role ID</span>
+</span></span><span style=display:flex><span>$resourceId = <span style=color:#1bc5e0>&#34;resource-id&#34;</span>  <span style=color:#b0bec5># Replace with resource (service) ID</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>New-MgServicePrincipalAppRoleAssignment -ServicePrincipalId $enterpriseApp.Id -AppRoleId $roleId -ResourceId $resourceId
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>Write-Host <span style=color:#1bc5e0>&#34;Role Assigned Successfully!&#34;</span>
+</span></span></code></pre></div><hr><h3 id=key-concepts>Key Concepts</h3><ul><li><strong>Service Principal</strong>: This represents the application&rsquo;s identity in Azure AD.</li><li><strong>App Roles</strong>: These are permissions or roles assigned to an application, and the <code>AppRoleAssignedTo</code> refers to which roles are assigned.</li><li><strong>Get-MgServicePrincipal</strong>: Retrieves a list of service principals (Enterprise Applications).</li><li><strong>New-MgServicePrincipalAppRoleAssignment</strong>: Assigns an app role to a service principal.</li></ul><hr><h3 id=more-advanced-operations-you-can-perform>More advanced operations you can perform</h3><ul><li><strong>Assigning users to an Enterprise Application</strong>: Use <code>Add-MgUserToGroup</code> or <code>Add-MgServicePrincipalOwner</code> if you&rsquo;re adding a user to the application or managing permissions.</li><li><strong>Deleting an Enterprise Application</strong>: Use <code>Remove-MgServicePrincipal</code>.</li></ul><hr><div class=terms-list><ul><li><a href=/tags/blog/>#Blog</a></li><li><a href=/tags/chatgpt/>#Chatgpt</a></li></ul></div><div class=terminal-nav><div class=back-nav><a href=/posts/ class=back-link>../</a></div></div></main><footer><p>&copy; Copyright 2026 &#183;
+Anthony Castañeda</p></footer></body></html>

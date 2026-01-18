@@ -1,5 +1,7 @@
 baseURL = 'https://www.anthonycastaneda.com/'
+description = "A blog for a middle-aged man"
 enableGitInfo = true
+features = ["responsive"]
 languageCode = 'en-us'
 title = 'Anthony Castañeda'
 
