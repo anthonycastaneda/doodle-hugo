@@ -14,6 +14,9 @@ defaultMarkdownHandler = "goldmark"
 [markup.goldmark]
 [markup.goldmark.renderer]
 unsafe = true # Enable user to embed HTML snippets in Markdown content.
+[markup.goldmark.parser.attribute]
+block = true
+
 [markup.highlight]
 codeFences = true
 guessSyntax = true

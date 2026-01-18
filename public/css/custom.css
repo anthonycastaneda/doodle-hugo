@@ -32,6 +32,24 @@ ul li {
   list-style-type: "* ";
 }
 
+figure {
+  margin: var(--spacing-base) 0;
+  text-align: center;
+}
+
+figure img {
+  border-radius: 3px;
+  border-style: solid;
+  border-width: 3px 3px 3px 3px;
+  border-image: url(/img/button.svg) 3 3 3 3 stretch stretch;
+}
+
+fieldset {
+  border-style: solid;
+  border-width: 10px 10px 10px 10px;
+  border-image: url(/img/border.svg) 10 10 10 10 stretch stretch;
+}
+
 .doodle * {
   box-sizing: border-box;
 }
@@ -74,14 +92,14 @@ ul li {
 .doodle textarea {
   border-style: solid;
   border-width: 10px 10px 10px 10px;
-  border-image: url(/static/img/border.svg) 10 10 10 10 stretch stretch;
+  border-image: url(/img/border.svg) 10 10 10 10 stretch stretch;
 }
 
 .doodle .border,
 .doodle-border {
   border-style: solid;
   border-width: 10px 10px 10px 10px;
-  border-image: url(/static/img/button.svg) 10 10 10 10 stretch stretch;
+  border-image: url(/img/button.svg) 10 10 10 10 stretch stretch;
 }
 
 .doodle button,
@@ -90,7 +108,7 @@ ul li {
 .doodle input[type="file"]::file-selector-button {
   border-style: solid;
   border-width: 10px 10px 10px 10px;
-  border-image: url(/static/img/button.svg) 10 10 10 10 stretch stretch;
+  border-image: url(/img/button.svg) 10 10 10 10 stretch stretch;
 }
 
 .doodle button {
@@ -104,13 +122,13 @@ ul li {
 .doodle hr {
   border-style: solid;
   border-width: 0px 3px 6px 3px;
-  border-image: url(/static/img/hr.svg) 0 3 6 3 stretch stretch;
+  border-image: url(/img/hr.svg) 0 3 6 3 stretch stretch;
 }
 
 .doodle blockquote {
   border-left-style: solid;
   border-width: 0px 6px 3px 6px;
-  border-image: url(/static/img/bq.svg) 0 6 3 6 stretch stretch;
+  border-image: url(/img/bq.svg) 0 6 3 6 stretch stretch;
   padding-left: 0.5em;
   border-right-width: 0px;
 }
@@ -132,7 +150,7 @@ ul li {
 .doodle table caption {
   border-bottom-style: solid;
   border-width: 0px 3px 6px 3px;
-  border-image: url(/static/img/hr.svg) 0 3 6 3 stretch stretch;
+  border-image: url(/img/hr.svg) 0 3 6 3 stretch stretch;
 }
 
 .doodle table td {
@@ -143,14 +161,14 @@ ul li {
   border-radius: 3px;
   border-style: solid;
   border-width: 3px 3px 3px 3px;
-  border-image: url(/static/img/button.svg) 3 3 3 3 stretch stretch;
+  border-image: url(/img/button.svg) 3 3 3 3 stretch stretch;
 }
 
 .doodle select {
   -webkit-appearance: none;
   appearance: none;
   padding-right: 1.5em;
-  background: url(/static/img/caret.svg) no-repeat right transparent;
+  background: url(/img/caret.svg) no-repeat right transparent;
   background-position-x: calc(100% - 10px);
 }
 
@@ -175,12 +193,12 @@ ul li {
 
 .doodle input[type="checkbox"] {
   border-width: 6px 6px 6px 6px;
-  border-image: url(/static/img/checkbox.svg) 6 6 6 6 stretch stretch;
+  border-image: url(/img/checkbox.svg) 6 6 6 6 stretch stretch;
 }
 
 .doodle input[type="radio"] {
   border-width: 16px 16px 16px 16px;
-  border-image: url(/static/img/radio.svg) 16 16 16 16 stretch stretch;
+  border-image: url(/img/radio.svg) 16 16 16 16 stretch stretch;
 }
 
 .doodle input[type="checkbox"],

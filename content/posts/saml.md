@@ -27,7 +27,7 @@ Every one of these steps passes through the browser, which means DevTools can se
 
 ---
 
-## Step 1: Open DevTools and Preserve the Trail
+## Open DevTools and Preserve the Trail
 
 1. Open your browser’s DevTools (`Cmd+Option+I` on macOS, `Ctrl+Shift+I` on Windows)
 2. Go to the **Network** tab
@@ -40,14 +40,20 @@ Now reproduce the login issue from the start.
 
 ---
 
-## Step 2: Identify the SAML Requests
+## Identify the SAML Requests
 
-In the Network tab, filter using:
+In the Network tab, look at the Name column for terms like these:
 
 * `SAML`
 * `login`
 * `acs`
 * `SSO`
+
+For reference, the name will be the last portion of the SP ACS URL. so if
+
+`https://contoso.com/sso/saml/post`
+
+is the service provider's ACS URL, the name in DevTools will be `post`.
 
 You are typically looking for:
 
@@ -58,7 +64,7 @@ Click on each request and inspect it closely.
 
 ---
 
-## Step 3: Inspect the SAMLRequest (SP → IdP)
+## Inspect the SAMLRequest (SP → IdP)
 
 Select the request that redirects to the IdP.
 
@@ -82,7 +88,7 @@ If the redirect never happens, the issue is almost certainly on the SP side.
 
 ---
 
-## Step 4: Decode and Inspect the SAMLResponse (IdP → SP)
+## Decode and Inspect the SAMLResponse (IdP → SP)
 
 This is where most SAML problems live.
 
@@ -116,7 +122,7 @@ A single character mismatch can cause validation failure.
 
 ---
 
-## Step 5: Look for Signature and Certificate Issues
+## Look for Signature and Certificate Issues
 
 Still in the decoded XML:
 
@@ -134,7 +140,7 @@ If the SP logs say “invalid signature,” DevTools plus the decoded XML usuall
 
 ---
 
-## Step 6: Use the Console for Silent Failures
+## Use the Console for Silent Failures
 
 Sometimes the network looks fine, but the browser still errors.
 
@@ -148,7 +154,7 @@ Modern browser cookie policies can break otherwise correct SAML flows.
 
 ---
 
-## Step 7: Compare a Working vs Broken Flow
+## Compare a Working vs Broken Flow
 
 One of the most effective techniques:
 

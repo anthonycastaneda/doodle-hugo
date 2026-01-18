@@ -106,13 +106,13 @@
 
 </header>
   <main id="main-content">
-  <h1>Working with SAML</h1>
+<h1>Working with SAML</h1>
 
-  
-  
-  <time datetime="2026-01-11T00:00:00&#43;00:00">January 11, 2026</time>
 
-  <h2 id="troubleshooting-saml-using-your-browsers-devtools">Troubleshooting SAML Using Your Browser’s DevTools</h2>
+
+<time datetime="2026-01-11T00:00:00&#43;00:00">January 11, 2026</time>
+
+<h2 id="troubleshooting-saml-using-your-browsers-devtools">Troubleshooting SAML Using Your Browser’s DevTools</h2>
 <p>Single Sign-On (SSO) with SAML can feel opaque when something goes wrong. Users see a vague error, identity providers log something cryptic, and service providers often just say “authentication failed.” Fortunately, your browser already has one of the most powerful SAML troubleshooting tools built in: <strong>Developer Tools (DevTools)</strong>.</p>
 <p>This post walks through a practical, repeatable approach to debugging SAML flows using browser DevTools, focusing on Chrome (the concepts apply equally to Firefox, Edge, and Safari).</p>
 <hr>
@@ -127,7 +127,7 @@
 </ol>
 <p>Every one of these steps passes through the browser, which means DevTools can see it.</p>
 <hr>
-<h2 id="step-1-open-devtools-and-preserve-the-trail">Step 1: Open DevTools and Preserve the Trail</h2>
+<h2 id="open-devtools-and-preserve-the-trail">Open DevTools and Preserve the Trail</h2>
 <ol>
 <li>
 <p>Open your browser’s DevTools (<code>Cmd+Option+I</code> on macOS, <code>Ctrl+Shift+I</code> on Windows)</p>
@@ -145,14 +145,17 @@
 </ol>
 <p>Now reproduce the login issue from the start.</p>
 <hr>
-<h2 id="step-2-identify-the-saml-requests">Step 2: Identify the SAML Requests</h2>
-<p>In the Network tab, filter using:</p>
+<h2 id="identify-the-saml-requests">Identify the SAML Requests</h2>
+<p>In the Network tab, look at the Name column for terms like these:</p>
 <ul>
 <li><code>SAML</code></li>
 <li><code>login</code></li>
 <li><code>acs</code></li>
 <li><code>SSO</code></li>
 </ul>
+<p>For reference, the name will be the last portion of the SP ACS URL. so if</p>
+<p><code>https://contoso.com/sso/saml/post</code></p>
+<p>is the service provider&rsquo;s ACS URL, the name in DevTools will be <code>post</code>.</p>
 <p>You are typically looking for:</p>
 <ul>
 <li>A <strong>redirect (302)</strong> to the IdP containing a <code>SAMLRequest</code></li>
@@ -160,7 +163,7 @@
 </ul>
 <p>Click on each request and inspect it closely.</p>
 <hr>
-<h2 id="step-3-inspect-the-samlrequest-sp--idp">Step 3: Inspect the SAMLRequest (SP → IdP)</h2>
+<h2 id="inspect-the-samlrequest-sp--idp">Inspect the SAMLRequest (SP → IdP)</h2>
 <p>Select the request that redirects to the IdP.</p>
 <h3 id="where-to-look">Where to Look</h3>
 <ul>
@@ -180,7 +183,7 @@
 </ul>
 <p>If the redirect never happens, the issue is almost certainly on the SP side.</p>
 <hr>
-<h2 id="step-4-decode-and-inspect-the-samlresponse-idp--sp">Step 4: Decode and Inspect the SAMLResponse (IdP → SP)</h2>
+<h2 id="decode-and-inspect-the-samlresponse-idp--sp">Decode and Inspect the SAMLResponse (IdP → SP)</h2>
 <p>This is where most SAML problems live.</p>
 <h3 id="find-the-response">Find the Response</h3>
 <p>Look for a <strong>POST</strong> request to your Assertion Consumer Service (ACS) URL. In DevTools:</p>
@@ -208,7 +211,7 @@
 </ul>
 <p>A single character mismatch can cause validation failure.</p>
 <hr>
-<h2 id="step-5-look-for-signature-and-certificate-issues">Step 5: Look for Signature and Certificate Issues</h2>
+<h2 id="look-for-signature-and-certificate-issues">Look for Signature and Certificate Issues</h2>
 <p>Still in the decoded XML:</p>
 <ul>
 <li>Is the assertion or response <strong>signed</strong>?</li>
@@ -223,7 +226,7 @@
 </ul>
 <p>If the SP logs say “invalid signature,” DevTools plus the decoded XML usually reveal why.</p>
 <hr>
-<h2 id="step-6-use-the-console-for-silent-failures">Step 6: Use the Console for Silent Failures</h2>
+<h2 id="use-the-console-for-silent-failures">Use the Console for Silent Failures</h2>
 <p>Sometimes the network looks fine, but the browser still errors.</p>
 <p>Check the <strong>Console</strong> tab for:</p>
 <ul>
@@ -233,7 +236,7 @@
 </ul>
 <p>Modern browser cookie policies can break otherwise correct SAML flows.</p>
 <hr>
-<h2 id="step-7-compare-a-working-vs-broken-flow">Step 7: Compare a Working vs Broken Flow</h2>
+<h2 id="compare-a-working-vs-broken-flow">Compare a Working vs Broken Flow</h2>
 <p>One of the most effective techniques:</p>
 <ol>
 <li>
@@ -276,19 +279,27 @@
 <p>Once you get comfortable with DevTools, SAML troubleshooting becomes less of a mystery and more of a checklist.</p>
 <p>Happy debugging 🔍</p>
 
-  
+
   <div class="terms-list">
     <ul>
         <li><a href="/tags/sso/">#SSO</a></li>
     </ul>
   </div>
 
+
+<div class="terminal-nav">
+  <div class="back-nav">
+    
+    <a href="/posts/" class="back-link">../</a>
+    
+  </div>
+</div>
+
 </main>
   <footer><p>
   &copy; Copyright 2026 &middot;
-  <a href="https://github.com/ntk148v/shibui">shibui</a>
-</p>
-</footer>
+  Anthony Castañeda
+</p></footer>
 </body>
 
 </html>

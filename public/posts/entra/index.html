@@ -106,16 +106,16 @@
 
 </header>
   <main id="main-content">
-  <h1>Entra ID</h1>
+<h1>Entra ID</h1>
 
-  
-  
-  <time datetime="2025-03-23T00:00:00&#43;00:00">March 23, 2025</time>
 
-  <h2 id="entra-powershell">Entra PowerShell</h2>
+
+<time datetime="2025-03-23T00:00:00&#43;00:00">March 23, 2025</time>
+
+<h2 id="entra-powershell">Entra PowerShell</h2>
 <p>To work with Enterprise Applications in Azure using PowerShell, particularly for Entra ID (previously Azure AD), you&rsquo;ll typically use the <strong>AzureAD</strong> or <strong>Microsoft.Graph</strong> module for interacting with these resources. Below is an example of a PowerShell script that demonstrates how to interact with an <strong>Enterprise Application</strong> in Entra ID using the <strong>Microsoft.Graph</strong> module.</p>
 <h3 id="prerequisites">Prerequisites</h3>
-<ol>
+<ul>
 <li>
 <p><strong>Microsoft.Graph PowerShell Module</strong>: If you don&rsquo;t have it installed, use the following to install it:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#433e56;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>Install-Module Microsoft.Graph -Scope CurrentUser
@@ -123,15 +123,15 @@
 <li>
 <p><strong>Login</strong>: You&rsquo;ll need to authenticate with your Azure tenant. If you&rsquo;re using multi-tenant authentication, you may need admin consent for specific actions.</p>
 </li>
-</ol>
+</ul>
 <hr>
 <h3 id="example-script-for-managing-enterprise-applications">Example Script for Managing Enterprise Applications</h3>
 <p>This script will cover basic tasks, such as:</p>
-<ol>
+<ul>
 <li>Logging in to Azure.</li>
 <li>Fetching a list of Enterprise Applications.</li>
 <li>Assigning roles or permissions to the app.</li>
-</ol>
+</ul>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#433e56;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-PowerShell" data-lang="PowerShell"><span style="display:flex;"><span><span style="color:#b0bec5"># Connect to Microsoft Graph</span>
 </span></span><span style="display:flex;"><span>Connect-MgGraph -Scopes <span style="color:#1bc5e0">&#34;Application.ReadWrite.All&#34;</span>, <span style="color:#1bc5e0">&#34;Directory.ReadWrite.All&#34;</span>
 </span></span><span style="display:flex;"><span>
@@ -179,7 +179,7 @@
 </ul>
 <hr>
 
-  
+
   <div class="terms-list">
     <ul>
         <li><a href="/tags/blog/">#Blog</a></li>
@@ -187,12 +187,20 @@
     </ul>
   </div>
 
+
+<div class="terminal-nav">
+  <div class="back-nav">
+    
+    <a href="/posts/" class="back-link">../</a>
+    
+  </div>
+</div>
+
 </main>
   <footer><p>
   &copy; Copyright 2026 &middot;
-  <a href="https://github.com/ntk148v/shibui">shibui</a>
-</p>
-</footer>
+  Anthony Castañeda
+</p></footer>
 </body>
 
 </html>

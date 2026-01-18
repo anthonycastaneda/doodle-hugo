@@ -12,13 +12,13 @@ To work with Enterprise Applications in Azure using PowerShell, particularly for
 
 ### Prerequisites
 
-1. **Microsoft.Graph PowerShell Module**: If you don't have it installed, use the following to install it:
+- **Microsoft.Graph PowerShell Module**: If you don't have it installed, use the following to install it:
 
    ```powershell
    Install-Module Microsoft.Graph -Scope CurrentUser
    ```
 
-2. **Login**: You'll need to authenticate with your Azure tenant. If you're using multi-tenant authentication, you may need admin consent for specific actions.
+- **Login**: You'll need to authenticate with your Azure tenant. If you're using multi-tenant authentication, you may need admin consent for specific actions.
 
 ---
 
@@ -26,9 +26,9 @@ To work with Enterprise Applications in Azure using PowerShell, particularly for
 
 This script will cover basic tasks, such as:
 
-1. Logging in to Azure.
-2. Fetching a list of Enterprise Applications.
-3. Assigning roles or permissions to the app.
+- Logging in to Azure.
+- Fetching a list of Enterprise Applications.
+- Assigning roles or permissions to the app.
 
 ```PowerShell
 # Connect to Microsoft Graph
