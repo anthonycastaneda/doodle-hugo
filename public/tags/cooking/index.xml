@@ -1,7 +1,21 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Cooking on Anthony Castañeda</title><link>https://www.anthonycastaneda.com/tags/cooking/</link><description>Recent content in Cooking on Anthony Castañeda</description><generator>Hugo</generator><language>en-us</language><managingEditor>anthony@anthonycastaneda.com (Anthony Castañeda)</managingEditor><webMaster>anthony@anthonycastaneda.com (Anthony Castañeda)</webMaster><lastBuildDate>Sat, 17 Jan 2026 21:33:56 -0600</lastBuildDate><atom:link href="https://www.anthonycastaneda.com/tags/cooking/index.xml" rel="self" type="application/rss+xml"/><item><title>Making Chicken Curry</title><link>https://www.anthonycastaneda.com/posts/curry/</link><pubDate>Sun, 23 Mar 2025 00:00:00 +0000</pubDate><author>anthony@anthonycastaneda.com (Anthony Castañeda)</author><guid>https://www.anthonycastaneda.com/posts/curry/</guid><description>&lt;fieldset&gt;
- &lt;legend&gt;Yummy&lt;/legend&gt;
-Making an &lt;strong&gt;authentic chicken curry&lt;/strong&gt; involves a blend of spices, slow cooking, and a bit of patience. Depending on the region, chicken curry recipes vary, but I'll guide you through a basic, flavorful recipe that can be adapted to suit many Indian and South Asian styles. This recipe focuses on traditional ingredients and techniques for an aromatic, rich, and delicious chicken curry.
-&lt;/fieldset&gt;
-&lt;h2 id="authentic-chicken-curry-recipe"&gt;&lt;strong&gt;Authentic Chicken Curry Recipe&lt;/strong&gt;&lt;/h2&gt;
-&lt;h3 id="ingredients"&gt;&lt;strong&gt;Ingredients:&lt;/strong&gt;&lt;/h3&gt;
-&lt;p&gt;&lt;strong&gt;For the Chicken Marinade:&lt;/strong&gt;&lt;/p&gt;</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Cooking on Anthony Castañeda</title>
+    <link>http://localhost:1313/tags/cooking/</link>
+    <description>Recent content in Cooking on Anthony Castañeda</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <managingEditor>anthony@anthonycastaneda.com (Anthony Castañeda)</managingEditor>
+    <webMaster>anthony@anthonycastaneda.com (Anthony Castañeda)</webMaster>
+    <lastBuildDate>Sat, 17 Jan 2026 21:33:56 -0600</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/cooking/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Making Chicken Curry</title>
+      <link>http://localhost:1313/posts/curry/</link>
+      <pubDate>Sun, 23 Mar 2025 00:00:00 +0000</pubDate><author>anthony@anthonycastaneda.com (Anthony Castañeda)</author>
+      <guid>http://localhost:1313/posts/curry/</guid>
+      <description>&lt;fieldset&gt;&#xA;    &lt;legend&gt;Yummy&lt;/legend&gt;&#xA;Making an &lt;strong&gt;authentic chicken curry&lt;/strong&gt; involves a blend of spices, slow cooking, and a bit of patience. Depending on the region, chicken curry recipes vary, but I&#39;ll guide you through a basic, flavorful recipe that can be adapted to suit many Indian and South Asian styles. This recipe focuses on traditional ingredients and techniques for an aromatic, rich, and delicious chicken curry.&#xA;&lt;/fieldset&gt;&#xA;&lt;h2 id=&#34;authentic-chicken-curry-recipe&#34;&gt;&lt;strong&gt;Authentic Chicken Curry Recipe&lt;/strong&gt;&lt;/h2&gt;&#xA;&lt;h3 id=&#34;ingredients&#34;&gt;&lt;strong&gt;Ingredients:&lt;/strong&gt;&lt;/h3&gt;&#xA;&lt;p&gt;&lt;strong&gt;For the Chicken Marinade:&lt;/strong&gt;&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

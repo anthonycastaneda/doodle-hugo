@@ -12,7 +12,7 @@ Tuning a snare drum properly is crucial for achieving a clear, crisp sound with 
 ## Tools You’ll Need
 
 - **Drum Key** (most important tool)
-- **Tuner (Optional)** – Some drummers use a drum tuner for precision, but it's not strictly necessary.
+- **Tuner (Optional)** – Some drummers use a drum tuner for precision, but it’s not strictly necessary.
 - **Muffling Pads or Dampening Rings (Optional)** – For specific tone adjustments.
 
 ---
@@ -45,7 +45,7 @@ Tuning a snare drum properly is crucial for achieving a clear, crisp sound with 
 
 - **Tune in a Star Pattern**: Tighten the rods in the star pattern. For the snare side head, it's common to tune it to a higher pitch than the batter head for more responsiveness and snappiness.
 
-- **Snare Side Head Tension**: The snare side head is usually tuned slightly tighter than the batter head for a crisp response. A higher tension will make the snare wires "snap" more sharply, but avoid overtightening, as this could result in choking the sound of the snare.
+- **Snare Side Head Tension**: The snare side head is usually tuned slightly tighter than the batter head for a crisp response. A higher tension will make the snare wires “snap” more sharply, but avoid overtightening, as this could result in choking the sound of the snare.
 
 - **Snare Wire Adjustment**: Once the snare side head is tuned to your liking, adjust the snare wires back to your preferred tension using the snare adjustment knob. The snare wires should be tight enough to make contact with the head but not so tight that they choke the sound or cause excessive buzzing.
 
@@ -53,16 +53,16 @@ Tuning a snare drum properly is crucial for achieving a clear, crisp sound with 
 
 ### **Check and Adjust Snare Wires**
 
-- **Snare Wire Tension**: If the snare wires are too tight, they may cause the drum to sound choked or overly dry. If they're too loose, the snare may not produce a crisp sound and could rattle too much. Find a happy medium where the snare wires are tight enough to provide that signature “snare buzz” without being too harsh.
+- **Snare Wire Tension**: If the snare wires are too tight, they may cause the drum to sound choked or overly dry. If they’re too loose, the snare may not produce a crisp sound and could rattle too much. Find a happy medium where the snare wires are tight enough to provide that signature “snare buzz” without being too harsh.
 
-- **Try the Drum Out**: Hit the drum with a stick (or brush) and listen to the overall sound. You want a sharp, clear "pop" with a clean snare buzz that resonates but isn't too muddy or dry.
+- **Try the Drum Out**: Hit the drum with a stick (or brush) and listen to the overall sound. You want a sharp, clear “pop” with a clean snare buzz that resonates but isn’t too muddy or dry.
 
 ---
 
 ### **Fine-Tuning for Personal Preference**
 
 - **Pitch Adjustment**: If you’re aiming for a specific sound, you can slightly adjust the pitch of either head to suit your playing style. A higher batter head tension will give you a sharper sound, while a lower batter head tension will give you a deeper, more resonant tone.
-- **Muffling**: If you find that the drum is ringing too much, you can use a dampening pad or gel (like **Moongel**) to reduce overtones. Just make sure it doesn’t mute the snare too much; you want to preserve the snare's natural resonance.
+- **Muffling**: If you find that the drum is ringing too much, you can use a dampening pad or gel (like **Moongel**) to reduce overtones. Just make sure it doesn’t mute the snare too much; you want to preserve the snare’s natural resonance.
   
 ---
 

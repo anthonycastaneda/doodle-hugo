@@ -9,7 +9,7 @@ tags: ["blog","cars"]
 
 ![Car Trucks](/img/used-car-transport.jpg)
 
-Loading cars onto car-carrying trucks (also known as **auto transporters** or **car haulers**) is a well-coordinated process that involves a combination of ramps, hydraulic systems, and skilled drivers. Here's a breakdown of how the loading process generally works:
+Loading cars onto car-carrying trucks (also known as **auto transporters** or **car haulers**) is a well-coordinated process that involves a combination of ramps, hydraulic systems, and skilled drivers. Here’s a breakdown of how the loading process generally works:
 
 ### **Preparation**
 
@@ -41,7 +41,7 @@ Loading cars onto car-carrying trucks (also known as **auto transporters** or **
 
 ### **Unloading**
 
-- When unloading, the process is essentially the reverse. The ramps or lifts are lowered, and the cars are driven off the transporter one by one, or in some cases, they may be winched off if they're not in working condition.
+- When unloading, the process is essentially the reverse. The ramps or lifts are lowered, and the cars are driven off the transporter one by one, or in some cases, they may be winched off if they’re not in working condition.
 
 ### Summary of Methods
 

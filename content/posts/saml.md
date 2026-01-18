@@ -53,7 +53,7 @@ For reference, the name will be the last portion of the SP ACS URL. so if
 
 `https://contoso.com/sso/saml/post`
 
-is the service provider's ACS URL, the name in DevTools will be `post`.
+is the service provider’s ACS URL, the name in DevTools will be `post`.
 
 You are typically looking for:
 

@@ -8,17 +8,17 @@ tags: ["blog","chatgpt"]
 
 ## Entra PowerShell
 
-To work with Enterprise Applications in Azure using PowerShell, particularly for Entra ID (previously Azure AD), you'll typically use the **AzureAD** or **Microsoft.Graph** module for interacting with these resources. Below is an example of a PowerShell script that demonstrates how to interact with an **Enterprise Application** in Entra ID using the **Microsoft.Graph** module.
+To work with Enterprise Applications in Azure using PowerShell, particularly for Entra ID (previously Azure AD), you’ll typically use the **AzureAD** or **Microsoft.Graph** module for interacting with these resources. Below is an example of a PowerShell script that demonstrates how to interact with an **Enterprise Application** in Entra ID using the **Microsoft.Graph** module.
 
 ### Prerequisites
 
-- **Microsoft.Graph PowerShell Module**: If you don't have it installed, use the following to install it:
+- **Microsoft.Graph PowerShell Module**: If you don’t have it installed, use the following to install it:
 
    ```powershell
    Install-Module Microsoft.Graph -Scope CurrentUser
    ```
 
-- **Login**: You'll need to authenticate with your Azure tenant. If you're using multi-tenant authentication, you may need admin consent for specific actions.
+- **Login**: You'll need to authenticate with your Azure tenant. If you’re using multi-tenant authentication, you may need admin consent for specific actions.
 
 ---
 
@@ -68,7 +68,7 @@ Write-Host "Role Assigned Successfully!"
 
 ### Key Concepts
 
-- **Service Principal**: This represents the application's identity in Azure AD.
+- **Service Principal**: This represents the application’s identity in Azure AD.
 - **App Roles**: These are permissions or roles assigned to an application, and the `AppRoleAssignedTo` refers to which roles are assigned.
 - **Get-MgServicePrincipal**: Retrieves a list of service principals (Enterprise Applications).
 - **New-MgServicePrincipalAppRoleAssignment**: Assigns an app role to a service principal.
@@ -77,7 +77,7 @@ Write-Host "Role Assigned Successfully!"
 
 ### More advanced operations you can perform
 
-- **Assigning users to an Enterprise Application**: Use `Add-MgUserToGroup` or `Add-MgServicePrincipalOwner` if you're adding a user to the application or managing permissions.
+- **Assigning users to an Enterprise Application**: Use `Add-MgUserToGroup` or `Add-MgServicePrincipalOwner` if you’re adding a user to the application or managing permissions.
 - **Deleting an Enterprise Application**: Use `Remove-MgServicePrincipal`.
 
 ---
