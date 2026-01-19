@@ -2,75 +2,75 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://www.anthonycastaneda.com/tags/blog/</loc>
+    <loc>http://localhost:1313/tags/blog/</loc>
+    <lastmod>2026-01-19T00:52:30-06:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/drummer/</loc>
+    <lastmod>2026-01-19T00:52:30-06:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/posts/drummer-small-room/</loc>
+    <lastmod>2026-01-19T00:52:30-06:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/</loc>
+    <lastmod>2026-01-19T00:52:30-06:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/history/</loc>
     <lastmod>2026-01-18T22:56:09-06:00</lastmod>
   </url><url>
-    <loc>https://www.anthonycastaneda.com/tags/drummer/</loc>
-    <lastmod>2026-01-19T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://www.anthonycastaneda.com/posts/drummer-small-room/</loc>
-    <lastmod>2026-01-19T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://www.anthonycastaneda.com/tags/</loc>
+    <loc>http://localhost:1313/posts/antietam/</loc>
     <lastmod>2026-01-18T22:56:09-06:00</lastmod>
   </url><url>
-    <loc>https://www.anthonycastaneda.com/tags/history/</loc>
+    <loc>http://localhost:1313/tags/us-civil-war/</loc>
     <lastmod>2026-01-18T22:56:09-06:00</lastmod>
   </url><url>
-    <loc>https://www.anthonycastaneda.com/posts/antietam/</loc>
-    <lastmod>2026-01-18T22:56:09-06:00</lastmod>
-  </url><url>
-    <loc>https://www.anthonycastaneda.com/tags/us-civil-war/</loc>
-    <lastmod>2026-01-18T22:56:09-06:00</lastmod>
-  </url><url>
-    <loc>https://www.anthonycastaneda.com/about/</loc>
+    <loc>http://localhost:1313/about/</loc>
     <lastmod>2026-01-18T08:56:36-06:00</lastmod>
   </url><url>
-    <loc>https://www.anthonycastaneda.com/tags/sso/</loc>
+    <loc>http://localhost:1313/tags/sso/</loc>
     <lastmod>2026-01-18T08:56:36-06:00</lastmod>
   </url><url>
-    <loc>https://www.anthonycastaneda.com/posts/saml/</loc>
+    <loc>http://localhost:1313/posts/saml/</loc>
     <lastmod>2026-01-18T08:56:36-06:00</lastmod>
   </url><url>
-    <loc>https://www.anthonycastaneda.com/tags/javascript/</loc>
+    <loc>http://localhost:1313/tags/javascript/</loc>
     <lastmod>2026-01-17T18:10:13-06:00</lastmod>
   </url><url>
-    <loc>https://www.anthonycastaneda.com/tags/marriage/</loc>
+    <loc>http://localhost:1313/tags/marriage/</loc>
     <lastmod>2026-01-17T18:10:13-06:00</lastmod>
   </url><url>
-    <loc>https://www.anthonycastaneda.com/posts/married/</loc>
+    <loc>http://localhost:1313/posts/married/</loc>
     <lastmod>2026-01-17T18:10:13-06:00</lastmod>
   </url><url>
-    <loc>https://www.anthonycastaneda.com/posts/cars/</loc>
+    <loc>http://localhost:1313/posts/cars/</loc>
     <lastmod>2026-01-18T08:56:36-06:00</lastmod>
   </url><url>
-    <loc>https://www.anthonycastaneda.com/tags/cars/</loc>
+    <loc>http://localhost:1313/tags/cars/</loc>
     <lastmod>2026-01-18T08:56:36-06:00</lastmod>
   </url><url>
-    <loc>https://www.anthonycastaneda.com/tags/cooking/</loc>
+    <loc>http://localhost:1313/tags/cooking/</loc>
     <lastmod>2026-01-17T21:33:56-06:00</lastmod>
   </url><url>
-    <loc>https://www.anthonycastaneda.com/tags/entra/</loc>
-    <lastmod>2026-01-18T08:56:36-06:00</lastmod>
+    <loc>http://localhost:1313/tags/entra/</loc>
+    <lastmod>2026-01-19T00:52:30-06:00</lastmod>
   </url><url>
-    <loc>https://www.anthonycastaneda.com/posts/entra/</loc>
-    <lastmod>2026-01-18T08:56:36-06:00</lastmod>
+    <loc>http://localhost:1313/posts/entra/</loc>
+    <lastmod>2026-01-19T00:52:30-06:00</lastmod>
   </url><url>
-    <loc>https://www.anthonycastaneda.com/posts/curry/</loc>
+    <loc>http://localhost:1313/posts/curry/</loc>
     <lastmod>2026-01-17T21:33:56-06:00</lastmod>
   </url><url>
-    <loc>https://www.anthonycastaneda.com/posts/snare/</loc>
+    <loc>http://localhost:1313/posts/snare/</loc>
     <lastmod>2026-01-18T08:56:36-06:00</lastmod>
   </url><url>
-    <loc>https://www.anthonycastaneda.com/tags/tuning/</loc>
+    <loc>http://localhost:1313/tags/tuning/</loc>
     <lastmod>2026-01-18T08:56:36-06:00</lastmod>
   </url><url>
-    <loc>https://www.anthonycastaneda.com/</loc>
+    <loc>http://localhost:1313/</loc>
     <lastmod>2026-01-18T08:56:36-06:00</lastmod>
   </url><url>
-    <loc>https://www.anthonycastaneda.com/categories/</loc>
+    <loc>http://localhost:1313/categories/</loc>
   </url><url>
-    <loc>https://www.anthonycastaneda.com/posts/</loc>
+    <loc>http://localhost:1313/posts/</loc>
     <lastmod>2026-01-17T18:10:13-06:00</lastmod>
   </url>
 </urlset>

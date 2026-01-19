@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>SSO on Anthony Castañeda</title>
-    <link>https://www.anthonycastaneda.com/tags/sso/</link>
+    <link>http://localhost:1313/tags/sso/</link>
     <description>Recent content in SSO on Anthony Castañeda</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <managingEditor>anthony@anthonycastaneda.com (Anthony Castañeda)</managingEditor>
     <webMaster>anthony@anthonycastaneda.com (Anthony Castañeda)</webMaster>
     <lastBuildDate>Sun, 18 Jan 2026 08:56:36 -0600</lastBuildDate>
-    <atom:link href="https://www.anthonycastaneda.com/tags/sso/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/sso/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Working with SAML</title>
-      <link>https://www.anthonycastaneda.com/posts/saml/</link>
+      <link>http://localhost:1313/posts/saml/</link>
       <pubDate>Sun, 11 Jan 2026 00:00:00 +0000</pubDate><author>anthony@anthonycastaneda.com (Anthony Castañeda)</author>
-      <guid>https://www.anthonycastaneda.com/posts/saml/</guid>
+      <guid>http://localhost:1313/posts/saml/</guid>
       <description>&lt;h2 id=&#34;troubleshooting-saml-using-your-browsers-devtools&#34;&gt;Troubleshooting SAML Using Your Browser’s DevTools&lt;/h2&gt;&#xA;&lt;p&gt;Single Sign-On (SSO) with SAML can feel opaque when something goes wrong. Users see a vague error, identity providers log something cryptic, and service providers often just say “authentication failed.” Fortunately, your browser already has one of the most powerful SAML troubleshooting tools built in: &lt;strong&gt;Developer Tools (DevTools)&lt;/strong&gt;.&lt;/p&gt;&#xA;&lt;p&gt;This post walks through a practical, repeatable approach to debugging SAML flows using browser DevTools, focusing on Chrome (the concepts apply equally to Firefox, Edge, and Safari).&lt;/p&gt;</description>
     </item>
   </channel>
