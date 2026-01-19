@@ -1,18 +1,54 @@
+version: "1"
 services:
-  - type: web
-    name: doodle
-    repo: https://github.com/anthonycastaneda/doodle-hugo
-    runtime: static
-    buildCommand: chmod a+x build.sh && ./build.sh
-    staticPublishPath: public
-    envVars:
-      - key: DART_SASS_VERSION
-        value: 1.97.2
-      - key: GO_VERSION
-        value: 1.25.5
-      - key: HUGO_VERSION
-        value: 0.154.4
-      - key: NODE_VERSION
-        value: 24.12.0
-      - key: TZ
-        value: Europe/Oslo
+- type: web
+  name: doodle-rz5d
+  runtime: static
+  repo: https://github.com/anthonycastaneda/doodle-hugo
+  envVars:
+    - key: DART_SASS_VERSION
+      value: 1.97.2
+    - key: GO_VERSION
+      value: 1.25.5
+    - key: HUGO_VERSION
+      value: 0.154.4
+    - key: NODE_VERSION
+      value: 24.12.0
+    - key: TZ
+      value: Europe/Oslo
+  buildCommand: chmod a+x build.sh && ./build.sh
+  staticPublishPath: public
+  domains:
+  - anthonycastaneda.com
+  - www.anthonycastaneda.com
+  headers:
+  - path: /*
+    name: Strict-Transport-Security
+    value: max-age=63072000; includeSubDomains; preload
+  - path: /*
+    name: X-Frame-Options
+    value: DENY
+  - path: /*
+    name: Referrer-Policy
+    value: no-referrer-when-downgrade
+  - path: /*
+    name: Permissions-Policy
+    value: geolocation=(self "https://*.anthonycastaneda.com"), microphone=()
+  - path: /*
+    name: Access-Control-Allow-Origin
+    value: https://*.anthonycastaneda.com
+  - path: /*
+    name: X-Permitted-Cross-Domain-Policies
+    value: none
+  - path: /*
+    name: Cross-Origin-Embedder-Policy
+    value: require-corp
+  - path: /*
+    name: Cross-Origin-Opener-Policy
+    value: same-origin
+  - path: /*
+    name: Upgrade-Insecure-Requests
+    value: "1"
+  - path: /*
+    name: Cross-Origin-Resource-Policy
+    value: same-origin
+  autoDeployTrigger: commit
