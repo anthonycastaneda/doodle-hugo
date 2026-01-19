@@ -1,4 +1,4 @@
-baseURL = 'https://www.anthonycastaneda.com/'
+baseURL = 'https://anthonycastaneda.com/'
 description = "A blog for a middle-aged man"
 enableGitInfo = true
 features = ["responsive"]

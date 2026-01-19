@@ -5,8 +5,22 @@
   site.Title }}{{ end }}
 </title>
 {{ with .Description | default .Site.Params.description }}
-<meta name="description" content="{{ . }}" />{{ end }} {{/* Canonical URL */}}
-<link rel="canonical" href="{{ .Permalink }}" />
+<meta name="description" content="{{ . }}" />
+<meta property="og:title" content="Anthony Castañeda">
+<meta property="og:type" content="blog" />
+<meta property="og:image" content="http://anthonycastaneda.com/thumbnail.png">
+<meta property="og:url" content="http://anthonycastaneda.com/">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Anthony Castañeda">
+<meta name="twitter:site" content="@CastanedaWave">
+<meta name="twitter:description" content="A blog for a middle-aged man.">
+<meta name="twitter:image" content="https://anthonycastaneda.com/cardimage.jpg">
+<meta name="twitter:image:alt" content="CSS of my first name">
+<meta property="og:description" content="A blog for a middle-aged man.">
+<meta property="og:site_name" content="Anthony Castañeda">
+{{ end }}
+{{/* Canonical URL */}}
+<link rel="canonical" href="https://anthonycastaneda.com" />
 
 {{/* RSS Feed */}} {{ with .OutputFormats.Get "rss" -}} {{ printf
 `
