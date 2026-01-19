@@ -2,19 +2,28 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>http://localhost:1313/tags/blog/</loc>
+    <lastmod>2026-01-17T21:33:56-06:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/history/</loc>
+    <lastmod>2026-01-18T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/</loc>
+    <lastmod>2026-01-17T21:33:56-06:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/posts/antietam/</loc>
+    <lastmod>2026-01-18T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/us-civil-war/</loc>
+    <lastmod>2026-01-18T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>http://localhost:1313/about/</loc>
     <lastmod>2026-01-17T18:10:13-06:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/sso/</loc>
     <lastmod>2026-01-17T21:33:56-06:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/</loc>
-    <lastmod>2026-01-17T21:33:56-06:00</lastmod>
-  </url><url>
     <loc>http://localhost:1313/posts/saml/</loc>
-    <lastmod>2026-01-17T21:33:56-06:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/blog/</loc>
     <lastmod>2026-01-17T21:33:56-06:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/javascript/</loc>
