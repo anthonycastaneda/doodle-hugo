@@ -51,4 +51,7 @@ services:
   - path: /*
     name: Cross-Origin-Resource-Policy
     value: same-origin
+  - path: /*
+    name: Content-Security-Policy
+    value: default-src *.anthonycastaneda.com ; script-src https://anthonycastaneda.com; connect-src 'self'; style-src ‘unsafe-inline’ fonts.googleapis.com;base-uri 'self';form-action 'self';font-src fonts.gstatic.com;img-src 'self';frame-ancestors 'none'
   autoDeployTrigger: commit
