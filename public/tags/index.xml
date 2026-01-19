@@ -2,82 +2,89 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Anthony Castañeda</title>
-    <link>http://localhost:1313/tags/</link>
+    <link>https://www.anthonycastaneda.com/tags/</link>
     <description>Recent content in Tags on Anthony Castañeda</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <managingEditor>anthony@anthonycastaneda.com (Anthony Castañeda)</managingEditor>
     <webMaster>anthony@anthonycastaneda.com (Anthony Castañeda)</webMaster>
-    <lastBuildDate>Sat, 17 Jan 2026 21:33:56 -0600</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 18 Jan 2026 22:56:09 -0600</lastBuildDate>
+    <atom:link href="https://www.anthonycastaneda.com/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Blog</title>
-      <link>http://localhost:1313/tags/blog/</link>
-      <pubDate>Sun, 18 Jan 2026 00:00:00 +0000</pubDate><author>anthony@anthonycastaneda.com (Anthony Castañeda)</author>
-      <guid>http://localhost:1313/tags/blog/</guid>
+      <link>https://www.anthonycastaneda.com/tags/blog/</link>
+      <pubDate>Mon, 19 Jan 2026 00:00:00 +0000</pubDate><author>anthony@anthonycastaneda.com (Anthony Castañeda)</author>
+      <guid>https://www.anthonycastaneda.com/tags/blog/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Drummer</title>
+      <link>https://www.anthonycastaneda.com/tags/drummer/</link>
+      <pubDate>Mon, 19 Jan 2026 00:00:00 +0000</pubDate><author>anthony@anthonycastaneda.com (Anthony Castañeda)</author>
+      <guid>https://www.anthonycastaneda.com/tags/drummer/</guid>
       <description></description>
     </item>
     <item>
       <title>History</title>
-      <link>http://localhost:1313/tags/history/</link>
+      <link>https://www.anthonycastaneda.com/tags/history/</link>
       <pubDate>Sun, 18 Jan 2026 00:00:00 +0000</pubDate><author>anthony@anthonycastaneda.com (Anthony Castañeda)</author>
-      <guid>http://localhost:1313/tags/history/</guid>
+      <guid>https://www.anthonycastaneda.com/tags/history/</guid>
       <description></description>
     </item>
     <item>
       <title>US Civil War</title>
-      <link>http://localhost:1313/tags/us-civil-war/</link>
+      <link>https://www.anthonycastaneda.com/tags/us-civil-war/</link>
       <pubDate>Sun, 18 Jan 2026 00:00:00 +0000</pubDate><author>anthony@anthonycastaneda.com (Anthony Castañeda)</author>
-      <guid>http://localhost:1313/tags/us-civil-war/</guid>
+      <guid>https://www.anthonycastaneda.com/tags/us-civil-war/</guid>
       <description></description>
     </item>
     <item>
       <title>SSO</title>
-      <link>http://localhost:1313/tags/sso/</link>
+      <link>https://www.anthonycastaneda.com/tags/sso/</link>
       <pubDate>Sun, 11 Jan 2026 00:00:00 +0000</pubDate><author>anthony@anthonycastaneda.com (Anthony Castañeda)</author>
-      <guid>http://localhost:1313/tags/sso/</guid>
+      <guid>https://www.anthonycastaneda.com/tags/sso/</guid>
       <description></description>
     </item>
     <item>
       <title>Javascript</title>
-      <link>http://localhost:1313/tags/javascript/</link>
+      <link>https://www.anthonycastaneda.com/tags/javascript/</link>
       <pubDate>Tue, 18 Nov 2025 00:00:00 +0000</pubDate><author>anthony@anthonycastaneda.com (Anthony Castañeda)</author>
-      <guid>http://localhost:1313/tags/javascript/</guid>
+      <guid>https://www.anthonycastaneda.com/tags/javascript/</guid>
       <description></description>
     </item>
     <item>
       <title>Marriage</title>
-      <link>http://localhost:1313/tags/marriage/</link>
+      <link>https://www.anthonycastaneda.com/tags/marriage/</link>
       <pubDate>Tue, 18 Nov 2025 00:00:00 +0000</pubDate><author>anthony@anthonycastaneda.com (Anthony Castañeda)</author>
-      <guid>http://localhost:1313/tags/marriage/</guid>
+      <guid>https://www.anthonycastaneda.com/tags/marriage/</guid>
       <description></description>
     </item>
     <item>
       <title>Cars</title>
-      <link>http://localhost:1313/tags/cars/</link>
+      <link>https://www.anthonycastaneda.com/tags/cars/</link>
       <pubDate>Sun, 23 Mar 2025 00:00:00 +0000</pubDate><author>anthony@anthonycastaneda.com (Anthony Castañeda)</author>
-      <guid>http://localhost:1313/tags/cars/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Chatgpt</title>
-      <link>http://localhost:1313/tags/chatgpt/</link>
-      <pubDate>Sun, 23 Mar 2025 00:00:00 +0000</pubDate><author>anthony@anthonycastaneda.com (Anthony Castañeda)</author>
-      <guid>http://localhost:1313/tags/chatgpt/</guid>
+      <guid>https://www.anthonycastaneda.com/tags/cars/</guid>
       <description></description>
     </item>
     <item>
       <title>Cooking</title>
-      <link>http://localhost:1313/tags/cooking/</link>
+      <link>https://www.anthonycastaneda.com/tags/cooking/</link>
       <pubDate>Sun, 23 Mar 2025 00:00:00 +0000</pubDate><author>anthony@anthonycastaneda.com (Anthony Castañeda)</author>
-      <guid>http://localhost:1313/tags/cooking/</guid>
+      <guid>https://www.anthonycastaneda.com/tags/cooking/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Entra</title>
+      <link>https://www.anthonycastaneda.com/tags/entra/</link>
+      <pubDate>Sun, 23 Mar 2025 00:00:00 +0000</pubDate><author>anthony@anthonycastaneda.com (Anthony Castañeda)</author>
+      <guid>https://www.anthonycastaneda.com/tags/entra/</guid>
       <description></description>
     </item>
     <item>
       <title>Tuning</title>
-      <link>http://localhost:1313/tags/tuning/</link>
+      <link>https://www.anthonycastaneda.com/tags/tuning/</link>
       <pubDate>Sun, 23 Mar 2025 00:00:00 +0000</pubDate><author>anthony@anthonycastaneda.com (Anthony Castañeda)</author>
-      <guid>http://localhost:1313/tags/tuning/</guid>
+      <guid>https://www.anthonycastaneda.com/tags/tuning/</guid>
       <description></description>
     </item>
   </channel>

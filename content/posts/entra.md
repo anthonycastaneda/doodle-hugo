@@ -2,8 +2,7 @@
 author: "Anthony Castañeda"
 title: "Entra ID"
 date: "2025-03-23"
-description: "ChatGPT creates documentation"
-tags: ["blog","chatgpt"]
+tags: ["blog","Entra"]
 ---
 
 ## Entra PowerShell
