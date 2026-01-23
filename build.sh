@@ -51,7 +51,7 @@ main() {
 
   # Build the site
   echo "Building the site..."
-  hugo --gc --minify --baseURL "${RENDER_EXTERNAL_URL}"
+  hugo --gc --minify --baseURL https://anthonycastaneda.com/
 
 }
 
