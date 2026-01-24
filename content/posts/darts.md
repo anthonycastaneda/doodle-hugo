@@ -1,6 +1,6 @@
 ---
 author: "Anthony Castañeda"
-title: "Throwing darts (Cricket)"
+title: "Throwing Darts (Cricket)"
 date: "2026-01-23"
 tags: ["blog","darts","life-tips"]
 ---
@@ -8,11 +8,11 @@ tags: ["blog","darts","life-tips"]
 Here’s a **clear, friendly guide to playing Cricket (the darts game)** 🎯
 No British batting involved, just pure pub-logic chaos.
 
-![The Setup](https://images.openai.com/static-rsc-3/bTK6q01uAldAsniFrWCu59p0Y6SFDNxSuoLGthq86jgrhaEK1D7zF6sKwZfD_GALH8gE_Ztxdu2JqE4MZaCDzCZxbbAKy2FBtv2XpBRZMJc?purpose=fullsize)
+![The Setup](/img/darts1.jpg)
 
-![Scoreboard](https://images.openai.com/static-rsc-3/YYQscIxO3qv0OWlLXeOjYV4PaBTKEumvZbRM2483wNYw-NH6W2SnBQ_yr1HGNQc-ssNLafYQ3K3U2koovsEFqWBuIb_KGbxZbIhCt87MyvU?purpose=fullsize)
+![Scoreboard](/img/darts2.jpg)
 
-![Double 13.  Worthless](https://images.openai.com/static-rsc-3/9zB_7Ljpqwi01PjqPZqrgao5VZzpdX2H2NGS1ukmlmMrC5g9gCf7gQHKFIizear8vThVRiW_FpESBceQDLlYhiA3KWYbKQydqv3w3-21btc?purpose=fullsize)
+![Double 13.  Worthless](/img/darts3.jpg)
 
 ---
 
