@@ -1,0 +1,24 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA256
+
+Contact: mailto:security@anthonycastaneda.com
+Expires: 2027-01-19T18:30:00.000Z
+Encryption: https://anthonycastaneda.com/.well-known/pgp-key.txt
+Encryption: https://anthonycastaneda.com/pgp-key.txt
+Preferred-Languages: en
+Canonical: https://anthonycastaneda.com/.well-known/security.txt
+Canonical: https://anthonycastaneda.com/security.txt
+-----BEGIN PGP SIGNATURE-----
+
+iQHSBAEBCAA8FiEEBkQj5Zzc+kLaEyN6RTnZX1HKui8FAmlunwkeHHNlY3VyaXR5
+QGFudGhvbnljYXN0YW5lZGEuY29tAAoJEEU52V9Ryrovx9gMAIiJCSGoDtYaaHWL
+Ox1HLrwkGdbXFInT6c+94lzWZp2PJHCirTY5qf+U6Kz5TGWH3rYQRfrESAOblRcq
+zaxyAmLmAeVwXe7c5ovlg2TR+y3R+RZnpFTi6j+/Uz3+vttH3A/ehvCvHKRSTAdx
+6tJgWxFMI3KcknRKnTKoIQ5JGw2KUmV782Wljw42JJIAecT0KS5FGr+TQJW/TN70
+rML14UV29vJFeTAny+a65AAUgJ9rw7Pb0wLG3pixDvCKJT7C+QH6oyZmXxifM/Ow
+wabsv2S8Y7I5+m8mCTChy4ksoHKGZNrUE/4QXH93rbD2mh48CAdcWPJXkda7D1Y0
+NSVgE+uEbFNRpUrxJlfVq71ptaqljc0xPMEpElsXX/hhVSV39Rbi+n72Vf9Y+kEQ
+6YxLQ3JGjugvdRYm6MRBPrKblFh4HDCe0NsrVSWkXvsf9RqdqSRfHtKcr5isZQoe
+pPvB4WQORKMlSHrUAlmKTYIr5b0ue2sQepYIyr0aNr/RZ1k/oA==
+=tC4V
+-----END PGP SIGNATURE-----
