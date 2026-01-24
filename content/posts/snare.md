@@ -5,9 +5,12 @@ date: "2025-03-23"
 description: "Tune that thing"
 tags: ["blog","tuning"]
 ---
+
 <fieldset>
 Tuning a snare drum properly is crucial for achieving a clear, crisp sound with good responsiveness. The snare drum is often considered one of the most important pieces of the drum kit, so tuning it correctly is essential for overall sound quality. Here’s a step-by-step guide to help you tune your snare drum:
 </fieldset>
+
+---
 
 ## Tools You’ll Need
 
