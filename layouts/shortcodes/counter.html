@@ -1,0 +1,138 @@
+<script type ="text/javascript" src="/counter.js"></script>
+
+
+<style>
+    .counter {
+        margin: 0;
+        background-color: #fdf7f1;
+        color: #3c3c3c
+    }
+
+    /* .root {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        } */
+
+    .row {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .row:not(:first-child) {
+        margin-top: 24px;
+    }
+
+    .wrapper {
+        display: inline-block;
+        text-align: center;
+    }
+
+    .value,
+    .unit {
+        font-family: 'Short Stack', cursive;
+    }
+
+    .value {
+        font-size: 2rem;
+        font-weight: 700;
+    }
+
+    .unit {
+        font-size: 2rem;
+    }
+
+    .copy {
+        position: fixed;
+        bottom: 0;
+        display: block;
+        width: 100%;
+        text-align: center;
+        font-size: 2rem;
+        font-family: 'Short Stack', cursive;
+    }
+
+    /* Media queries. */
+    @media (max-width: 800px) {
+        .row {
+            flex-direction: column;
+            flex-wrap: wrap;
+        }
+
+        .row:not(:first-child) {
+            margin-top: 0;
+        }
+
+        .value {
+            font-size: 2rem;
+        }
+
+        .unit {
+            font-size: 2rem;
+            margin-top: -24px;
+        }
+
+        .copy {
+            position: relative;
+            display: block;
+            margin-top: 24px;
+        }
+    }
+
+    @media (min-width: 800px) {
+        .wrapper:not(:first-child) {
+            margin-left: 48px;
+        }
+
+        .row {
+            width: 800px;
+        }
+
+        .wrapper {
+            width: 33.3%;
+        }
+    }
+</style>
+
+<script>
+    window.addEventListener('load', () => {
+        const result = calculate();
+        render(result);
+
+        setInterval(() => {
+            render(calculate());
+        }, 1000);
+    });
+</script>
+<div class="counter" align="{{ if .Get " align" }}{{ .Get "align" }}{{ else }}center{{ end }}">{{ safeHTML .Inner }}
+    <div class="row">
+        <div class="wrapper">
+            <div class="value" id="years"></div>
+            <div class="unit">Years</div>
+        </div>
+        <div class="wrapper">
+            <div class="value" id="months"></div>
+            <div class="unit">Months</div>
+        </div>
+        <div class="wrapper">
+            <div class="value" id="days"></div>
+            <div class="unit">Days</div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="wrapper">
+            <div class="value" id="hours"></div>
+            <div class="unit">Hours</div>
+        </div>
+        <div class="wrapper">
+            <div class="value" id="minutes"></div>
+            <div class="unit">Minutes</div>
+        </div>
+        <div class="wrapper">
+            <div class="value" id="seconds"></div>
+            <div class="unit">Seconds</div>
+        </div>
+    </div>
+</div>

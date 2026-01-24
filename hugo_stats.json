@@ -33,6 +33,7 @@
       "script",
       "span",
       "strong",
+      "style",
       "time",
       "title",
       "ul"
@@ -40,12 +41,17 @@
     "classes": [
       "back-link",
       "back-nav",
+      "counter",
       "current",
       "highlight",
       "path-nav",
+      "row",
       "terminal-nav",
       "terms-list",
-      "time-list"
+      "time-list",
+      "unit",
+      "value",
+      "wrapper"
     ],
     "ids": [
       "a-quick-refresher-how-saml-works",
@@ -63,6 +69,7 @@
       "compare-a-working-vs-broken-flow",
       "core-trash-talk-categories",
       "course-of-the-battle",
+      "days",
       "decode-and-inspect-the-samlresponse-idp--sp",
       "decode-the-response",
       "deep-link-relay-state",
@@ -80,6 +87,7 @@
       "from-the-adfs-side",
       "from-the-application-sp-side",
       "groove-over-chops-the-room-hears-feel-first",
+      "hours",
       "how-do-they-load-them-cars-on-them-trucks",
       "how-people-actually-lose",
       "how-to-close-a-number",
@@ -102,6 +110,8 @@
       "marinate-the-chicken",
       "mental-game-youre-driving-the-night",
       "mid-game",
+      "minutes",
+      "months",
       "more-advanced-operations-you-can-perform",
       "multi-level-carriers",
       "objective",
@@ -111,6 +121,7 @@
       "prerequisites",
       "relay-state-in-an-idp-initiated-flow",
       "scoring",
+      "seconds",
       "securing-the-load",
       "security-considerations-very-important",
       "serving-suggestions",
@@ -154,7 +165,8 @@
       "when-you-actually-need-relay-state",
       "where-relay-state-fits-in-the-saml-flow",
       "where-to-look",
-      "work-with-the-sound-engineer"
+      "work-with-the-sound-engineer",
+      "years"
     ]
   }
 }

@@ -1,0 +1,15 @@
+{{ range .Page.Params.custom_js }}
+{{ if hasPrefix . "http" }}
+<!-- External CDN JS -->
+<script src="{{ . }}" {{ with $.Get "async" }} async{{ end }}{{ with $.Get "defer" }} defer{{ end }}></script>
+{{ else }}
+<!-- Local page resource JS -->
+{{ $jsFile := $.Page.Resources.GetMatch . }}
+{{ if $jsFile }}
+<script src="{{ $jsFile.RelPermalink }}" {{ with $.Get "async" }} async{{ end }}{{ with $.Get "defer" }} defer{{ end
+    }}></script>
+{{ else }}
+{{ errorf "Local JS file not found: %s" . }}
+{{ end }}
+{{ end }}
+{{ end }}
