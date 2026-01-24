@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>
+  ADFS RelayState | Anthony Castañeda
+</title>
+
+<meta property="og:title" content="Anthony Castañeda Weblog for Fun and Profit.">
+<meta property="og:type" content="website" />
+<meta property="og:image" content="https://anthonycastaneda.com/cardimage.jpg">
+<meta property="og:url" content="https://anthonycastaneda.com/">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Anthony Castañeda Weblog for Fun and Profit.">
+<meta name="twitter:site" content="@CastanedaWave">
+<meta name="twitter:description"
+  content="A blog for a middle-aged man. I don't post very often, so don't be disappointed.">
+<meta name="twitter:image" content="https://anthonycastaneda.com/cardimage.jpg">
+<meta name="twitter:image:alt" content="Sisyphus pushing a rock up a hill.">
+<meta property="og:description"
+  content="A blog for a middle-aged man. I don't post very often, so don't be disappointed.">
+<meta property="og:site_name" content="Anthony Castañeda Weblog for Fun and Profit.">
+
+<link rel="canonical" href="https://anthonycastaneda.com" />
+
+   
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "ADFS RelayState",
+    "url": "http:\/\/localhost:1313\/posts\/adfsrelaystate\/",
+    "datePublished": "2026-01-24T00:00:00Z",
+    "dateModified": "2026-01-24T00:00:00Z",
+    "author": {
+      "@type": "Person",
+      "name": "Anthony Castañeda"
+    }
+  }
+</script>
+ <link rel="apple-touch-icon" sizes="180x180" href="/favicon_io/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="192x192" href="/favicon_io/android-chrome-192x192.png">
+<link rel="icon" type="image/png" sizes="512x512" href="/favicon_io/android-chrome-512x512.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon_io/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon_io/favicon-16x16.png">
+<link rel="manifest" href="/favicon_io/site.webmanifest"> 
+<link rel="stylesheet" href="/css/main.css">
+<link rel="stylesheet" href="/css/custom.css">
+</head>
+
+<body>
+  <header><nav class="path-nav">
+  <ol>
+    
+  
+    
+  
+    
+  
+  <li>
+    /
+    <a href="/">Anthony Castañeda</a>
+    /
+  </li>
+
+  
+  <li>
+    
+    <a href="/posts/">Posts</a>
+    /
+  </li>
+
+  
+  <li class="current">
+    
+    <a href="/posts/adfsrelaystate/">ADFS RelayState</a>
+    
+  </li>
+
+  </ol>
+</nav>
+
+
+
+</header>
+  <main id="main-content">
+<h1>ADFS RelayState</h1>
+
+
+
+<time datetime="2026-01-24T00:00:00&#43;00:00">January 24, 2026</time>
+
+<p>Do you have a weird request for an ADFS RelayState?  Read on and be illuminated.</p>
+<hr>
+<h2 id="what-is-an-adfs-relay-state">What is an ADFS Relay State?</h2>
+<p><strong>Relay State</strong> is a piece of data passed through an SAML authentication flow that tells <strong>ADFS</strong> <em>where the user should end up after they successfully sign in</em>.</p>
+<p>Think of it as a <strong>return address</strong>.</p>
+<h3 id="in-plain-english">In plain English</h3>
+<ol>
+<li>A user tries to access a protected app or deep link</li>
+<li>They get redirected to ADFS to log in</li>
+<li>ADFS authenticates the user</li>
+<li><strong>Relay State tells ADFS where to send the user back to</strong></li>
+</ol>
+<p>Without Relay State, users usually land on a default page instead of the exact resource they originally requested.</p>
+<hr>
+<h2 id="where-relay-state-fits-in-the-saml-flow">Where Relay State Fits in the SAML Flow</h2>
+<p>High-level flow:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#433e56;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>User → Service Provider <span style="color:#ffb8d1">(</span>App<span style="color:#ffb8d1">)</span>
+</span></span><span style="display:flex;"><span>     → ADFS <span style="color:#ffb8d1">(</span>with RelayState<span style="color:#ffb8d1">)</span>
+</span></span><span style="display:flex;"><span>     → ADFS authenticates user
+</span></span><span style="display:flex;"><span>     → Service Provider <span style="color:#ffb8d1">(</span>SAML Response + RelayState<span style="color:#ffb8d1">)</span>
+</span></span></code></pre></div><p>Relay State is:</p>
+<ul>
+<li>Created by the <strong>Service Provider (SP)</strong> or client</li>
+<li>Passed <strong>unchanged</strong> through ADFS</li>
+<li>Returned to the SP after authentication</li>
+</ul>
+<p>ADFS <strong>does not interpret</strong> Relay State—it just preserves and forwards it.</p>
+<hr>
+<h2 id="what-can-a-relay-state-be">What Can a Relay State Be?</h2>
+<p>Relay State is just a string, but in practice it’s commonly:</p>
+<ul>
+<li>A <strong>URL</strong> (most common)</li>
+<li>A <strong>path</strong> or route (<code>/orders/123</code>)</li>
+<li>A <strong>base64-encoded value</strong></li>
+<li>An <strong>opaque token</strong> (looked up by the app later)</li>
+</ul>
+<h3 id="important-limits">Important limits</h3>
+<ul>
+<li>In SAML 2.0, RelayState is typically limited to <strong>~80 bytes</strong> by spec</li>
+<li>ADFS itself is tolerant, but proxies and apps may not be</li>
+</ul>
+<hr>
+<h2 id="how-to-create-a-relay-state-common-methods">How to Create a Relay State (Common Methods)</h2>
+<h3 id="simple-url-relay-state-most-common">Simple URL Relay State (Most Common)</h3>
+<p>When redirecting to ADFS, include RelayState as a query or POST parameter.</p>
+<p><strong>Example (conceptual):</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#433e56;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>RelayState<span style="color:#ffb8d1">=</span>https://app.example.com/dashboard
+</span></span></code></pre></div><p>After login, the user lands back on <code>/dashboard</code>.</p>
+<p>✅ Simple
+⚠️ Must validate the URL to avoid open redirect attacks</p>
+<hr>
+<h3 id="deep-link-relay-state">Deep-Link Relay State</h3>
+<p>Used when a user bookmarks or directly accesses a protected resource.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#433e56;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>RelayState<span style="color:#ffb8d1">=</span>https://app.example.com/orders/84721
+</span></span></code></pre></div><p>After authentication:</p>
+<ul>
+<li>User is returned to the <strong>exact page</strong> they wanted</li>
+</ul>
+<hr>
+<h3 id="encoded-or-tokenized-relay-state-best-practice">Encoded or Tokenized Relay State (Best Practice)</h3>
+<p>Instead of passing a raw URL:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#433e56;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>RelayState<span style="color:#ffb8d1">=</span>abc123xyz
+</span></span></code></pre></div><p>Your app then:</p>
+<ol>
+<li>Receives <code>abc123xyz</code></li>
+<li>Looks it up server-side</li>
+<li>Redirects the user safely</li>
+</ol>
+<p>✅ Safer
+✅ Avoids length limits
+✅ Prevents URL tampering</p>
+<hr>
+<h3 id="relay-state-in-an-idp-initiated-flow">Relay State in an IdP-Initiated Flow</h3>
+<p>ADFS can initiate login (no SP request first).</p>
+<p>In this case:</p>
+<ul>
+<li>Relay State is configured <strong>inside ADFS</strong></li>
+<li>Often tied to a <strong>Relying Party Trust</strong></li>
+<li>Used to select the landing page or app context</li>
+</ul>
+<p>This is common for:</p>
+<ul>
+<li>Portals</li>
+<li>App launch pages</li>
+<li>Tiles in ADFS access pages</li>
+</ul>
+<hr>
+<h2 id="how-to-configure-or-use-relay-state-with-adfs">How to Configure or Use Relay State with ADFS</h2>
+<h3 id="from-the-application-sp-side">From the Application (SP side)</h3>
+<ul>
+<li>Include <code>RelayState</code> in the SAML AuthnRequest</li>
+<li>Expect it back <strong>unchanged</strong> with the SAML response</li>
+<li>Handle it securely after validation</li>
+</ul>
+<h3 id="from-the-adfs-side">From the ADFS side</h3>
+<ul>
+<li>
+<p>ADFS does <strong>not generate</strong> Relay State automatically</p>
+</li>
+<li>
+<p>It only:</p>
+<ul>
+<li>Accepts it</li>
+<li>Stores it temporarily</li>
+<li>Returns it</li>
+</ul>
+</li>
+</ul>
+<p>For IdP-initiated sign-on:</p>
+<ul>
+<li>Configure default or fixed Relay State in the Relying Party Trust settings</li>
+</ul>
+<hr>
+<h2 id="security-considerations-very-important">Security Considerations (Very Important)</h2>
+<p>Never blindly redirect based on Relay State.</p>
+<p>Always:</p>
+<ul>
+<li>Validate allowed domains</li>
+<li>Use allowlists</li>
+<li>Prefer opaque tokens over raw URLs</li>
+<li>Reject unexpected or malformed values</li>
+</ul>
+<p>Relay State is a <strong>common attack vector</strong> for open redirects if handled carelessly.</p>
+<hr>
+<h2 id="when-you-actually-need-relay-state">When You Actually Need Relay State</h2>
+<p>You almost certainly need it if:</p>
+<ul>
+<li>Users deep-link into your app</li>
+<li>You want a smooth login experience</li>
+<li>You support multiple entry points</li>
+<li>You don’t want users dumped on a generic home page</li>
+</ul>
+<hr>
+<h2 id="javascript-example">Javascript example</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#433e56;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#b0bec5">/**
+</span></span></span><span style="display:flex;"><span><span style="color:#b0bec5"> * Minimal SAML 2.0 AuthnRequest generator (SP-initiated) for ADFS using
+</span></span></span><span style="display:flex;"><span><span style="color:#b0bec5"> * HTTP-Redirect binding:  SAMLRequest = base64(deflateRaw(xml))
+</span></span></span><span style="display:flex;"><span><span style="color:#b0bec5"> *
+</span></span></span><span style="display:flex;"><span><span style="color:#b0bec5"> * Includes an example RelayState you would send alongside SAMLRequest.
+</span></span></span><span style="display:flex;"><span><span style="color:#b0bec5"> *
+</span></span></span><span style="display:flex;"><span><span style="color:#b0bec5"> * NOTE:
+</span></span></span><span style="display:flex;"><span><span style="color:#b0bec5"> * - You typically do NOT sign the AuthnRequest for ADFS unless your setup requires it.
+</span></span></span><span style="display:flex;"><span><span style="color:#b0bec5"> * - This example focuses on generating the XML + Redirect-binding encoding.
+</span></span></span><span style="display:flex;"><span><span style="color:#b0bec5"> */</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#c2ffdf">import</span> crypto from <span style="color:#1bc5e0">&#34;crypto&#34;</span>;
+</span></span><span style="display:flex;"><span><span style="color:#c2ffdf">import</span> { deflateRaw } from <span style="color:#1bc5e0">&#34;pako&#34;</span>; <span style="color:#b0bec5">// npm i pako
+</span></span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#c2ffdf">function</span> samlTimestamp(date <span style="color:#ffb8d1">=</span> <span style="color:#c2ffdf">new</span> Date()) {
+</span></span><span style="display:flex;"><span>  <span style="color:#b0bec5">// e.g. 2026-01-24T13:45:12Z
+</span></span></span><span style="display:flex;"><span>  <span style="color:#c2ffdf">return</span> date.toISOString().replace(<span style="color:#1bc5e0">/\.\d{3}Z$/</span>, <span style="color:#1bc5e0">&#34;Z&#34;</span>);
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#c2ffdf">function</span> generateId() {
+</span></span><span style="display:flex;"><span>  <span style="color:#b0bec5">// SAML IDs often look like _&lt;random&gt;
+</span></span></span><span style="display:flex;"><span>  <span style="color:#c2ffdf">return</span> <span style="color:#1bc5e0">&#34;_&#34;</span> <span style="color:#ffb8d1">+</span> crypto.randomBytes(<span style="color:#c5a3ff">20</span>).toString(<span style="color:#1bc5e0">&#34;hex&#34;</span>);
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#b0bec5">/**
+</span></span></span><span style="display:flex;"><span><span style="color:#b0bec5"> * Create an AuthnRequest XML string.
+</span></span></span><span style="display:flex;"><span><span style="color:#b0bec5"> *
+</span></span></span><span style="display:flex;"><span><span style="color:#b0bec5"> * @param {object} opts
+</span></span></span><span style="display:flex;"><span><span style="color:#b0bec5"> * @param {string} opts.issuer           SP EntityID (your app)
+</span></span></span><span style="display:flex;"><span><span style="color:#b0bec5"> * @param {string} opts.destination      ADFS SSO endpoint, e.g. https://adfs.example.com/adfs/ls/
+</span></span></span><span style="display:flex;"><span><span style="color:#b0bec5"> * @param {string} opts.acsUrl           Your Assertion Consumer Service URL
+</span></span></span><span style="display:flex;"><span><span style="color:#b0bec5"> * @param {string} [opts.nameIdFormat]   Optional NameIDPolicy format
+</span></span></span><span style="display:flex;"><span><span style="color:#b0bec5"> * @param {boolean} [opts.forceAuthn]    Optional ForceAuthn
+</span></span></span><span style="display:flex;"><span><span style="color:#b0bec5"> * @param {boolean} [opts.passive]       Optional IsPassive
+</span></span></span><span style="display:flex;"><span><span style="color:#b0bec5"> */</span>
+</span></span><span style="display:flex;"><span><span style="color:#c2ffdf">export</span> <span style="color:#c2ffdf">function</span> buildAuthnRequestXml(opts) {
+</span></span><span style="display:flex;"><span>  <span style="color:#c2ffdf">const</span> id <span style="color:#ffb8d1">=</span> generateId();
+</span></span><span style="display:flex;"><span>  <span style="color:#c2ffdf">const</span> issueInstant <span style="color:#ffb8d1">=</span> samlTimestamp();
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#c2ffdf">const</span> {
+</span></span><span style="display:flex;"><span>    issuer,
+</span></span><span style="display:flex;"><span>    destination,
+</span></span><span style="display:flex;"><span>    acsUrl,
+</span></span><span style="display:flex;"><span>    nameIdFormat <span style="color:#ffb8d1">=</span> <span style="color:#1bc5e0">&#34;urn:oasis:names:tc:SAML:1.1:nameid-format:emailAddress&#34;</span>,
+</span></span><span style="display:flex;"><span>    forceAuthn <span style="color:#ffb8d1">=</span> <span style="color:#c2ffdf">false</span>,
+</span></span><span style="display:flex;"><span>    passive <span style="color:#ffb8d1">=</span> <span style="color:#c2ffdf">false</span>,
+</span></span><span style="display:flex;"><span>  } <span style="color:#ffb8d1">=</span> opts;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#b0bec5">// Minimal AuthnRequest. You can add RequestedAuthnContext, Scoping, etc. if needed.
+</span></span></span><span style="display:flex;"><span>  <span style="color:#c2ffdf">const</span> xml <span style="color:#ffb8d1">=</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#1bc5e0">`&lt;?xml version=&#34;1.0&#34; encoding=&#34;UTF-8&#34;?&gt;`</span> <span style="color:#ffb8d1">+</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#1bc5e0">`&lt;samlp:AuthnRequest xmlns:samlp=&#34;urn:oasis:names:tc:SAML:2.0:protocol&#34; `</span> <span style="color:#ffb8d1">+</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#1bc5e0">`xmlns:saml=&#34;urn:oasis:names:tc:SAML:2.0:assertion&#34; `</span> <span style="color:#ffb8d1">+</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#1bc5e0">`ID=&#34;</span><span style="color:#1bc5e0">${</span>id<span style="color:#1bc5e0">}</span><span style="color:#1bc5e0">&#34; Version=&#34;2.0&#34; IssueInstant=&#34;</span><span style="color:#1bc5e0">${</span>issueInstant<span style="color:#1bc5e0">}</span><span style="color:#1bc5e0">&#34; `</span> <span style="color:#ffb8d1">+</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#1bc5e0">`Destination=&#34;</span><span style="color:#1bc5e0">${</span>destination<span style="color:#1bc5e0">}</span><span style="color:#1bc5e0">&#34; `</span> <span style="color:#ffb8d1">+</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#1bc5e0">`ProtocolBinding=&#34;urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST&#34; `</span> <span style="color:#ffb8d1">+</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#1bc5e0">`AssertionConsumerServiceURL=&#34;</span><span style="color:#1bc5e0">${</span>acsUrl<span style="color:#1bc5e0">}</span><span style="color:#1bc5e0">&#34; `</span> <span style="color:#ffb8d1">+</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#1bc5e0">`ForceAuthn=&#34;</span><span style="color:#1bc5e0">${</span>forceAuthn <span style="color:#ffb8d1">?</span> <span style="color:#1bc5e0">&#34;true&#34;</span> <span style="color:#ffb8d1">:</span> <span style="color:#1bc5e0">&#34;false&#34;</span><span style="color:#1bc5e0">}</span><span style="color:#1bc5e0">&#34; `</span> <span style="color:#ffb8d1">+</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#1bc5e0">`IsPassive=&#34;</span><span style="color:#1bc5e0">${</span>passive <span style="color:#ffb8d1">?</span> <span style="color:#1bc5e0">&#34;true&#34;</span> <span style="color:#ffb8d1">:</span> <span style="color:#1bc5e0">&#34;false&#34;</span><span style="color:#1bc5e0">}</span><span style="color:#1bc5e0">&#34;&gt;`</span> <span style="color:#ffb8d1">+</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#1bc5e0">`&lt;saml:Issuer&gt;</span><span style="color:#1bc5e0">${</span>escapeXml(issuer)<span style="color:#1bc5e0">}</span><span style="color:#1bc5e0">&lt;/saml:Issuer&gt;`</span> <span style="color:#ffb8d1">+</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#1bc5e0">`&lt;samlp:NameIDPolicy Format=&#34;</span><span style="color:#1bc5e0">${</span>escapeXml(nameIdFormat)<span style="color:#1bc5e0">}</span><span style="color:#1bc5e0">&#34; AllowCreate=&#34;true&#34; /&gt;`</span> <span style="color:#ffb8d1">+</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#1bc5e0">`&lt;/samlp:AuthnRequest&gt;`</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#c2ffdf">return</span> { id, issueInstant, xml };
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#b0bec5">/**
+</span></span></span><span style="display:flex;"><span><span style="color:#b0bec5"> * Encode XML into SAMLRequest for HTTP-Redirect binding:
+</span></span></span><span style="display:flex;"><span><span style="color:#b0bec5"> * deflateRaw -&gt; base64 -&gt; urlEncode
+</span></span></span><span style="display:flex;"><span><span style="color:#b0bec5"> */</span>
+</span></span><span style="display:flex;"><span><span style="color:#c2ffdf">export</span> <span style="color:#c2ffdf">function</span> encodeSamlRequestForRedirect(xml) {
+</span></span><span style="display:flex;"><span>  <span style="color:#c2ffdf">const</span> deflated <span style="color:#ffb8d1">=</span> deflateRaw(xml); <span style="color:#b0bec5">// Uint8Array
+</span></span></span><span style="display:flex;"><span>  <span style="color:#c2ffdf">const</span> base64 <span style="color:#ffb8d1">=</span> Buffer.from(deflated).toString(<span style="color:#1bc5e0">&#34;base64&#34;</span>);
+</span></span><span style="display:flex;"><span>  <span style="color:#c2ffdf">const</span> urlEncoded <span style="color:#ffb8d1">=</span> encodeURIComponent(base64);
+</span></span><span style="display:flex;"><span>  <span style="color:#c2ffdf">return</span> { base64, urlEncoded };
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#b0bec5">/**
+</span></span></span><span style="display:flex;"><span><span style="color:#b0bec5"> * Build the final ADFS redirect URL including SAMLRequest and RelayState.
+</span></span></span><span style="display:flex;"><span><span style="color:#b0bec5"> *
+</span></span></span><span style="display:flex;"><span><span style="color:#b0bec5"> * @param {object} opts
+</span></span></span><span style="display:flex;"><span><span style="color:#b0bec5"> * @param {string} opts.adfsSsoUrl   e.g. https://adfs.example.com/adfs/ls/
+</span></span></span><span style="display:flex;"><span><span style="color:#b0bec5"> * @param {string} opts.samlRequest  URL-encoded SAMLRequest
+</span></span></span><span style="display:flex;"><span><span style="color:#b0bec5"> * @param {string} opts.relayState   Any opaque string (keep it short; many stacks expect &lt;= ~80 bytes)
+</span></span></span><span style="display:flex;"><span><span style="color:#b0bec5"> */</span>
+</span></span><span style="display:flex;"><span><span style="color:#c2ffdf">export</span> <span style="color:#c2ffdf">function</span> buildAdfsRedirectUrl({ adfsSsoUrl, samlRequest, relayState }) {
+</span></span><span style="display:flex;"><span>  <span style="color:#c2ffdf">const</span> sep <span style="color:#ffb8d1">=</span> adfsSsoUrl.includes(<span style="color:#1bc5e0">&#34;?&#34;</span>) <span style="color:#ffb8d1">?</span> <span style="color:#1bc5e0">&#34;&amp;&#34;</span> <span style="color:#ffb8d1">:</span> <span style="color:#1bc5e0">&#34;?&#34;</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#c2ffdf">const</span> relay <span style="color:#ffb8d1">=</span> encodeURIComponent(relayState);
+</span></span><span style="display:flex;"><span>  <span style="color:#c2ffdf">return</span> <span style="color:#1bc5e0">`</span><span style="color:#1bc5e0">${</span>adfsSsoUrl<span style="color:#1bc5e0">}${</span>sep<span style="color:#1bc5e0">}</span><span style="color:#1bc5e0">SAMLRequest=</span><span style="color:#1bc5e0">${</span>samlRequest<span style="color:#1bc5e0">}</span><span style="color:#1bc5e0">&amp;RelayState=</span><span style="color:#1bc5e0">${</span>relay<span style="color:#1bc5e0">}</span><span style="color:#1bc5e0">`</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#c2ffdf">function</span> escapeXml(str) {
+</span></span><span style="display:flex;"><span>  <span style="color:#c2ffdf">return</span> String(str)
+</span></span><span style="display:flex;"><span>    .replace(<span style="color:#1bc5e0">/&amp;/g</span>, <span style="color:#1bc5e0">&#34;&amp;amp;&#34;</span>)
+</span></span><span style="display:flex;"><span>    .replace(<span style="color:#1bc5e0">/&lt;/g</span>, <span style="color:#1bc5e0">&#34;&amp;lt;&#34;</span>)
+</span></span><span style="display:flex;"><span>    .replace(<span style="color:#1bc5e0">/&gt;/g</span>, <span style="color:#1bc5e0">&#34;&amp;gt;&#34;</span>)
+</span></span><span style="display:flex;"><span>    .replace(<span style="color:#1bc5e0">/&#34;/g</span>, <span style="color:#1bc5e0">&#34;&amp;quot;&#34;</span>)
+</span></span><span style="display:flex;"><span>    .replace(<span style="color:#1bc5e0">/&#39;/g</span>, <span style="color:#1bc5e0">&#34;&amp;apos;&#34;</span>);
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#b0bec5">// ----------------------
+</span></span></span><span style="display:flex;"><span><span style="color:#b0bec5">// Example usage
+</span></span></span><span style="display:flex;"><span><span style="color:#b0bec5">// ----------------------
+</span></span></span><span style="display:flex;"><span><span style="color:#c2ffdf">const</span> issuer <span style="color:#ffb8d1">=</span> <span style="color:#1bc5e0">&#34;https://sp.example.com/saml/metadata&#34;</span>; <span style="color:#b0bec5">// SP entityID
+</span></span></span><span style="display:flex;"><span><span style="color:#c2ffdf">const</span> adfsSsoUrl <span style="color:#ffb8d1">=</span> <span style="color:#1bc5e0">&#34;https://adfs.example.com/adfs/ls/&#34;</span>; <span style="color:#b0bec5">// ADFS SSO endpoint (IdP)
+</span></span></span><span style="display:flex;"><span><span style="color:#c2ffdf">const</span> acsUrl <span style="color:#ffb8d1">=</span> <span style="color:#1bc5e0">&#34;https://sp.example.com/saml/acs&#34;</span>; <span style="color:#b0bec5">// SP ACS endpoint
+</span></span></span><span style="display:flex;"><span><span style="color:#c2ffdf">const</span> relayState <span style="color:#ffb8d1">=</span> <span style="color:#1bc5e0">&#34;/app/orders/84721&#34;</span>; <span style="color:#b0bec5">// what you want to restore after login (often a path or token)
+</span></span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#c2ffdf">const</span> { xml } <span style="color:#ffb8d1">=</span> buildAuthnRequestXml({
+</span></span><span style="display:flex;"><span>  issuer,
+</span></span><span style="display:flex;"><span>  destination<span style="color:#ffb8d1">:</span> adfsSsoUrl,
+</span></span><span style="display:flex;"><span>  acsUrl,
+</span></span><span style="display:flex;"><span>});
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#c2ffdf">const</span> { urlEncoded } <span style="color:#ffb8d1">=</span> encodeSamlRequestForRedirect(xml);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#c2ffdf">const</span> redirectUrl <span style="color:#ffb8d1">=</span> buildAdfsRedirectUrl({
+</span></span><span style="display:flex;"><span>  adfsSsoUrl,
+</span></span><span style="display:flex;"><span>  samlRequest<span style="color:#ffb8d1">:</span> urlEncoded,
+</span></span><span style="display:flex;"><span>  relayState,
+</span></span><span style="display:flex;"><span>});
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>console.log(<span style="color:#1bc5e0">&#34;AuthnRequest XML:&#34;</span>, xml);
+</span></span><span style="display:flex;"><span>console.log(<span style="color:#1bc5e0">&#34;Redirect URL:&#34;</span>, redirectUrl);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#b0bec5">/**
+</span></span></span><span style="display:flex;"><span><span style="color:#b0bec5"> * In a web app, you&#39;d do:
+</span></span></span><span style="display:flex;"><span><span style="color:#b0bec5"> *   res.redirect(redirectUrl);
+</span></span></span><span style="display:flex;"><span><span style="color:#b0bec5"> */</span>
+</span></span></code></pre></div>
+
+  <div class="terms-list">
+    <ul>
+        <li><a href="/tags/blog/">#Blog</a></li>
+        <li><a href="/tags/adfs/">#Adfs</a></li>
+        <li><a href="/tags/auth-nerd/">#Auth-Nerd</a></li>
+    </ul>
+  </div>
+
+
+<div class="terminal-nav">
+  <div class="back-nav">
+    
+    <a href="/posts/" class="back-link">../</a>
+    
+  </div>
+</div>
+
+</main>
+  <footer><p>
+  &copy; Copyright 2026 &middot;
+  Uses DoodleCSS by <a href="https://mccormick.cx/">chr15m</a>
+</p></footer>
+</body>
+
+</html>

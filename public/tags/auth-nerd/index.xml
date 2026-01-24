@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Auth-Nerd on Anthony Castañeda</title>
+    <link>http://localhost:1313/tags/auth-nerd/</link>
+    <description>Recent content in Auth-Nerd on Anthony Castañeda</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <managingEditor>anthony@anthonycastaneda.com (Anthony Castañeda)</managingEditor>
+    <webMaster>anthony@anthonycastaneda.com (Anthony Castañeda)</webMaster>
+    <lastBuildDate>Sat, 24 Jan 2026 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/auth-nerd/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>ADFS RelayState</title>
+      <link>http://localhost:1313/posts/adfsrelaystate/</link>
+      <pubDate>Sat, 24 Jan 2026 00:00:00 +0000</pubDate><author>anthony@anthonycastaneda.com (Anthony Castañeda)</author>
+      <guid>http://localhost:1313/posts/adfsrelaystate/</guid>
+      <description>&lt;p&gt;Do you have a weird request for an ADFS RelayState?  Read on and be illuminated.&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;h2 id=&#34;what-is-an-adfs-relay-state&#34;&gt;What is an ADFS Relay State?&lt;/h2&gt;&#xA;&lt;p&gt;&lt;strong&gt;Relay State&lt;/strong&gt; is a piece of data passed through an SAML authentication flow that tells &lt;strong&gt;ADFS&lt;/strong&gt; &lt;em&gt;where the user should end up after they successfully sign in&lt;/em&gt;.&lt;/p&gt;&#xA;&lt;p&gt;Think of it as a &lt;strong&gt;return address&lt;/strong&gt;.&lt;/p&gt;&#xA;&lt;h3 id=&#34;in-plain-english&#34;&gt;In plain English&lt;/h3&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;A user tries to access a protected app or deep link&lt;/li&gt;&#xA;&lt;li&gt;They get redirected to ADFS to log in&lt;/li&gt;&#xA;&lt;li&gt;ADFS authenticates the user&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Relay State tells ADFS where to send the user back to&lt;/strong&gt;&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;p&gt;Without Relay State, users usually land on a default page instead of the exact resource they originally requested.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

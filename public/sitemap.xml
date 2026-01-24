@@ -2,16 +2,34 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>http://localhost:1313/tags/adfs/</loc>
+    <lastmod>2026-01-24T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/posts/adfsrelaystate/</loc>
+    <lastmod>2026-01-24T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/auth-nerd/</loc>
+    <lastmod>2026-01-24T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>http://localhost:1313/tags/blog/</loc>
-    <lastmod>2026-01-19T00:52:30-06:00</lastmod>
+    <lastmod>2026-01-23T22:27:20-06:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/</loc>
+    <lastmod>2026-01-23T22:27:20-06:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/darts/</loc>
+    <lastmod>2026-01-23T21:47:10-06:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/life-tips/</loc>
+    <lastmod>2026-01-23T21:47:10-06:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/posts/darts/</loc>
+    <lastmod>2026-01-23T21:47:10-06:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/drummer/</loc>
     <lastmod>2026-01-19T00:52:30-06:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/posts/drummer-small-room/</loc>
-    <lastmod>2026-01-19T00:52:30-06:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/</loc>
     <lastmod>2026-01-19T00:52:30-06:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/history/</loc>
@@ -60,10 +78,10 @@
     <lastmod>2026-01-17T21:33:56-06:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/posts/snare/</loc>
-    <lastmod>2026-01-18T08:56:36-06:00</lastmod>
+    <lastmod>2026-01-23T22:27:20-06:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/tuning/</loc>
-    <lastmod>2026-01-18T08:56:36-06:00</lastmod>
+    <lastmod>2026-01-23T22:27:20-06:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/</loc>
     <lastmod>2026-01-18T08:56:36-06:00</lastmod>

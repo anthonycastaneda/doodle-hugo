@@ -8,13 +8,41 @@
     <language>en-us</language>
     <managingEditor>anthony@anthonycastaneda.com (Anthony Castañeda)</managingEditor>
     <webMaster>anthony@anthonycastaneda.com (Anthony Castañeda)</webMaster>
-    <lastBuildDate>Mon, 19 Jan 2026 00:52:30 -0600</lastBuildDate>
+    <lastBuildDate>Fri, 23 Jan 2026 22:27:20 -0600</lastBuildDate>
     <atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Adfs</title>
+      <link>http://localhost:1313/tags/adfs/</link>
+      <pubDate>Sat, 24 Jan 2026 00:00:00 +0000</pubDate><author>anthony@anthonycastaneda.com (Anthony Castañeda)</author>
+      <guid>http://localhost:1313/tags/adfs/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Auth-Nerd</title>
+      <link>http://localhost:1313/tags/auth-nerd/</link>
+      <pubDate>Sat, 24 Jan 2026 00:00:00 +0000</pubDate><author>anthony@anthonycastaneda.com (Anthony Castañeda)</author>
+      <guid>http://localhost:1313/tags/auth-nerd/</guid>
+      <description></description>
+    </item>
     <item>
       <title>Blog</title>
       <link>http://localhost:1313/tags/blog/</link>
-      <pubDate>Mon, 19 Jan 2026 00:00:00 +0000</pubDate><author>anthony@anthonycastaneda.com (Anthony Castañeda)</author>
+      <pubDate>Sat, 24 Jan 2026 00:00:00 +0000</pubDate><author>anthony@anthonycastaneda.com (Anthony Castañeda)</author>
       <guid>http://localhost:1313/tags/blog/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Darts</title>
+      <link>http://localhost:1313/tags/darts/</link>
+      <pubDate>Fri, 23 Jan 2026 00:00:00 +0000</pubDate><author>anthony@anthonycastaneda.com (Anthony Castañeda)</author>
+      <guid>http://localhost:1313/tags/darts/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Life-Tips</title>
+      <link>http://localhost:1313/tags/life-tips/</link>
+      <pubDate>Fri, 23 Jan 2026 00:00:00 +0000</pubDate><author>anthony@anthonycastaneda.com (Anthony Castañeda)</author>
+      <guid>http://localhost:1313/tags/life-tips/</guid>
       <description></description>
     </item>
     <item>
