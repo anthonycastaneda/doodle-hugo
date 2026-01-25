@@ -232,6 +232,7 @@ h5 > code {
 }
 
 .terms-list {
+  padding-top: 2em;
   padding-bottom: var(--spacing-base);
 }
 

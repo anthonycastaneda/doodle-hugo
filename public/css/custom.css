@@ -1,13 +1,20 @@
 /* You can add custom style here */
 
-@import url("https://fonts.googleapis.com/css2?family=Short+Stack&display=swap");
+/*@import url("https://fonts.googleapis.com/css2?family=Short+Stack&display=swap");*/
+
+@font-face {
+  font-family: "Short Stack";
+  src: url('/font/ShortStack.woff2') format('woff2'),
+
+}
+
 
 * {
-  font-family: "Short Stack", cursive;
+  font-family: "Short Stack", sans-serif;
 }
 
 body {
-  font-family: "Short Stack", cursive;
+  font-family: "Short Stack", sans-serif;
   /* font-size: 2em; */
 }
 
