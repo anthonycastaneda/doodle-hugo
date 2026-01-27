@@ -39,7 +39,7 @@ Why?  Why not.  I've had an iPhone for a long time and I've used a ton of apps. 
 >* Built for iOS 12+
 >* Shake for Star Harp
 >
-![MOON Notification](/img/Moon3.png)
+![MOON Notification](/img/moon3.png)
 ![Think about that](/img/moon2.jpeg)
 ![You happy now?](/img/moon4.jpeg)
 
