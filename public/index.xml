@@ -10,6 +10,13 @@
     <webMaster>anthony@anthonycastaneda.com (Anthony Castañeda)</webMaster>
     <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>MOON</title>
+      <link>http://localhost:1313/posts/moon/</link>
+      <pubDate>Mon, 26 Jan 2026 00:00:00 +0000</pubDate><author>anthony@anthonycastaneda.com (Anthony Castañeda)</author>
+      <guid>http://localhost:1313/posts/moon/</guid>
+      <description>&lt;h2 id=&#34;my-favorite-apps-a-possible-series&#34;&gt;My Favorite Apps (a possible series)&lt;/h2&gt;&#xA;&lt;p&gt;Why?  Why not.  I&amp;rsquo;ve had an iPhone for a long time and I&amp;rsquo;ve used a ton of apps.  This is one of my favorites.  No one asked, but here you go.&lt;/p&gt;&#xA;&lt;h3 id=&#34;moon&#34;&gt;MOON&lt;/h3&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://moonapp.me&#34;&gt;MOON&lt;/a&gt; is a fantastic app that does one thing.  It tracks the moon.  Well, it also randomly sends you notifications, which are typically nothing to do with the moon.  It has home screen widgets in various sizes, a Watch app&amp;hellip;  I&amp;rsquo;ll let the developer describe it.&lt;/p&gt;</description>
+    </item>
+    <item>
       <title>ADFS RelayState</title>
       <link>http://localhost:1313/posts/adfsrelaystate/</link>
       <pubDate>Sat, 24 Jan 2026 00:00:00 +0000</pubDate><author>anthony@anthonycastaneda.com (Anthony Castañeda)</author>

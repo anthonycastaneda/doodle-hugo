@@ -2,6 +2,21 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>http://localhost:1313/tags/blog/</loc>
+    <lastmod>2026-01-26T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/posts/faveapps/</loc>
+    <lastmod>2026-01-26T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/ios/</loc>
+    <lastmod>2026-01-26T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/noreason/</loc>
+    <lastmod>2026-01-26T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/</loc>
+    <lastmod>2026-01-26T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>http://localhost:1313/tags/adfs/</loc>
     <lastmod>2026-01-24T11:53:07-06:00</lastmod>
   </url><url>
@@ -9,12 +24,6 @@
     <lastmod>2026-01-24T11:53:07-06:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/auth-nerd/</loc>
-    <lastmod>2026-01-24T11:53:07-06:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/blog/</loc>
-    <lastmod>2026-01-24T11:53:07-06:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/</loc>
     <lastmod>2026-01-24T11:53:07-06:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/darts/</loc>
@@ -51,13 +60,13 @@
     <lastmod>2026-01-18T08:56:36-06:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/javascript/</loc>
-    <lastmod>2026-01-17T18:10:13-06:00</lastmod>
+    <lastmod>2026-01-24T15:13:32-06:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/marriage/</loc>
-    <lastmod>2026-01-17T18:10:13-06:00</lastmod>
+    <lastmod>2026-01-24T15:13:32-06:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/posts/married/</loc>
-    <lastmod>2026-01-17T18:10:13-06:00</lastmod>
+    <lastmod>2026-01-24T15:13:32-06:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/posts/cars/</loc>
     <lastmod>2026-01-18T08:56:36-06:00</lastmod>

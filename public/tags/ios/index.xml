@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>IOS on Anthony Castañeda</title>
+    <link>http://localhost:1313/tags/ios/</link>
+    <description>Recent content in IOS on Anthony Castañeda</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <managingEditor>anthony@anthonycastaneda.com (Anthony Castañeda)</managingEditor>
+    <webMaster>anthony@anthonycastaneda.com (Anthony Castañeda)</webMaster>
+    <lastBuildDate>Mon, 26 Jan 2026 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/ios/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Favorite Apps</title>
+      <link>http://localhost:1313/posts/faveapps/</link>
+      <pubDate>Mon, 26 Jan 2026 00:00:00 +0000</pubDate><author>anthony@anthonycastaneda.com (Anthony Castañeda)</author>
+      <guid>http://localhost:1313/posts/faveapps/</guid>
+      <description>&lt;h2 id=&#34;my-favorite-apps&#34;&gt;My Favorite Apps&lt;/h2&gt;&#xA;&lt;p&gt;Why?  Why not.  I&amp;rsquo;ve had an iPhone for a long time and I&amp;rsquo;ve used a ton of apps.  These are some of my favorites.  No one asked, but here you go.&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;MOON&#xA;&lt;a href=&#34;https://moonapp.me&#34;&gt;MOON&lt;/a&gt; is a fantastic app that does one thing.  It tracks the moon.  Well, it also randomly sends you notifications, which are typically nothing to do with the moon.  It has home screen widgets in various sizes, a Watch app&amp;hellip;  I&amp;rsquo;ll let the developer describe it.&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://moonapp.me&#34;&gt;MOON&lt;/a&gt; is your personal lunar portal.&#xA;++ Best User Experience - Webby Awards 2017 Honoree ++&#xA;Never be caught off-guard by moon-related craziness again. View the current moon phase or what the moon will look like on a certain date, see countdowns &amp;gt;to moon events, receive notifications with enough time to avoid unpleasantness, and share what the moon looks like on any day with your friends.&#xA;MOON is the most thoughtful moon phase calendar available. It becomes increasingly useful the more you use it. Enjoy.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
